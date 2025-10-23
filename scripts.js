@@ -8,7 +8,6 @@
   const sortOptions = document.querySelectorAll(".sort-option");
   const downloadAllBtn = document.getElementById("downloadAllBtn");
 
-  // set downloadAll link (assumes a zip at repo root named wallpaper-all.zip)
   if (downloadAllBtn) {
     downloadAllBtn.href = "wallpaper-all.zip";
     downloadAllBtn.setAttribute("download", "wallpaper-all.zip");
@@ -49,6 +48,10 @@
     const tile = document.createElement("div");
     tile.className = "tile";
 
+    // wrapper to enforce 16:9
+    const wrap = document.createElement("div");
+    wrap.className = "thumb-wrap";
+
     const img = document.createElement("img");
     img.className = "thumb";
     img.loading = "lazy";
@@ -60,11 +63,12 @@
       img.src =
         "data:image/svg+xml;charset=UTF-8," +
         encodeURIComponent(
-          `<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect fill='#0b1220' width='100%' height='100%'/><text x='50%' y='50%' fill='#666' dominant-baseline='middle' text-anchor='middle' font-size='18'>Image not available</text></svg>`
+          `<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='675'><rect fill='#0b1220' width='100%' height='100%'/><text x='50%' y='50%' fill='#666' dominant-baseline='middle' text-anchor='middle' font-size='24'>Image not available</text></svg>`
         );
     };
 
     img.addEventListener("click", () => openPreview(item));
+    wrap.appendChild(img);
 
     const footer = document.createElement("div");
     footer.className = "tile-footer";
@@ -93,7 +97,7 @@
     footer.appendChild(meta);
     footer.appendChild(actions);
 
-    tile.appendChild(img);
+    tile.appendChild(wrap);
     tile.appendChild(footer);
     col.appendChild(tile);
 
