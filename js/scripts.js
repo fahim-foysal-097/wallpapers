@@ -1,7 +1,7 @@
 // scripts.js - gallery renderer used by index.html and favorites.html
 (() => {
-  const JSON_PATH = "wallpapers.json";
-  const FAVORITES_JSON = "favorites.json"; // optional file you can add
+  const JSON_PATH = "json/wallpapers.json";
+  const FAVORITES_JSON = "json/favorites.json";
   const galleryEl = document.getElementById("gallery");
   const summaryEl = document.getElementById("summary");
   const emptyState = document.getElementById("emptyState");

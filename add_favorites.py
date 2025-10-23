@@ -21,7 +21,7 @@ from pathlib import Path
 import json
 import sys
 
-FAV_FILE = Path("favorites.json")
+FAV_FILE = Path("json/favorites.json")
 
 def load_existing():
     if not FAV_FILE.exists():
