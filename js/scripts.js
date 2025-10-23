@@ -123,7 +123,7 @@
 
   function makeTile(item, idx) {
     const col = document.createElement("div");
-    col.className = "col-6 col-sm-4 col-md-3 col-xl-2";
+    col.className = "col-6 col-sm-4 col-md-3 col-xl-3";
 
     const tile = document.createElement("div");
     tile.className = "tile";

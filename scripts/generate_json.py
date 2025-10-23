@@ -13,8 +13,8 @@ import json
 from datetime import datetime, timezone
 
 # Config
-WALLPAPER_DIR = Path("wallpapers")
-OUTPUT_FILE = Path("json/wallpapers.json")
+WALLPAPER_DIR = Path("../wallpapers")
+OUTPUT_FILE = Path("../json/wallpapers.json")
 IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".bmp", ".tiff", ".svg"}
 
 def is_image(path: Path) -> bool:

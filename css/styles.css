@@ -15,7 +15,7 @@ select {
   --glass-bg: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.06);
   --accent-start: #7c5cff; /* purple */
-  --accent-end: #3dd6c7; /* teal */
+  --accent-end: #955cff;
   --white: #ffffff;
 }
 
@@ -311,4 +311,5 @@ body {
   object-fit: cover;
   border-radius: 25%;
   border: 2px solid #ffffff33;
+  margin-right: 10px;
 }

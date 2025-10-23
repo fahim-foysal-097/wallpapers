@@ -7,14 +7,14 @@
 A **static gallery site** to browse, preview, and download wallpapers stored in the repository's `wallpapers/` folder.
 
 <p>
-  <a href="https://website-url.com" target="_blank">
+  <a href="https://fahim-foysal-097.github.io/wallpapers/" target="_blank">
     <img src="https://img.shields.io/badge/Visit%20Website-Click%20Here-blue?style=for-the-badge&logo=google-chrome" alt="Visit Website"/>
   </a>
 </p>
 
 ## Scripts
 
-Use the following Python scripts included in the repository:
+Use the following Python scripts included in `scripts/`:
 
 | Script             | Description                                  |
 | ------------------ | -------------------------------------------- |
