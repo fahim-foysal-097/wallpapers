@@ -22,7 +22,7 @@ def main():
         sys.exit(1)
 
     # Create zip (overwrite if exists)
-    with zipfile.ZipFile(OUTPUT_ZIP, mode="w", compression=zipfile.ZIP_DEFLATED) as zf:
+    with zipfile.ZipFile(OUTPUT_ZIP, mode="w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
         for p in sorted(WALLPAPER_DIR.rglob("*")):
             if p.is_file():
                 # store with path relative to repo root so zip contains wallpapers/<name>

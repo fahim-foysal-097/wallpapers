@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Wallpapers — Gallery</title>
+    <title>Wallpaper Gallery</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -63,7 +63,7 @@
                     </ul>
                 </div>
 
-                <!-- Favorites button (replaces previous Repository button) -->
+                <!-- Favorites button -->
                 <a class="btn btn-outline-light" href="favorites.html" title="Favorites">
                     <i class="bi bi-star-fill"></i>
                 </a>
@@ -75,6 +75,11 @@
         <div class="row align-items-center mb-3">
             <div class="col">
                 <h1 class="display-6 mb-0">Wallpaper Gallery</h1>
+
+                <!-- Animated subtitle (typing effect) -->
+                <p id="animatedText" class="animated-subtitle">Discover Beautiful Wallpapers</p>
+
+                <!-- Count summary -->
                 <p class="text-muted mb-0" id="summary">Loading…</p>
             </div>
             <div class="col-auto d-flex gap-2">
@@ -87,7 +92,9 @@
             </div>
         </div>
 
-        <div id="gallery" class="row g-3"></div>
+        <div id="gallery" class="row g-3">
+            <!-- tiles injected here -->
+        </div>
 
         <div id="emptyState" class="text-center text-muted mt-5" style="display:none;">
             <i class="bi bi-image fs-1"></i>
@@ -103,7 +110,13 @@
     <!-- Preview Modal -->
     <div class="modal fade" id="previewModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen-sm-down modal-xl modal-dialog-centered">
-            <div class="modal-content bg-dark border-0">
+            <div class="modal-content bg-dark border-0 position-relative">
+                <!-- Prev / Next buttons -->
+                <button class="modal-nav-btn prev" id="modalPrevBtn" title="Previous (←)"><i
+                        class="bi bi-chevron-left"></i></button>
+                <button class="modal-nav-btn next" id="modalNextBtn" title="Next (→)"><i
+                        class="bi bi-chevron-right"></i></button>
+
                 <div class="modal-body p-3">
                     <div class="d-flex justify-content-between align-items-start">
                         <div>
@@ -121,7 +134,7 @@
                         </div>
                     </div>
 
-                    <div class="mt-3 d-flex justify-content-center align-items-center">
+                    <div class="mt-3 d-flex justify-content-center align-items-center position-relative">
                         <img id="modalImage" src="" alt="preview" class="img-fluid rounded shadow-lg"
                             style="max-height:80vh; object-fit:contain;" />
                     </div>
@@ -135,6 +148,7 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
+    <!-- Gallery script (shared) -->
     <script>window.GALLERY_MODE = "all";</script>
     <script src="scripts.js"></script>
 </body>

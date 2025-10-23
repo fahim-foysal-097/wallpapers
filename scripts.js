@@ -8,8 +8,9 @@
   const searchInput = document.getElementById("searchInput");
   const sortOptions = document.querySelectorAll(".sort-option");
   const downloadAllBtn = document.getElementById("downloadAllBtn");
+  const animatedEl = document.getElementById("animatedText");
 
-  // default behavior: set downloadAll link if present
+  // set downloadAll link if present
   if (downloadAllBtn) {
     downloadAllBtn.href = "wallpaper-all.zip";
     downloadAllBtn.setAttribute("download", "wallpaper-all.zip");
@@ -17,7 +18,6 @@
 
   // runtime mode: "all" or "favorites"
   const MODE = window.GALLERY_MODE === "favorites" ? "favorites" : "all";
-  // inline fallback favorites list (can be defined in favorites.html)
   const INLINE_FAVORITES = Array.isArray(window.FAVORITES)
     ? window.FAVORITES
     : [];
@@ -25,13 +25,18 @@
   let data = [];
   let filtered = [];
 
-  // modal elements
+  // modal elements and navigation
   const previewModalEl = document.getElementById("previewModal");
   const modal = previewModalEl ? new bootstrap.Modal(previewModalEl) : null;
   const modalImage = document.getElementById("modalImage");
   const modalFilename = document.getElementById("modalFilename");
   const modalMeta = document.getElementById("modalMeta");
   const modalDownload = document.getElementById("modalDownload");
+  const modalPrevBtn = document.getElementById("modalPrevBtn");
+  const modalNextBtn = document.getElementById("modalNextBtn");
+
+  let currentIndex = -1; // index into filtered[]
+  let modalVisible = false;
 
   function humanSize(n) {
     if (n < 1024) return n + " B";
@@ -39,6 +44,70 @@
     if (n < 1024 * 1024 * 1024) return (n / 1024 / 1024).toFixed(1) + " MB";
     return (n / 1024 / 1024 / 1024).toFixed(2) + " GB";
   }
+
+  /* -------------------- Typing animation -------------------- */
+  // Animates text switching between two phrases: original and "Download Wallpapers"
+  (function initTyping() {
+    if (!animatedEl) return;
+    const original =
+      animatedEl.textContent.trim() || "Discover Beautiful Wallpapers";
+    const alt = "Download Wallpapers";
+    const phrases = [original, alt];
+    const typingSpeed = 60; // ms per char
+    const deletingSpeed = 40;
+    const pauseAfterTyping = 1200; // ms
+    const pauseAfterDeleting = 350; // ms
+
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let mode = "typing"; // "typing" | "deleting"
+    let timeoutId = null;
+
+    function step() {
+      const text = phrases[phraseIndex];
+      if (mode === "typing") {
+        charIndex++;
+        animatedEl.textContent = text.slice(0, charIndex);
+        if (charIndex >= text.length) {
+          mode = "pauseAfterTyping";
+          timeoutId = setTimeout(() => {
+            mode = "deleting";
+            timeoutId = setTimeout(step, deletingSpeed);
+          }, pauseAfterTyping);
+          return;
+        }
+        timeoutId = setTimeout(step, typingSpeed);
+      } else if (mode === "deleting") {
+        charIndex--;
+        animatedEl.textContent = text.slice(0, charIndex);
+        if (charIndex <= 0) {
+          // switch phrase
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          mode = "pauseAfterDeleting";
+          timeoutId = setTimeout(() => {
+            mode = "typing";
+            charIndex = 0;
+            timeoutId = setTimeout(step, typingSpeed);
+          }, pauseAfterDeleting);
+          return;
+        }
+        timeoutId = setTimeout(step, deletingSpeed);
+      } else {
+        // initial start
+        mode = "typing";
+        charIndex = 0;
+        timeoutId = setTimeout(step, typingSpeed);
+      }
+    }
+
+    // start after small delay for smoothness
+    timeoutId = setTimeout(step, 700);
+
+    // optional: stop animation when modal is open (not necessary but can be done)
+    // we won't cancel; let it run.
+  })();
+
+  /* -------------------- Gallery rendering -------------------- */
 
   function renderSummary() {
     if (!summaryEl) return;
@@ -52,14 +121,14 @@
     galleryEl.innerHTML = "";
   }
 
-  function makeTile(item) {
+  function makeTile(item, idx) {
     const col = document.createElement("div");
     col.className = "col-6 col-sm-4 col-md-3 col-xl-2";
 
     const tile = document.createElement("div");
     tile.className = "tile";
 
-    // enforce 16:9 thumbnail
+    // wrapper to enforce 16:9
     const wrap = document.createElement("div");
     wrap.className = "thumb-wrap";
 
@@ -69,6 +138,8 @@
     img.decoding = "async";
     img.alt = item.filename;
     img.src = item.url;
+    img.dataset.index = String(idx); // assign index so we can navigate
+    img.dataset.filename = item.filename;
 
     img.onerror = () => {
       img.src =
@@ -78,7 +149,7 @@
         );
     };
 
-    img.addEventListener("click", () => openPreview(item));
+    img.addEventListener("click", () => openPreviewAtIndex(idx));
     wrap.appendChild(img);
 
     const footer = document.createElement("div");
@@ -125,21 +196,91 @@
       if (emptyState) emptyState.style.display = "none";
     }
     const frag = document.createDocumentFragment();
-    items.forEach((it) => frag.appendChild(makeTile(it)));
+    items.forEach((it, idx) => frag.appendChild(makeTile(it, idx)));
     galleryEl.appendChild(frag);
   }
 
-  function openPreview(item) {
-    if (!modal) return;
-    modalImage.src = item.url;
-    modalFilename.textContent = item.filename;
-    modalMeta.textContent = `${new Date(
-      item.modified
-    ).toLocaleString()} • ${humanSize(item.size)}`;
-    modalDownload.href = item.url;
-    modalDownload.setAttribute("download", item.filename);
-    modal.show();
+  /* -------------------- Modal navigation -------------------- */
+
+  function openPreviewAtIndex(idx) {
+    if (!Array.isArray(filtered) || idx < 0 || idx >= filtered.length) return;
+    currentIndex = idx;
+    showImageAt(currentIndex);
+    if (modal) modal.show();
   }
+
+  function showImageAt(idx) {
+    const item = filtered[idx];
+    if (!item) return;
+    if (modalImage) {
+      modalImage.src = item.url;
+      modalImage.alt = item.filename;
+    }
+    if (modalFilename) modalFilename.textContent = item.filename;
+    if (modalMeta)
+      modalMeta.textContent = `${new Date(
+        item.modified
+      ).toLocaleString()} • ${humanSize(item.size)}`;
+    if (modalDownload) {
+      modalDownload.href = item.url;
+      modalDownload.setAttribute("download", item.filename);
+    }
+    // update nav visibility (if at edges)
+    if (modalPrevBtn) modalPrevBtn.disabled = idx <= 0;
+    if (modalNextBtn) modalNextBtn.disabled = idx >= filtered.length - 1;
+  }
+
+  function showNext() {
+    if (currentIndex < filtered.length - 1) {
+      currentIndex++;
+      showImageAt(currentIndex);
+    }
+  }
+
+  function showPrev() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      showImageAt(currentIndex);
+    }
+  }
+
+  // attach nav button handlers
+  if (modalPrevBtn)
+    modalPrevBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      showPrev();
+    });
+  if (modalNextBtn)
+    modalNextBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      showNext();
+    });
+
+  // track modal show/hide to enable keyboard arrows only when modal visible
+  if (previewModalEl) {
+    previewModalEl.addEventListener("shown.bs.modal", () => {
+      modalVisible = true;
+    });
+    previewModalEl.addEventListener("hidden.bs.modal", () => {
+      modalVisible = false;
+    });
+  }
+
+  // keyboard navigation for modal
+  document.addEventListener("keydown", (ev) => {
+    if (!modalVisible) return;
+    if (ev.key === "ArrowRight") {
+      ev.preventDefault();
+      showNext();
+    } else if (ev.key === "ArrowLeft") {
+      ev.preventDefault();
+      showPrev();
+    } else if (ev.key === "Escape") {
+      // let bootstrap handle escape to close modal
+    }
+  });
+
+  /* -------------------- Sorting, searching, loading -------------------- */
 
   function applySearchSort() {
     const q =
@@ -212,7 +353,6 @@
   }
 
   async function init() {
-    // load wallpapers
     const all = await loadWallpapers();
 
     if (MODE === "all") {
@@ -231,14 +371,12 @@
         renderGrid(filtered);
         return;
       }
-      // create a lookup for fast match
       const lookup = new Map(all.map((i) => [i.filename, i]));
       const favEntries = [];
       favList.forEach((name) => {
         if (lookup.has(name)) favEntries.push(lookup.get(name));
       });
       data = favEntries;
-      // default: keep order as in favorites list
       filtered = data.slice();
       renderSummary();
       renderGrid(filtered);
@@ -255,6 +393,6 @@
     })
   );
 
-  // start
+  // initialize
   init();
 })();

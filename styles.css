@@ -145,6 +145,42 @@ body {
   padding: 0.5rem 0.9rem;
 }
 
+/* Animated subtitle */
+.animated-subtitle {
+  font-weight: 500;
+  color: rgba(230, 238, 248, 0.9);
+  margin-top: 0.25rem;
+  margin-bottom: 0.45rem;
+  display: inline-block;
+  min-height: 1.2em;
+  font-size: 0.98rem;
+  position: relative;
+}
+
+/* typing cursor as pseudo element */
+.animated-subtitle::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1.05em;
+  background: var(--white);
+  margin-left: 6px;
+  vertical-align: middle;
+  animation: blink 1s steps(1) infinite;
+  opacity: 0.95;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 0.95;
+  }
+  51%,
+  100% {
+    opacity: 0.15;
+  }
+}
+
 /* Gallery tiles */
 .tile {
   background: linear-gradient(
@@ -225,6 +261,37 @@ body {
   border-radius: 14px;
 }
 
+/* modal nav buttons */
+.modal-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 30;
+  width: 44px;
+  height: 64px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.28);
+  color: #fff;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  backdrop-filter: blur(4px);
+  transition: background 0.12s ease, transform 0.12s ease, opacity 0.12s ease;
+  opacity: 0.9;
+}
+.modal-nav-btn:hover {
+  background: rgba(0, 0, 0, 0.45);
+  transform: translateY(-50%) scale(1.03);
+}
+.modal-nav-btn.prev {
+  left: 8px;
+}
+.modal-nav-btn.next {
+  right: 8px;
+}
+
 /* responsive */
 @media (max-width: 576px) {
   .thumb-wrap {
@@ -235,4 +302,7 @@ body {
     height: 40px;
     font-size: 0.95rem;
   }
+  .modal-nav-btn {
+    display: none;
+  } /* hide nav buttons on very small screens — user can still swipe/keyboard */
 }
