@@ -1,6 +1,7 @@
-// scripts.js
+// scripts.js - gallery renderer used by index.html and favorites.html
 (() => {
   const JSON_PATH = "wallpapers.json";
+  const FAVORITES_JSON = "favorites.json"; // optional file you can add
   const galleryEl = document.getElementById("gallery");
   const summaryEl = document.getElementById("summary");
   const emptyState = document.getElementById("emptyState");
@@ -8,17 +9,25 @@
   const sortOptions = document.querySelectorAll(".sort-option");
   const downloadAllBtn = document.getElementById("downloadAllBtn");
 
+  // default behavior: set downloadAll link if present
   if (downloadAllBtn) {
     downloadAllBtn.href = "wallpaper-all.zip";
     downloadAllBtn.setAttribute("download", "wallpaper-all.zip");
   }
+
+  // runtime mode: "all" or "favorites"
+  const MODE = window.GALLERY_MODE === "favorites" ? "favorites" : "all";
+  // inline fallback favorites list (can be defined in favorites.html)
+  const INLINE_FAVORITES = Array.isArray(window.FAVORITES)
+    ? window.FAVORITES
+    : [];
 
   let data = [];
   let filtered = [];
 
   // modal elements
   const previewModalEl = document.getElementById("previewModal");
-  const modal = new bootstrap.Modal(previewModalEl);
+  const modal = previewModalEl ? new bootstrap.Modal(previewModalEl) : null;
   const modalImage = document.getElementById("modalImage");
   const modalFilename = document.getElementById("modalFilename");
   const modalMeta = document.getElementById("modalMeta");
@@ -32,12 +41,14 @@
   }
 
   function renderSummary() {
+    if (!summaryEl) return;
     summaryEl.textContent = `${filtered.length} wallpaper${
       filtered.length !== 1 ? "s" : ""
     }`;
   }
 
   function clearGallery() {
+    if (!galleryEl) return;
     galleryEl.innerHTML = "";
   }
 
@@ -48,7 +59,7 @@
     const tile = document.createElement("div");
     tile.className = "tile";
 
-    // wrapper to enforce 16:9
+    // enforce 16:9 thumbnail
     const wrap = document.createElement("div");
     wrap.className = "thumb-wrap";
 
@@ -106,11 +117,12 @@
 
   function renderGrid(items) {
     clearGallery();
+    if (!galleryEl) return;
     if (!items.length) {
-      emptyState.style.display = "";
+      if (emptyState) emptyState.style.display = "";
       return;
     } else {
-      emptyState.style.display = "none";
+      if (emptyState) emptyState.style.display = "none";
     }
     const frag = document.createDocumentFragment();
     items.forEach((it) => frag.appendChild(makeTile(it)));
@@ -118,6 +130,7 @@
   }
 
   function openPreview(item) {
+    if (!modal) return;
     modalImage.src = item.url;
     modalFilename.textContent = item.filename;
     modalMeta.textContent = `${new Date(
@@ -129,7 +142,10 @@
   }
 
   function applySearchSort() {
-    const q = searchInput.value.trim().toLowerCase();
+    const q =
+      searchInput && searchInput.value
+        ? searchInput.value.trim().toLowerCase()
+        : "";
     filtered = data.filter((it) => {
       if (!q) return true;
       if (it.filename.toLowerCase().includes(q)) return true;
@@ -168,24 +184,70 @@
     renderGrid(filtered);
   }
 
-  async function init() {
+  async function loadWallpapers() {
     try {
       const resp = await fetch(JSON_PATH, { cache: "no-store" });
       if (!resp.ok) throw new Error("Could not load wallpapers.json");
       const json = await resp.json();
-      data = json.wallpapers || [];
+      return json.wallpapers || [];
+    } catch (err) {
+      console.error("Failed to load", JSON_PATH, err);
+      return [];
+    }
+  }
+
+  async function loadFavoritesList() {
+    // try favorites.json first
+    try {
+      const resp = await fetch(FAVORITES_JSON, { cache: "no-store" });
+      if (resp.ok) {
+        const json = await resp.json();
+        if (Array.isArray(json.favorites)) return json.favorites;
+      }
+    } catch (e) {
+      // ignore; fallback to INLINE_FAVORITES
+    }
+    // fallback to inline list
+    return INLINE_FAVORITES || [];
+  }
+
+  async function init() {
+    // load wallpapers
+    const all = await loadWallpapers();
+
+    if (MODE === "all") {
+      data = all.slice();
+      // default newest first
       data.sort((a, b) => new Date(b.modified) - new Date(a.modified));
       filtered = data.slice();
       renderSummary();
       renderGrid(filtered);
-    } catch (err) {
-      summaryEl.textContent = "Failed to load wallpapers.json";
-      console.error(err);
-      emptyState.style.display = "";
+    } else if (MODE === "favorites") {
+      const favList = await loadFavoritesList();
+      if (!favList.length) {
+        data = [];
+        filtered = [];
+        renderSummary();
+        renderGrid(filtered);
+        return;
+      }
+      // create a lookup for fast match
+      const lookup = new Map(all.map((i) => [i.filename, i]));
+      const favEntries = [];
+      favList.forEach((name) => {
+        if (lookup.has(name)) favEntries.push(lookup.get(name));
+      });
+      data = favEntries;
+      // default: keep order as in favorites list
+      filtered = data.slice();
+      renderSummary();
+      renderGrid(filtered);
     }
   }
 
-  searchInput.addEventListener("input", () => applySearchSort());
+  // events
+  if (searchInput)
+    searchInput.addEventListener("input", () => applySearchSort());
   sortOptions.forEach((opt) =>
     opt.addEventListener("click", (e) => {
       e.preventDefault();
@@ -193,5 +255,6 @@
     })
   );
 
+  // start
   init();
 })();
