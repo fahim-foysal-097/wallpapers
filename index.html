@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Wallpaper Gallery</title>
+    <link rel="icon" href="assets/icon.png" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,8 +22,12 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/cursor.css" />
 
-    <meta name="description" content="Wallpapers gallery - browse and download wallpapers from this repository." />
+    <meta name="description" content="Wallpapers gallery - browse and download desktop wallpapers." />
+
+    <meta name keywords
+        content="Wallpaper, Wallpapers, Desktop, Desktop Wallpaper, Best wallpaper, Wallpaper github, linux wallpaper" />
 </head>
 
 <body class="bg-dark text-light">
@@ -34,7 +39,7 @@
     <nav class="navbar navbar-dark sticky-top bg-transparent blur-nav px-3 py-2 border-bottom">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                <span class="logo-circle">W</span>
+                <img src="assets/icon.png" alt="Logo" class="logo-image">
                 <div>
                     <div class="h6 mb-0">Wallpaper Gallery</div>
                     <small class="text-muted">Discover and Download</small>
@@ -151,6 +156,7 @@
     <!-- Gallery script (shared) -->
     <script>window.GALLERY_MODE = "all";</script>
     <script src="js/scripts.js"></script>
+    <script src="js/cursor.js"></script>
 </body>
 
 </html>

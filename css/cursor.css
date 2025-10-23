@@ -1,0 +1,104 @@
+:root {
+  --cursor-size: 28px; /* slightly smaller */
+  --cursor-ring-width: 2px;
+  --ripple-size: 18px; /* subtle ripple */
+  --ripple-duration: 380ms; /* snappy ripple */
+  --accent1: 124, 92, 255; /* purple */
+  --accent2: 61, 214, 199; /* teal */
+}
+
+/* core cursor */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--cursor-size);
+  height: var(--cursor-size);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 999999;
+  background: linear-gradient(
+    145deg,
+    rgba(var(--accent1), 0.15),
+    rgba(var(--accent2), 0.12)
+  );
+  border: var(--cursor-ring-width) solid rgba(var(--accent2), 0.6);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* inner subtle ring */
+.custom-cursor::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  pointer-events: none;
+}
+
+/* hover on interactive elements */
+.custom-cursor.cursor--hover {
+  transform: translate3d(-50%, -50%, 0) scale(1.5);
+  background: linear-gradient(
+    145deg,
+    rgba(var(--accent2), 0.18),
+    rgba(var(--accent1), 0.14)
+  );
+  border-color: rgba(var(--accent1), 0.7);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45),
+    0 0 12px rgba(var(--accent2), 0.06);
+}
+
+/* pressed state */
+.custom-cursor.cursor--down {
+  transform: translate3d(-50%, -50%, 0) scale(0.9);
+  opacity: 0.95;
+}
+
+/* subtle click ripple */
+.cursor-ripple {
+  position: fixed;
+  width: var(--ripple-size);
+  height: var(--ripple-size);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(var(--accent2), 0.12) 0%,
+    rgba(var(--accent1), 0.06) 70%,
+    transparent 100%
+  );
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: none;
+  z-index: 999998;
+  animation: ripple-effect var(--ripple-duration) ease-out forwards;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+@keyframes ripple-effect {
+  to {
+    transform: translate(-50%, -50%) scale(8);
+    opacity: 0;
+  }
+}
+
+/* hide system cursor on desktop */
+html,
+body,
+*,
+a,
+button,
+input,
+textarea,
+select,
+[contenteditable] {
+  cursor: none !important;
+}
+
+/* hide custom cursor on touch/coarse devices */
+@media (pointer: coarse), (hover: none) {
+  .custom-cursor,
+  .cursor-ripple {
+    display: none !important;
+  }
+}

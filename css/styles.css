@@ -1,5 +1,3 @@
-/* styles.css - modern dark theme with two-color gradients, blobs, glassmorphism, 16:9 thumbnails */
-
 /* Fonts */
 body,
 button,
@@ -304,5 +302,13 @@ body {
   }
   .modal-nav-btn {
     display: none;
-  } /* hide nav buttons on very small screens — user can still swipe/keyboard */
+  } /* hide nav buttons on very small screens - user can still swipe/keyboard */
+}
+
+.logo-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 25%;
+  border: 2px solid #ffffff33;
 }
