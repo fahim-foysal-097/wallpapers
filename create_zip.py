@@ -13,19 +13,15 @@ from pathlib import Path
 import zipfile
 import sys
 
-# locate repo root relative to this script file
-SCRIPT_DIR = Path(__file__).resolve().parent
-REPO_ROOT = SCRIPT_DIR.parent
-
-WALLPAPER_DIR = REPO_ROOT / "wallpapers"
-OUTPUT_ZIP = REPO_ROOT / "wallpaper-all.zip"
+WALLPAPER_DIR = Path("wallpapers")
+OUTPUT_ZIP = Path("wallpaper-all.zip")
 
 def main():
     if not WALLPAPER_DIR.exists() or not WALLPAPER_DIR.is_dir():
         print(f"Error: '{WALLPAPER_DIR}' not found. Create it and put images inside.")
         sys.exit(1)
 
-    # Remove existing output if you want fresh overwrite (optional)
+    # Remove existing output for fresh overwrite (optional)
     if OUTPUT_ZIP.exists():
         OUTPUT_ZIP.unlink()
 
@@ -33,11 +29,10 @@ def main():
     with zipfile.ZipFile(OUTPUT_ZIP, mode="w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
         for p in sorted(WALLPAPER_DIR.rglob("*")):
             if p.is_file():
-                # IMPORTANT: store path relative to repo root, NOT including '..' or absolute components
-                arcname = p.relative_to(REPO_ROOT).as_posix()  # e.g. "wallpapers/subdir/file.jpg"
-                print(f"Adding {p} as {arcname}")
+                # store with path relative to repo root so zip contains wallpapers/<name>
+                arcname = p.as_posix()
+                print(f"Adding {arcname}")
                 zf.write(p, arcname)
-
     print(f"Wrote {OUTPUT_ZIP} ({OUTPUT_ZIP.stat().st_size} bytes)")
 
     # quick integrity check

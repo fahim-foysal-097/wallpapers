@@ -14,7 +14,7 @@ A **static gallery site** to browse, preview, and download wallpapers stored in 
 
 ## Scripts
 
-Use the following Python scripts included in `scripts/`:
+Use the following Python scripts included in the repository:
 
 | Script             | Description                                  |
 | ------------------ | -------------------------------------------- |

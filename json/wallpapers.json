@@ -1,16 +1,16 @@
 {
-  "generated_at": "2025-10-23T19:24:36.719721+00:00",
+  "generated_at": "2025-10-23T20:03:07.660442+00:00",
   "count": 2,
   "wallpapers": [
     {
       "filename": "3squares.png",
-      "url": "../wallpapers/3squares.png",
+      "url": "wallpapers/3squares.png",
       "size": 3815,
       "modified": "2025-10-23T19:06:36.414313+00:00"
     },
     {
       "filename": "a_bird_on_a_statue.jpg",
-      "url": "../wallpapers/a_bird_on_a_statue.jpg",
+      "url": "wallpapers/a_bird_on_a_statue.jpg",
       "size": 871165,
       "modified": "2025-10-23T19:07:04.556441+00:00"
     }
