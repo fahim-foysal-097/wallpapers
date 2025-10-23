@@ -1,5 +1,4 @@
 // scripts.js
-// Modern gallery: fetch wallpapers.json and render tiles
 (() => {
   const JSON_PATH = "wallpapers.json";
   const galleryEl = document.getElementById("gallery");
@@ -7,6 +6,13 @@
   const emptyState = document.getElementById("emptyState");
   const searchInput = document.getElementById("searchInput");
   const sortOptions = document.querySelectorAll(".sort-option");
+  const downloadAllBtn = document.getElementById("downloadAllBtn");
+
+  // set downloadAll link (assumes a zip at repo root named wallpaper-all.zip)
+  if (downloadAllBtn) {
+    downloadAllBtn.href = "wallpaper-all.zip";
+    downloadAllBtn.setAttribute("download", "wallpaper-all.zip");
+  }
 
   let data = [];
   let filtered = [];
@@ -43,7 +49,6 @@
     const tile = document.createElement("div");
     tile.className = "tile";
 
-    // image (use img for accessibility + lazy)
     const img = document.createElement("img");
     img.className = "thumb";
     img.loading = "lazy";
@@ -51,7 +56,6 @@
     img.alt = item.filename;
     img.src = item.url;
 
-    // fallback small placeholder if image fails
     img.onerror = () => {
       img.src =
         "data:image/svg+xml;charset=UTF-8," +
@@ -68,7 +72,6 @@
     const meta = document.createElement("div");
     meta.className = "meta";
     meta.title = item.filename;
-    const date = new Date(item.modified).toLocaleString();
     meta.textContent = item.filename;
 
     const actions = document.createElement("div");
@@ -124,7 +127,6 @@
   function applySearchSort() {
     const q = searchInput.value.trim().toLowerCase();
     filtered = data.filter((it) => {
-      // match filename, size, modified
       if (!q) return true;
       if (it.filename.toLowerCase().includes(q)) return true;
       if (humanSize(it.size).toLowerCase().includes(q)) return true;
@@ -162,14 +164,12 @@
     renderGrid(filtered);
   }
 
-  // fetch JSON and initialize
   async function init() {
     try {
       const resp = await fetch(JSON_PATH, { cache: "no-store" });
       if (!resp.ok) throw new Error("Could not load wallpapers.json");
       const json = await resp.json();
       data = json.wallpapers || [];
-      // default: newest first
       data.sort((a, b) => new Date(b.modified) - new Date(a.modified));
       filtered = data.slice();
       renderSummary();
@@ -181,19 +181,13 @@
     }
   }
 
-  // events
-  searchInput.addEventListener("input", () => {
-    applySearchSort();
-  });
-
-  sortOptions.forEach((opt) => {
+  searchInput.addEventListener("input", () => applySearchSort());
+  sortOptions.forEach((opt) =>
     opt.addEventListener("click", (e) => {
       e.preventDefault();
-      const mode = opt.getAttribute("data-sort");
-      applySortMode(mode);
-    });
-  });
+      applySortMode(opt.getAttribute("data-sort"));
+    })
+  );
 
-  // initialize
   init();
 })();
