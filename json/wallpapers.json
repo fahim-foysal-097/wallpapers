@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-10-23T20:03:07.660442+00:00",
-  "count": 2,
+  "generated_at": "2025-10-24T18:32:53.922902+00:00",
+  "count": 8,
   "wallpapers": [
     {
       "filename": "3squares.png",
@@ -13,6 +13,42 @@
       "url": "wallpapers/a_bird_on_a_statue.jpg",
       "size": 871165,
       "modified": "2025-10-23T19:07:04.556441+00:00"
+    },
+    {
+      "filename": "big_robot.jpg",
+      "url": "wallpapers/big_robot.jpg",
+      "size": 944649,
+      "modified": "2025-10-24T18:27:50.972145+00:00"
+    },
+    {
+      "filename": "boat.png",
+      "url": "wallpapers/boat.png",
+      "size": 7351508,
+      "modified": "2025-10-24T18:27:11.230491+00:00"
+    },
+    {
+      "filename": "darek-zabrocki-marine-11.jpg",
+      "url": "wallpapers/darek-zabrocki-marine-11.jpg",
+      "size": 2052904,
+      "modified": "2025-10-24T18:28:35.122356+00:00"
+    },
+    {
+      "filename": "estrategy-minimal.png",
+      "url": "wallpapers/estrategy-minimal.png",
+      "size": 48149,
+      "modified": "2025-10-24T18:28:55.013170+00:00"
+    },
+    {
+      "filename": "retro_pc.gif",
+      "url": "wallpapers/retro_pc.gif",
+      "size": 597307,
+      "modified": "2025-10-24T18:26:33.703261+00:00"
+    },
+    {
+      "filename": "waterfall.gif",
+      "url": "wallpapers/waterfall.gif",
+      "size": 170229,
+      "modified": "2025-10-24T18:29:27.368915+00:00"
     }
   ]
 }
