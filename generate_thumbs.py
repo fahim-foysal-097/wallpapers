@@ -21,7 +21,7 @@ import sys
 # CONFIG
 SRC_DESKTOP = Path("wallpapers")
 SRC_MOBILE = Path("wallpapers-mobile")
-OUT_ROOT = Path("thumbnails")
+OUT_ROOT = Path("thumbnail")
 OUT_DESKTOP = OUT_ROOT / "wallpapers-thumb"
 OUT_MOBILE = OUT_ROOT / "mobile-wallpapers-thumb"
 
@@ -34,7 +34,7 @@ RASTER_EXTS = {".png", ".jpg", ".jpeg", ".webp", ".bmp", ".tiff", ".gif"}
 
 # output format and options
 OUT_FORMAT = "WEBP"  # use WEBP for smaller filesize; change to "JPEG" for .jpg output
-OUT_QUALITY = 85
+OUT_QUALITY = 90
 
 def ensure_dir(p: Path):
     p.mkdir(parents=True, exist_ok=True)
