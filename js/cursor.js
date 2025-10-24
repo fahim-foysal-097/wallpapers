@@ -20,7 +20,7 @@
 
   // hover effect on interactive elements
   const hoverSelector =
-    "a, button, .btn, input, textarea, select, [role=button], .gallery-card, .nav-link";
+    "a, button, .btn, input, textarea, select, [role=button], .gallery-card, .nav-link, .thumb";
   function bindHover() {
     document.querySelectorAll(hoverSelector).forEach((el) => {
       if (el.__cursorBound) return;

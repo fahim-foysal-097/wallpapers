@@ -46,13 +46,14 @@
   }
 
   /* -------------------- Typing animation -------------------- */
-  // Animates text switching between two phrases: original and "Download Wallpapers"
+  // Animates text switching between phrases
   (function initTyping() {
     if (!animatedEl) return;
     const original =
       animatedEl.textContent.trim() || "Discover Beautiful Wallpapers";
     const alt = "Download Wallpapers";
-    const phrases = [original, alt];
+    const alt2 = "If you want to add wallpapers, go to the github repository";
+    const phrases = [original, alt, alt2];
     const typingSpeed = 60; // ms per char
     const deletingSpeed = 40;
     const pauseAfterTyping = 1200; // ms
