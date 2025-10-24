@@ -16,13 +16,14 @@ If you want to **add wallpapers**, fork the repository --> add wallpapers --> op
 
 ## Scripts
 
-Use the following Python scripts included in the repository:
+Use the following Python scripts included in the repository (use in order) :
 
-| Script             | Description                                  |
-| ------------------ | -------------------------------------------- |
-| `generate_json.py` | Generate `json` for all wallpapers.          |
-| `add_favorites.py` | Add a wallpaper to favorites list.           |
-| `create_zip.py`    | Create a zip file containing all wallpapers. |
+| Script               | Description                                  |
+| -------------------- | -------------------------------------------- |
+| `generate_thumbs.py` | Generate `thumbnails` for all wallpapers.    |
+| `generate_json.py`   | Generate `json` for all wallpapers.          |
+| `add_favorites.py`   | Add a wallpaper to favorites list.           |
+| `create_zip.py`      | Create a zip file containing all wallpapers. |
 
 ## Note
 

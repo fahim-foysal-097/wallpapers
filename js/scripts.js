@@ -138,8 +138,13 @@
     img.loading = "lazy";
     img.decoding = "async";
     img.alt = item.filename;
-    img.src = item.url;
-    img.dataset.index = String(idx); // assign index so we can navigate
+
+    // show thumbnail if present for faster load, otherwise full url
+    img.src = item.thumb_url ? item.thumb_url : item.url;
+
+    // store full-res in data attribute so modal uses full image
+    img.dataset.fullUrl = item.url;
+    img.dataset.index = String(idx);
     img.dataset.filename = item.filename;
 
     img.onerror = () => {

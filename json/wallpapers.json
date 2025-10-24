@@ -1,52 +1,95 @@
 {
-  "generated_at": "2025-10-24T18:32:53.922902+00:00",
-  "count": 8,
+  "generated_at": "2025-10-24T19:19:58.368990+00:00",
+  "count": 13,
   "wallpapers": [
     {
       "filename": "3squares.png",
       "url": "wallpapers/3squares.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/3squares.webp",
       "size": 3815,
       "modified": "2025-10-23T19:06:36.414313+00:00"
     },
     {
       "filename": "a_bird_on_a_statue.jpg",
       "url": "wallpapers/a_bird_on_a_statue.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/a_bird_on_a_statue.webp",
       "size": 871165,
       "modified": "2025-10-23T19:07:04.556441+00:00"
     },
     {
       "filename": "big_robot.jpg",
       "url": "wallpapers/big_robot.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/big_robot.webp",
       "size": 944649,
       "modified": "2025-10-24T18:27:50.972145+00:00"
     },
     {
       "filename": "boat.png",
       "url": "wallpapers/boat.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/boat.webp",
       "size": 7351508,
       "modified": "2025-10-24T18:27:11.230491+00:00"
     },
     {
       "filename": "darek-zabrocki-marine-11.jpg",
       "url": "wallpapers/darek-zabrocki-marine-11.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/darek-zabrocki-marine-11.webp",
       "size": 2052904,
       "modified": "2025-10-24T18:28:35.122356+00:00"
     },
     {
       "filename": "estrategy-minimal.png",
       "url": "wallpapers/estrategy-minimal.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/estrategy-minimal.webp",
       "size": 48149,
       "modified": "2025-10-24T18:28:55.013170+00:00"
     },
     {
+      "filename": "futuristic-cityscape.jpg",
+      "url": "wallpapers/futuristic-cityscape.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/futuristic-cityscape.webp",
+      "size": 2036509,
+      "modified": "2025-10-24T19:12:42.632503+00:00"
+    },
+    {
+      "filename": "futuristicAncientTree.png",
+      "url": "wallpapers/futuristicAncientTree.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/futuristicAncientTree.webp",
+      "size": 3467130,
+      "modified": "2025-10-24T19:12:45.868115+00:00"
+    },
+    {
+      "filename": "green-sun.jpg",
+      "url": "wallpapers/green-sun.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/green-sun.webp",
+      "size": 26453,
+      "modified": "2025-10-24T19:13:09.837331+00:00"
+    },
+    {
+      "filename": "groove-edit.jpg",
+      "url": "wallpapers/groove-edit.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/groove-edit.webp",
+      "size": 651369,
+      "modified": "2025-10-24T19:13:15.706592+00:00"
+    },
+    {
+      "filename": "minecraft.jpg",
+      "url": "wallpapers/minecraft.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/minecraft.webp",
+      "size": 1032026,
+      "modified": "2025-10-24T19:11:37.859327+00:00"
+    },
+    {
       "filename": "retro_pc.gif",
       "url": "wallpapers/retro_pc.gif",
+      "thumb_url": "thumbnail/wallpapers-thumb/retro_pc.webp",
       "size": 597307,
       "modified": "2025-10-24T18:26:33.703261+00:00"
     },
     {
       "filename": "waterfall.gif",
       "url": "wallpapers/waterfall.gif",
+      "thumb_url": "thumbnail/wallpapers-thumb/waterfall.webp",
       "size": 170229,
       "modified": "2025-10-24T18:29:27.368915+00:00"
     }

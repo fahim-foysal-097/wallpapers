@@ -1,46 +1,81 @@
 {
-  "generated_at": "2025-10-24T18:32:53.923750+00:00",
-  "count": 7,
+  "generated_at": "2025-10-24T19:19:58.370714+00:00",
+  "count": 11,
   "wallpapers": [
     {
       "filename": "Acclaimed_rectangle.jpg",
       "url": "wallpapers-mobile/Acclaimed_rectangle.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/Acclaimed_rectangle.webp",
       "size": 475560,
       "modified": "2025-10-24T18:25:22.124443+00:00"
     },
     {
       "filename": "asciiflowers.png",
       "url": "wallpapers-mobile/asciiflowers.png",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/asciiflowers.webp",
       "size": 2746224,
       "modified": "2025-10-24T18:25:52.303389+00:00"
     },
     {
       "filename": "cat_landscape.jpg",
       "url": "wallpapers-mobile/cat_landscape.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/cat_landscape.webp",
       "size": 290995,
       "modified": "2025-10-24T18:24:37.166913+00:00"
     },
     {
       "filename": "cube.jpg",
       "url": "wallpapers-mobile/cube.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/cube.webp",
       "size": 102261,
       "modified": "2025-10-24T18:26:07.568568+00:00"
     },
     {
+      "filename": "CYBERPUNK samurai.jpeg",
+      "url": "wallpapers-mobile/CYBERPUNK samurai.jpeg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/CYBERPUNK samurai.webp",
+      "size": 1469964,
+      "modified": "2025-10-24T19:14:12.369885+00:00"
+    },
+    {
+      "filename": "ERR_NAME.jpeg",
+      "url": "wallpapers-mobile/ERR_NAME.jpeg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/ERR_NAME.webp",
+      "size": 403441,
+      "modified": "2025-10-24T19:15:01.894908+00:00"
+    },
+    {
+      "filename": "evening.jpg",
+      "url": "wallpapers-mobile/evening.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/evening.webp",
+      "size": 279976,
+      "modified": "2025-10-24T19:17:00.348897+00:00"
+    },
+    {
       "filename": "keyhole.png",
       "url": "wallpapers-mobile/keyhole.png",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/keyhole.webp",
       "size": 2053984,
       "modified": "2025-10-24T18:25:58.700937+00:00"
     },
     {
+      "filename": "reach-for-it.png",
+      "url": "wallpapers-mobile/reach-for-it.png",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/reach-for-it.webp",
+      "size": 2087937,
+      "modified": "2025-10-24T19:14:42.206516+00:00"
+    },
+    {
       "filename": "skull.jpg",
       "url": "wallpapers-mobile/skull.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/skull.webp",
       "size": 1199636,
       "modified": "2025-10-24T18:25:06.595993+00:00"
     },
     {
       "filename": "snow_cat.jpg",
       "url": "wallpapers-mobile/snow_cat.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/snow_cat.webp",
       "size": 300252,
       "modified": "2025-10-24T18:24:07.089094+00:00"
     }

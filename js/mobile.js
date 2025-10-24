@@ -47,9 +47,15 @@
 
     const img = document.createElement("img");
     img.className = "thumb";
-    img.src = entry.url;
     img.alt = entry.filename;
     img.loading = "lazy";
+    img.decoding = "async";
+
+    // use thumb if available for speed
+    img.src = entry.thumb_url ? entry.thumb_url : entry.url;
+
+    // store full-res in dataset so modal uses it
+    img.dataset.fullUrl = entry.url;
 
     thumbWrap.appendChild(img);
 
