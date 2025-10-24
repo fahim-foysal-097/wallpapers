@@ -1,95 +1,165 @@
 {
-  "generated_at": "2025-10-24T19:19:58.368990+00:00",
-  "count": 13,
+  "generated_at": "2025-10-24T20:23:15.415842+00:00",
+  "count": 23,
   "wallpapers": [
     {
       "filename": "3squares.png",
       "url": "wallpapers/3squares.png",
-      "thumb_url": "thumbnail/wallpapers-thumb/3squares.webp",
+      "thumb_url": null,
       "size": 3815,
       "modified": "2025-10-23T19:06:36.414313+00:00"
     },
     {
       "filename": "a_bird_on_a_statue.jpg",
       "url": "wallpapers/a_bird_on_a_statue.jpg",
-      "thumb_url": "thumbnail/wallpapers-thumb/a_bird_on_a_statue.webp",
+      "thumb_url": null,
       "size": 871165,
       "modified": "2025-10-23T19:07:04.556441+00:00"
     },
     {
+      "filename": "abandoned_boat.png",
+      "url": "wallpapers/abandoned_boat.png",
+      "thumb_url": null,
+      "size": 5106881,
+      "modified": "2025-10-24T20:15:36.583526+00:00"
+    },
+    {
       "filename": "big_robot.jpg",
       "url": "wallpapers/big_robot.jpg",
-      "thumb_url": "thumbnail/wallpapers-thumb/big_robot.webp",
+      "thumb_url": null,
       "size": 944649,
       "modified": "2025-10-24T18:27:50.972145+00:00"
     },
     {
       "filename": "boat.png",
       "url": "wallpapers/boat.png",
-      "thumb_url": "thumbnail/wallpapers-thumb/boat.webp",
+      "thumb_url": null,
       "size": 7351508,
       "modified": "2025-10-24T18:27:11.230491+00:00"
     },
     {
+      "filename": "castle.jpg",
+      "url": "wallpapers/castle.jpg",
+      "thumb_url": null,
+      "size": 3627582,
+      "modified": "2025-10-24T20:17:36.726415+00:00"
+    },
+    {
       "filename": "darek-zabrocki-marine-11.jpg",
       "url": "wallpapers/darek-zabrocki-marine-11.jpg",
-      "thumb_url": "thumbnail/wallpapers-thumb/darek-zabrocki-marine-11.webp",
+      "thumb_url": null,
       "size": 2052904,
       "modified": "2025-10-24T18:28:35.122356+00:00"
     },
     {
+      "filename": "darkpurplewoods.png",
+      "url": "wallpapers/darkpurplewoods.png",
+      "thumb_url": null,
+      "size": 5514983,
+      "modified": "2025-10-24T20:18:08.657859+00:00"
+    },
+    {
       "filename": "estrategy-minimal.png",
       "url": "wallpapers/estrategy-minimal.png",
-      "thumb_url": "thumbnail/wallpapers-thumb/estrategy-minimal.webp",
+      "thumb_url": null,
       "size": 48149,
       "modified": "2025-10-24T18:28:55.013170+00:00"
     },
     {
       "filename": "futuristic-cityscape.jpg",
       "url": "wallpapers/futuristic-cityscape.jpg",
-      "thumb_url": "thumbnail/wallpapers-thumb/futuristic-cityscape.webp",
+      "thumb_url": null,
       "size": 2036509,
       "modified": "2025-10-24T19:12:42.632503+00:00"
     },
     {
       "filename": "futuristicAncientTree.png",
       "url": "wallpapers/futuristicAncientTree.png",
-      "thumb_url": "thumbnail/wallpapers-thumb/futuristicAncientTree.webp",
+      "thumb_url": null,
       "size": 3467130,
       "modified": "2025-10-24T19:12:45.868115+00:00"
     },
     {
       "filename": "green-sun.jpg",
       "url": "wallpapers/green-sun.jpg",
-      "thumb_url": "thumbnail/wallpapers-thumb/green-sun.webp",
+      "thumb_url": null,
       "size": 26453,
       "modified": "2025-10-24T19:13:09.837331+00:00"
     },
     {
       "filename": "groove-edit.jpg",
       "url": "wallpapers/groove-edit.jpg",
-      "thumb_url": "thumbnail/wallpapers-thumb/groove-edit.webp",
+      "thumb_url": null,
       "size": 651369,
       "modified": "2025-10-24T19:13:15.706592+00:00"
     },
     {
+      "filename": "lone_house.jpg",
+      "url": "wallpapers/lone_house.jpg",
+      "thumb_url": null,
+      "size": 569200,
+      "modified": "2025-10-24T20:15:18.605127+00:00"
+    },
+    {
       "filename": "minecraft.jpg",
       "url": "wallpapers/minecraft.jpg",
-      "thumb_url": "thumbnail/wallpapers-thumb/minecraft.webp",
+      "thumb_url": null,
       "size": 1032026,
       "modified": "2025-10-24T19:11:37.859327+00:00"
     },
     {
+      "filename": "mountains.png",
+      "url": "wallpapers/mountains.png",
+      "thumb_url": null,
+      "size": 10625271,
+      "modified": "2025-10-24T20:14:12.367129+00:00"
+    },
+    {
+      "filename": "poles.png",
+      "url": "wallpapers/poles.png",
+      "thumb_url": null,
+      "size": 7981049,
+      "modified": "2025-10-24T20:13:32.480191+00:00"
+    },
+    {
+      "filename": "red_planet.jpg",
+      "url": "wallpapers/red_planet.jpg",
+      "thumb_url": null,
+      "size": 1760980,
+      "modified": "2025-10-24T20:12:53.286406+00:00"
+    },
+    {
       "filename": "retro_pc.gif",
       "url": "wallpapers/retro_pc.gif",
-      "thumb_url": "thumbnail/wallpapers-thumb/retro_pc.webp",
+      "thumb_url": null,
       "size": 597307,
       "modified": "2025-10-24T18:26:33.703261+00:00"
     },
     {
+      "filename": "tower_cloud.png",
+      "url": "wallpapers/tower_cloud.png",
+      "thumb_url": null,
+      "size": 12260772,
+      "modified": "2025-10-24T20:14:31.040921+00:00"
+    },
+    {
+      "filename": "wallhaven-house.jpg",
+      "url": "wallpapers/wallhaven-house.jpg",
+      "thumb_url": null,
+      "size": 222745,
+      "modified": "2025-10-24T20:13:17.396267+00:00"
+    },
+    {
+      "filename": "water_tree.png",
+      "url": "wallpapers/water_tree.png",
+      "thumb_url": null,
+      "size": 2840428,
+      "modified": "2025-10-24T20:16:54.784875+00:00"
+    },
+    {
       "filename": "waterfall.gif",
       "url": "wallpapers/waterfall.gif",
-      "thumb_url": "thumbnail/wallpapers-thumb/waterfall.webp",
+      "thumb_url": null,
       "size": 170229,
       "modified": "2025-10-24T18:29:27.368915+00:00"
     }

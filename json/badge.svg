@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="20" role="img" aria-label="wallpapers: 39">
+  <title>wallpapers: 39</title>
+  <linearGradient id="s" x2="0" y2="100%">
+    <stop offset="0" stop-color="#fff" stop-opacity=".1"/>
+    <stop offset="1" stop-opacity=".05"/>
+  </linearGradient>
+
+  <!-- background -->
+  <rect rx="4" width="128" height="20" fill="#555"/>
+  <rect rx="4" x="88" width="40" height="20" fill="#8A2BE2"/>
+
+  <!-- overlay for subtle gloss -->
+  <rect rx="4" width="128" height="20" fill="url(#s)"/>
+
+  <!-- divider -->
+  <rect x="88" width="1" height="20" fill="#000" opacity="0.2"/>
+
+  <!-- text -->
+  <g fill="#fff" text-anchor="middle" font-family="Verdana,DejaVu Sans,Segoe UI,Arial,sans-serif" font-size="11">
+    <text x="44.0" y="14.0" fill="#fff" fill-opacity="0.9">wallpapers</text>
+    <text x="108.0" y="14.0" fill="#fff" font-weight="700">39</text>
+  </g>
+</svg>

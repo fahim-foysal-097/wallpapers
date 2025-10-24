@@ -2,7 +2,7 @@
   <img src="assets/icon.png" alt="Site Icon" width="80" />
 </p>
 
-# Wallpaper Gallery <img src="https://img.shields.io/badge/2%20wallpapers-8A2BE2">
+# Wallpaper Gallery <img src="json/badge.svg" alt="(wallpaper-count)">
 
 A **static gallery site** to browse, preview, and download wallpapers stored in the repository's `wallpapers/` folder.
 
@@ -24,6 +24,9 @@ Use the following Python scripts included in the repository (use in order) :
 | `generate_json.py`   | Generate `json` for all wallpapers.          |
 | `add_favorites.py`   | Add a wallpaper to favorites list.           |
 | `create_zip.py`      | Create a zip file containing all wallpapers. |
+
+or you just run :
+`build_all.py` to do all in order.
 
 ## Note
 

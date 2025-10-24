@@ -1,2 +1,4 @@
 .directory
 .icon.ico
+.venv/
+.vscode/

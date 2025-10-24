@@ -21,19 +21,19 @@ import sys
 # CONFIG
 SRC_DESKTOP = Path("wallpapers")
 SRC_MOBILE = Path("wallpapers-mobile")
-OUT_ROOT = Path("thumbnail")
+OUT_ROOT = Path("thumbnails")
 OUT_DESKTOP = OUT_ROOT / "wallpapers-thumb"
 OUT_MOBILE = OUT_ROOT / "mobile-wallpapers-thumb"
 
 # bounding box for thumbnails (max width, max height)
-DESKTOP_MAX = (480, 270)    # approx 16:9 thumbs
-MOBILE_MAX = (360, 640)     # portrait-ish thumb for mobile gallery
+DESKTOP_MAX = (640, 360)    # ~16:9 thumbs, 
+MOBILE_MAX = (540, 960)     # portrait-ish thumb for mobile gallery
 
 # allowed raster extensions
 RASTER_EXTS = {".png", ".jpg", ".jpeg", ".webp", ".bmp", ".tiff", ".gif"}
 
 # output format and options
-OUT_FORMAT = "WEBP"  # saves smaller than JPEG; change to "JPEG" if you prefer .jpg
+OUT_FORMAT = "WEBP"  # use WEBP for smaller filesize; change to "JPEG" for .jpg output
 OUT_QUALITY = 85
 
 def ensure_dir(p: Path):
@@ -75,10 +75,9 @@ def process_folder(src_dir: Path, out_dir: Path, max_size):
         if not p.is_file():
             continue
         if p.suffix.lower() not in RASTER_EXTS:
-            # skip SVG and other non-raster; you can add support for svg rasterization separately
+            # skip SVG and other non-raster
             print(f"Skipping non-raster: {p.name}")
             continue
-        # target filename: same basename but .webp (or .jpg if you change OUT_FORMAT)
         dst_name = p.with_suffix("." + OUT_FORMAT.lower()).name
         dst_path = out_dir / dst_name
         if should_process(p, dst_path):
