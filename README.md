@@ -26,7 +26,7 @@ Use the following Python scripts included in the repository (use in order) :
 | `create_zip.py`      | Create a zip file containing all wallpapers. |
 
 or you just run :
-`build_all.py` to do all in order.
+`build_all.py` to do all at once.
 
 ## Note
 

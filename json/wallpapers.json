@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-10-24T20:45:09.616185+00:00",
-  "count": 37,
+  "generated_at": "2025-10-25T19:08:19.038067+00:00",
+  "count": 48,
   "wallpapers": [
     {
       "filename": "3squares.png",
@@ -24,6 +24,13 @@
       "modified": "2025-10-24T20:15:36.583526+00:00"
     },
     {
+      "filename": "anbu.jpg",
+      "url": "wallpapers/anbu.jpg",
+      "thumb_url": null,
+      "size": 76381,
+      "modified": "2025-10-25T19:04:53.377420+00:00"
+    },
+    {
       "filename": "arch_1.jpg",
       "url": "wallpapers/arch_1.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/arch_1.webp",
@@ -36,6 +43,13 @@
       "thumb_url": "thumbnail/wallpapers-thumb/big_robot.webp",
       "size": 944649,
       "modified": "2025-10-24T18:27:50.972145+00:00"
+    },
+    {
+      "filename": "black_sun.png",
+      "url": "wallpapers/black_sun.png",
+      "thumb_url": null,
+      "size": 1514864,
+      "modified": "2025-10-25T19:02:16.537160+00:00"
     },
     {
       "filename": "boat.png",
@@ -59,11 +73,25 @@
       "modified": "2025-10-24T20:17:36.726415+00:00"
     },
     {
+      "filename": "comet.jpg",
+      "url": "wallpapers/comet.jpg",
+      "thumb_url": null,
+      "size": 755227,
+      "modified": "2025-10-25T19:07:04.631202+00:00"
+    },
+    {
       "filename": "comp.jpg",
       "url": "wallpapers/comp.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/comp.webp",
       "size": 14655,
       "modified": "2025-10-24T20:31:43.298548+00:00"
+    },
+    {
+      "filename": "cyberpunk_truck.jpg",
+      "url": "wallpapers/cyberpunk_truck.jpg",
+      "thumb_url": null,
+      "size": 1008784,
+      "modified": "2025-10-25T19:05:42.604412+00:00"
     },
     {
       "filename": "darek-zabrocki-marine-11.jpg",
@@ -101,6 +129,13 @@
       "modified": "2025-10-24T18:28:55.013170+00:00"
     },
     {
+      "filename": "eye.png",
+      "url": "wallpapers/eye.png",
+      "thumb_url": null,
+      "size": 3201946,
+      "modified": "2025-10-25T19:02:05.948498+00:00"
+    },
+    {
       "filename": "Fantasy-Autumn.png",
       "url": "wallpapers/Fantasy-Autumn.png",
       "thumb_url": "thumbnail/wallpapers-thumb/Fantasy-Autumn.webp",
@@ -108,11 +143,25 @@
       "modified": "2025-10-24T20:32:22.571712+00:00"
     },
     {
+      "filename": "fantasy-world.jpg",
+      "url": "wallpapers/fantasy-world.jpg",
+      "thumb_url": null,
+      "size": 1630261,
+      "modified": "2025-10-25T19:06:13.709665+00:00"
+    },
+    {
       "filename": "firewatch-2.png",
       "url": "wallpapers/firewatch-2.png",
       "thumb_url": "thumbnail/wallpapers-thumb/firewatch-2.webp",
       "size": 6891524,
       "modified": "2025-10-24T20:33:22.457355+00:00"
+    },
+    {
+      "filename": "firewatch-3.jpg",
+      "url": "wallpapers/firewatch-3.jpg",
+      "thumb_url": null,
+      "size": 1211428,
+      "modified": "2025-10-25T19:03:02.722685+00:00"
     },
     {
       "filename": "firewatch.png",
@@ -148,6 +197,13 @@
       "thumb_url": "thumbnail/wallpapers-thumb/groove-edit.webp",
       "size": 651369,
       "modified": "2025-10-24T19:13:15.706592+00:00"
+    },
+    {
+      "filename": "just-do-it.jpg",
+      "url": "wallpapers/just-do-it.jpg",
+      "thumb_url": null,
+      "size": 119861,
+      "modified": "2025-10-25T19:05:28.759880+00:00"
     },
     {
       "filename": "kitty.jpg",
@@ -213,6 +269,13 @@
       "modified": "2025-10-24T20:34:46.218214+00:00"
     },
     {
+      "filename": "old-house.png",
+      "url": "wallpapers/old-house.png",
+      "thumb_url": null,
+      "size": 11466317,
+      "modified": "2025-10-25T19:03:50.703383+00:00"
+    },
+    {
       "filename": "poles.png",
       "url": "wallpapers/poles.png",
       "thumb_url": "thumbnail/wallpapers-thumb/poles.webp",
@@ -232,6 +295,20 @@
       "thumb_url": "thumbnail/wallpapers-thumb/retro_pc.webp",
       "size": 597307,
       "modified": "2025-10-24T18:26:33.703261+00:00"
+    },
+    {
+      "filename": "stare.png",
+      "url": "wallpapers/stare.png",
+      "thumb_url": null,
+      "size": 413588,
+      "modified": "2025-10-25T19:06:33.056074+00:00"
+    },
+    {
+      "filename": "sudo-rm-rf.jpg",
+      "url": "wallpapers/sudo-rm-rf.jpg",
+      "thumb_url": null,
+      "size": 167901,
+      "modified": "2025-10-25T19:05:12.893603+00:00"
     },
     {
       "filename": "tower_cloud.png",

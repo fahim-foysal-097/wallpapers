@@ -313,3 +313,18 @@ body {
   border: 2px solid #ffffff33;
   margin-right: 10px;
 }
+
+body {
+  animation: fadeInAnimation ease-in 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

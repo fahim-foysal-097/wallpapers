@@ -1,4 +1,5 @@
-// js/mobile.js
+// Script for mobile-page
+
 (() => {
   const JSON_PATH = "json/wallpapers-mobile.json";
   const galleryEl = document.getElementById("gallery");
@@ -23,7 +24,7 @@
   let currentIndex = 0;
 
   const ASPECT_KEY = "mobileAspectRatio";
-  const DEFAULT_ASPECT = "9/16";
+  const DEFAULT_ASPECT = "9/19";
 
   function setAspectOnThumbs(aspect) {
     // apply inline style to each .thumb-wrap so CSS aspect-ratio is updated
