@@ -1,4 +1,4 @@
-// scripts.js - gallery renderer used by index.html and favorites.html
+// js/scripts.js - gallery renderer used by index.html and favorites.html
 (() => {
   const JSON_PATH = "json/wallpapers.json";
   const FAVORITES_JSON = "json/favorites.json";
@@ -10,10 +10,100 @@
   const downloadAllBtn = document.getElementById("downloadAllBtn");
   const animatedEl = document.getElementById("animatedText");
 
-  // set downloadAll link if present
+  // GITHUB RELEASES CONFIG
+  const GITHUB_OWNER = "fahim-foysal-097";
+  const GITHUB_REPO = "wallpapers";
+  const TAG_PREFIX = "wallpaper-archive-";
+  const CACHE_TTL_MS = 10 * 60 * 1000; // 10 minutes cache
+
+  // set downloadAll link if present (will be replaced after checking releases)
   if (downloadAllBtn) {
-    downloadAllBtn.href = "wallpaper-all.zip";
-    downloadAllBtn.setAttribute("download", "wallpaper-all.zip");
+    // keep default as fallback, but show fetching state
+    const originalHref = downloadAllBtn.href || "wallpaper-all.zip";
+    downloadAllBtn.dataset.fallback = originalHref;
+    // show loading state
+    downloadAllBtn.classList.add("disabled");
+    downloadAllBtn.setAttribute("aria-disabled", "true");
+    downloadAllBtn.innerHTML = `<i class="bi bi-hourglass-split"></i>&nbsp;Checking latest...`;
+    // asynchronously resolve to release asset
+    fetchReleaseAssetAndSetButton("wallpaper-all.zip", downloadAllBtn);
+  }
+
+  /**
+   * getLatestReleaseAsset(assetName)
+   * - Looks up GitHub releases for this repo and returns the browser_download_url for the first matching asset
+   * - Uses localStorage caching to reduce API requests
+   */
+  async function getLatestReleaseAsset(assetName) {
+    try {
+      const cacheKey = `gh_asset_cache_${GITHUB_OWNER}_${GITHUB_REPO}_${assetName}`;
+      const cached = localStorage.getItem(cacheKey);
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        if (Date.now() - parsed.ts < CACHE_TTL_MS) {
+          return parsed.url;
+        }
+      }
+
+      const api = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/releases?per_page=50`;
+      const resp = await fetch(api, {
+        headers: { Accept: "application/vnd.github.v3+json" },
+      });
+      if (!resp.ok) {
+        console.warn("GitHub API fetch failed", resp.status);
+        return null;
+      }
+      const releases = await resp.json();
+
+      // filter by our tag prefix then sort newest first
+      const matchingReleases = releases
+        .filter((r) => r.tag_name && r.tag_name.startsWith(TAG_PREFIX))
+        .sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+
+      for (const rel of matchingReleases) {
+        if (!rel.assets || !rel.assets.length) continue;
+        const asset = rel.assets.find((a) => a.name === assetName);
+        if (asset && asset.browser_download_url) {
+          // cache and return
+          localStorage.setItem(
+            cacheKey,
+            JSON.stringify({ url: asset.browser_download_url, ts: Date.now() })
+          );
+          return asset.browser_download_url;
+        }
+      }
+      return null;
+    } catch (err) {
+      console.error("Failed to get release asset", err);
+      return null;
+    }
+  }
+
+  async function fetchReleaseAssetAndSetButton(assetName, btnEl) {
+    // try to get the release asset URL
+    try {
+      const url = await getLatestReleaseAsset(assetName);
+      if (url) {
+        btnEl.href = url;
+        btnEl.setAttribute("download", assetName);
+        btnEl.classList.remove("disabled");
+        btnEl.removeAttribute("aria-disabled");
+        btnEl.innerHTML = `<i class="bi bi-file-earmark-zip-fill"></i>&nbsp;Download All (latest)`;
+        btnEl.title = `Download ${assetName} from latest release`;
+        return;
+      }
+    } catch (e) {
+      console.warn("Error while resolving release asset:", e);
+    }
+
+    // fallback to local path if release not found
+    const fallback = btnEl.dataset.fallback || `/${assetName}`;
+    btnEl.href = fallback;
+    btnEl.setAttribute("download", assetName);
+    btnEl.classList.remove("disabled");
+    btnEl.removeAttribute("aria-disabled");
+    btnEl.innerHTML = `<i class="bi bi-file-earmark-zip-fill"></i>&nbsp;Download All`;
+    btnEl.title = "Download all desktop wallpapers";
   }
 
   // runtime mode: "all" or "favorites"
@@ -103,9 +193,6 @@
 
     // start after small delay for smoothness
     timeoutId = setTimeout(step, 700);
-
-    // optional: stop animation when modal is open (not necessary but can be done)
-    // we won't cancel; let it run.
   })();
 
   /* -------------------- Gallery rendering -------------------- */

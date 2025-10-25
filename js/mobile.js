@@ -1,5 +1,4 @@
-// Script for mobile-page
-
+// js/mobile.js - mobile gallery script with release-backed Download All link
 (() => {
   const JSON_PATH = "json/wallpapers-mobile.json";
   const galleryEl = document.getElementById("gallery");
@@ -9,9 +8,17 @@
   const aspectSelect = document.getElementById("aspectSelect");
   const downloadAllBtn = document.getElementById("downloadAllBtn");
 
+  // GITHUB RELEASES CONFIG
+  const GITHUB_OWNER = "fahim-foysal-097";
+  const GITHUB_REPO = "wallpapers";
+  const TAG_PREFIX = "wallpaper-archive-";
+  const CACHE_TTL_MS = 10 * 60 * 1000; // 10 minutes cache
+
   // modal elements
   const previewModalEl = document.getElementById("previewModal");
-  const bsModal = new bootstrap.Modal(previewModalEl, {});
+  const bsModal = previewModalEl
+    ? new bootstrap.Modal(previewModalEl, {})
+    : null;
   const modalImage = document.getElementById("modalImage");
   const modalFilename = document.getElementById("modalFilename");
   const modalMeta = document.getElementById("modalMeta");
@@ -31,6 +38,88 @@
     document.querySelectorAll(".thumb-wrap").forEach((el) => {
       el.style.aspectRatio = aspect;
     });
+  }
+
+  // GitHub release asset helper (same logic as desktop)
+  async function getLatestReleaseAsset(assetName) {
+    try {
+      const cacheKey = `gh_asset_cache_${GITHUB_OWNER}_${GITHUB_REPO}_${assetName}`;
+      const cached = localStorage.getItem(cacheKey);
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        if (Date.now() - parsed.ts < CACHE_TTL_MS) {
+          return parsed.url;
+        }
+      }
+
+      const api = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/releases?per_page=50`;
+      const resp = await fetch(api, {
+        headers: { Accept: "application/vnd.github.v3+json" },
+      });
+      if (!resp.ok) {
+        console.warn("GitHub API fetch failed", resp.status);
+        return null;
+      }
+      const releases = await resp.json();
+
+      const matchingReleases = releases
+        .filter((r) => r.tag_name && r.tag_name.startsWith(TAG_PREFIX))
+        .sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+
+      for (const rel of matchingReleases) {
+        if (!rel.assets || !rel.assets.length) continue;
+        const asset = rel.assets.find((a) => a.name === assetName);
+        if (asset && asset.browser_download_url) {
+          localStorage.setItem(
+            cacheKey,
+            JSON.stringify({ url: asset.browser_download_url, ts: Date.now() })
+          );
+          return asset.browser_download_url;
+        }
+      }
+      return null;
+    } catch (err) {
+      console.error("Failed to get release asset", err);
+      return null;
+    }
+  }
+
+  // wire the downloadAllBtn to release asset
+  if (downloadAllBtn) {
+    const originalHref = downloadAllBtn.href || "wallpaper-mobile-all.zip";
+    downloadAllBtn.dataset.fallback = originalHref;
+    downloadAllBtn.classList.add("disabled");
+    downloadAllBtn.setAttribute("aria-disabled", "true");
+    downloadAllBtn.innerHTML = `<i class="bi bi-hourglass-split"></i>&nbsp;Checking latest...`;
+    (async () => {
+      try {
+        const url = await getLatestReleaseAsset("wallpaper-mobile-all.zip");
+        if (url) {
+          downloadAllBtn.href = url;
+          downloadAllBtn.setAttribute("download", "wallpaper-mobile-all.zip");
+          downloadAllBtn.classList.remove("disabled");
+          downloadAllBtn.removeAttribute("aria-disabled");
+          downloadAllBtn.innerHTML = `<i class="bi bi-file-earmark-zip-fill"></i>&nbsp;Download All (latest)`;
+          downloadAllBtn.title = "Download latest mobile zip from release";
+        } else {
+          // fallback
+          downloadAllBtn.href =
+            downloadAllBtn.dataset.fallback || "wallpaper-mobile-all.zip";
+          downloadAllBtn.setAttribute("download", "wallpaper-mobile-all.zip");
+          downloadAllBtn.classList.remove("disabled");
+          downloadAllBtn.removeAttribute("aria-disabled");
+          downloadAllBtn.innerHTML = `<i class="bi bi-file-earmark-zip-fill"></i>&nbsp;Download All`;
+          downloadAllBtn.title = "Download all mobile wallpapers";
+        }
+      } catch (e) {
+        console.warn("Error checking release:", e);
+        downloadAllBtn.href =
+          downloadAllBtn.dataset.fallback || "wallpaper-mobile-all.zip";
+        downloadAllBtn.classList.remove("disabled");
+        downloadAllBtn.removeAttribute("aria-disabled");
+        downloadAllBtn.innerHTML = `<i class="bi bi-file-earmark-zip-fill"></i>&nbsp;Download All`;
+      }
+    })();
   }
 
   function buildTile(entry, idx, aspect) {
@@ -104,7 +193,9 @@
       emptyStateEl.style.display = "none";
     }
 
-    const aspect = aspectSelect.value || DEFAULT_ASPECT;
+    const aspect = aspectSelect
+      ? aspectSelect.value || DEFAULT_ASPECT
+      : DEFAULT_ASPECT;
 
     list.forEach((entry, i) => {
       const tile = buildTile(entry, i, aspect);
@@ -129,7 +220,7 @@
     ).toLocaleString()}`;
     modalDownload.href = entry.url;
     modalDownload.setAttribute("download", entry.filename);
-    bsModal.show();
+    if (bsModal) bsModal.show();
   }
 
   function prev() {
@@ -223,11 +314,7 @@
       wallpapers = data.wallpapers || [];
       filtered = [...wallpapers];
 
-      // set download all link to the expected mobile zip file (user can provide)
-      if (downloadAllBtn) {
-        // leave it; default href in HTML is wallpaper-mobile-all.zip; optionally adjust if json contains path
-      }
-
+      // keep pre-existing downloadAllBtn fallback but the release-checker already ran earlier
       renderList(filtered);
     } catch (err) {
       console.error("Error loading mobile wallpapers:", err);
@@ -245,61 +332,4 @@
 
   // init on DOM ready
   document.addEventListener("DOMContentLoaded", init);
-})();
-
-// --- Typing animation for #animatedText for mobile page ---
-
-(function typingAnimation() {
-  const el = document.getElementById("animatedText");
-  if (!el) return; // nothing to do
-
-  // phrases to cycle through - you can edit these
-  const phrases = [
-    "Discover Beautiful Wallpapers",
-    "Portrait wallpapers for phones",
-    "High-resolution phone backgrounds",
-  ];
-
-  const TYPING_SPEED = 40; // ms per character
-  const ERASING_SPEED = 30; // ms per character when deleting
-  const PAUSE_AFTER = 1200; // pause after typing a phrase (ms)
-  let phraseIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-
-  function tick() {
-    const current = phrases[phraseIndex];
-    if (!isDeleting) {
-      // typing
-      el.textContent = current.slice(0, charIndex + 1);
-      charIndex++;
-      if (charIndex === current.length) {
-        // finished typing
-        isDeleting = true;
-        setTimeout(tick, PAUSE_AFTER);
-        return;
-      }
-      setTimeout(tick, TYPING_SPEED);
-    } else {
-      // deleting
-      el.textContent = current.slice(0, charIndex - 1);
-      charIndex--;
-      if (charIndex === 0) {
-        isDeleting = false;
-        phraseIndex = (phraseIndex + 1) % phrases.length;
-        setTimeout(tick, TYPING_SPEED);
-        return;
-      }
-      setTimeout(tick, ERASING_SPEED);
-    }
-  }
-
-  // start when DOM ready (if script is appended at end it's usually safe, but be explicit)
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", () => {
-      setTimeout(tick, 300); // small initial delay
-    });
-  } else {
-    setTimeout(tick, 300);
-  }
 })();
