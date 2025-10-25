@@ -1,6 +1,5 @@
 name: Build and Release Wallpapers
 
-# Run only when wallpapers/ or wallpapers-mobile/ change, or manually
 on:
   push:
     paths:
@@ -9,7 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write   # needed to create/delete releases & tags
+  contents: write
 
 jobs:
   build-and-release:
@@ -19,22 +18,20 @@ jobs:
       ZIP2: wallpaper-mobile-all.zip
       TAG_PREFIX: wallpaper-archive-
       KEEP_RELEASES: '3'
-      # timestamp used for tag (UTC)
-      TIMESTAMP: ${{ steps.set_timestamp.outputs.ts }}
     steps:
-      - name: Checkout repository (full)
+      - name: Checkout (full)
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Set UTC timestamp for tag name
+      - name: Prepare timestamp
         id: set_timestamp
         run: |
-          # example: 20251026T013045Z
+          # UTC timestamp safe for tags: YYYYMMDDTHHMMSSZ
           ts=$(date -u +"%Y%m%dT%H%M%SZ")
           echo "ts=$ts" >> "$GITHUB_OUTPUT"
 
-      - name: Ensure zip tool installed
+      - name: Install zip (if missing)
         run: |
           sudo apt-get update -y
           sudo apt-get install -y zip
@@ -43,20 +40,18 @@ jobs:
         id: create_zips
         run: |
           set -eux
-
           ZIP1="${ZIP1}"
           ZIP2="${ZIP2}"
 
-          # remove any stale zips
+          # Clean any existing artifacts
           rm -f "${ZIP1}" "${ZIP2}"
 
           zip_created=false
           zip1_exists=false
           zip2_exists=false
 
-          # Create wallpaper-all.zip if wallpapers/ exists and contains files
           if [ -d "wallpapers" ] && [ "$(ls -A wallpapers || true)" ]; then
-            echo "Zipping wallpapers/ -> ${ZIP1}"
+            echo "Creating ${ZIP1} from wallpapers/"
             zip -r "${ZIP1}" wallpapers -x "*/.git/*"
             if [ -f "${ZIP1}" ]; then
               zip_created=true
@@ -66,9 +61,8 @@ jobs:
             echo "No wallpapers/ folder or it's empty — skipping ${ZIP1}"
           fi
 
-          # Create wallpaper-mobile-all.zip if wallpapers-mobile/ exists and contains files
           if [ -d "wallpapers-mobile" ] && [ "$(ls -A wallpapers-mobile || true)" ]; then
-            echo "Zipping wallpapers-mobile/ -> ${ZIP2}"
+            echo "Creating ${ZIP2} from wallpapers-mobile/"
             zip -r "${ZIP2}" wallpapers-mobile -x "*/.git/*"
             if [ -f "${ZIP2}" ]; then
               zip_created=true
@@ -78,25 +72,24 @@ jobs:
             echo "No wallpapers-mobile/ folder or it's empty — skipping ${ZIP2}"
           fi
 
-          # Print file sizes and warn if >2GB (GitHub release single-file limit)
+          # Output sizes and warn about 2GB+ files
           for f in "${ZIP1}" "${ZIP2}"; do
             if [ -f "$f" ]; then
               size=$(stat -c%s "$f")
               human=$(ls -lh "$f" | awk '{print $5}')
-              echo "Created $f — size: $human ($size bytes)"
-              # 2 GiB = 2147483648 bytes
+              echo "Created $f — size $human ($size bytes)"
               if [ "$size" -ge 2147483648 ]; then
-                echo "WARNING: $f is >= 2 GiB (GitHub release asset single-file limit). Consider hosting externally."
+                echo "WARNING: $f is >= 2 GiB (GitHub release single-file limit)."
               fi
             fi
           done
 
-          # Set outputs for subsequent steps
+          # set outputs (via GITHUB_OUTPUT)
           echo "zip_created=${zip_created}" >> "$GITHUB_OUTPUT"
           echo "zip1_exists=${zip1_exists}" >> "$GITHUB_OUTPUT"
           echo "zip2_exists=${zip2_exists}" >> "$GITHUB_OUTPUT"
 
-      - name: Create release (only if at least one zip created)
+      - name: Create GitHub Release (only if zip created)
         id: create_release
         if: steps.create_zips.outputs.zip_created == 'true'
         uses: softprops/action-gh-release@v1
@@ -110,7 +103,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload wallpaper-all.zip (if exists)
+      - name: Upload wallpaper-all.zip (if created)
         if: steps.create_zips.outputs.zip1_exists == 'true'
         uses: actions/upload-release-asset@v1
         with:
@@ -119,7 +112,7 @@ jobs:
           asset_name: wallpaper-all.zip
           asset_content_type: application/zip
 
-      - name: Upload wallpaper-mobile-all.zip (if exists)
+      - name: Upload wallpaper-mobile-all.zip (if created)
         if: steps.create_zips.outputs.zip2_exists == 'true'
         uses: actions/upload-release-asset@v1
         with:
@@ -149,7 +142,7 @@ jobs:
               .filter(r => r.tag_name && r.tag_name.startsWith(prefix))
               .sort((a,b) => new Date(b.created_at) - new Date(a.created_at));
 
-            core.info(`Found ${releases.length} "${prefix}" releases.`);
+            core.info(`Found ${releases.length} releases with prefix '${prefix}'.`);
 
             if (releases.length <= keep) {
               core.info(`Nothing to prune (keep = ${keep}).`);
@@ -171,7 +164,7 @@ jobs:
                 core.warning(`Failed to delete release id=${r.id}: ${err}`);
               }
 
-              // Try to delete the git tag reference as well
+              // Attempt to delete the git tag reference as well
               try {
                 const ref = `tags/${r.tag_name}`;
                 core.info(`Attempting to delete git ref ${ref}`);
