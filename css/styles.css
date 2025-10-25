@@ -1,3 +1,5 @@
+/* styles.css — mobile modal nav buttons visible + mobile layout tweaks */
+
 /* Fonts */
 body,
 button,
@@ -23,6 +25,8 @@ select {
 html,
 body {
   height: 100%;
+  /* guard against accidental horizontal scroll caused by minor rounding differences */
+  overflow-x: hidden;
 }
 body {
   background: radial-gradient(
@@ -41,7 +45,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: -0.01em;
   position: relative;
-  overflow-x: hidden;
 }
 
 /* blobs */
@@ -91,27 +94,37 @@ body {
   z-index: 20;
 }
 
-/* logo circle - W white text */
+/* make inner nav actions wrap when there isn't enough space */
+.navbar .container-fluid > .d-flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap; /* crucial: allow wrapping */
+  justify-content: flex-end;
+}
+
+/* logo circle (if you still use it) */
 .navbar-brand .logo-circle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 48px;
   height: 48px;
-  background: linear-gradient(
-    135deg,
-    var(--accent-start),
-    var(--accent-end)
-  ); /* only two colors */
+  background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
   font-weight: 800;
-  color: var(--white); /* FORCE white text here */
+  color: var(--white);
   border-radius: 12px;
   box-shadow: 0 10px 40px rgba(61, 87, 255, 0.14);
   font-size: 1.05rem;
   letter-spacing: -0.02em;
 }
 
-/* inputs */
+/* inputs — make flexible so it doesn't force overflow */
+.input-group {
+  min-width: 0; /* allow shrinking on small screens */
+  flex: 1 1 240px; /* grow, shrink, base width */
+  max-width: 440px;
+}
 .form-control-dark {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
@@ -120,6 +133,8 @@ body {
   transition: box-shadow 0.15s ease, transform 0.08s ease;
   border-radius: 12px;
   height: 46px;
+  min-width: 0; /* ensure input can shrink */
+  flex: 1 1 auto;
 }
 .form-control-dark:focus {
   box-shadow: 0 10px 30px rgba(124, 92, 255, 0.12);
@@ -130,17 +145,19 @@ body {
 
 /* gradient button (Download All) - text white */
 .btn-gradient {
-  background: linear-gradient(
-    90deg,
-    var(--accent-start),
-    var(--accent-end)
-  ); /* two-color gradient */
-  color: var(--white) !important; /* FORCE white text */
+  background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+  color: var(--white) !important;
   border: none;
   font-weight: 700;
   box-shadow: 0 10px 30px rgba(61, 87, 255, 0.12);
   border-radius: 12px;
-  padding: 0.5rem 0.9rem;
+  padding: 0.45rem 0.8rem;
+  white-space: nowrap;
+}
+
+/* keep download button label visible on larger screens but optionally hide on very small (kept accessible via icon) */
+#downloadAllBtn .btn-text {
+  display: inline-block;
 }
 
 /* Animated subtitle */
@@ -259,12 +276,12 @@ body {
   border-radius: 14px;
 }
 
-/* modal nav buttons */
+/* modal nav buttons - visible on all screen sizes, but smaller on narrow screens */
 .modal-nav-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 30;
+  z-index: 1055; /* higher than modal backdrop/content to ensure clickable */
   width: 44px;
   height: 64px;
   border-radius: 8px;
@@ -277,11 +294,12 @@ body {
   font-size: 1.25rem;
   backdrop-filter: blur(4px);
   transition: background 0.12s ease, transform 0.12s ease, opacity 0.12s ease;
-  opacity: 0.9;
+  opacity: 0.95;
+  pointer-events: auto;
 }
 .modal-nav-btn:hover {
   background: rgba(0, 0, 0, 0.45);
-  transform: translateY(-50%) scale(1.03);
+  transform: translateY(-50%) scale(1.02);
 }
 .modal-nav-btn.prev {
   left: 8px;
@@ -290,21 +308,121 @@ body {
   right: 8px;
 }
 
-/* responsive */
-@media (max-width: 576px) {
-  .thumb-wrap {
-    aspect-ratio: 16 / 9;
+/* responsive tweaks to avoid horizontal scroll and reduce navbar footprint */
+@media (max-width: 992px) {
+  .input-group {
+    max-width: 320px;
   }
-  .navbar-brand .logo-circle {
-    width: 40px;
-    height: 40px;
-    font-size: 0.95rem;
-  }
-  .modal-nav-btn {
-    display: none;
-  } /* hide nav buttons on very small screens - user can still swipe/keyboard */
 }
 
+@media (max-width: 768px) {
+  /* reduce the navbar padding on smaller screens to save space */
+  .navbar {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .navbar .container-fluid > .d-flex {
+    gap: 0.35rem;
+    justify-content: flex-end;
+  }
+
+  .input-group {
+    flex: 1 1 180px;
+    max-width: 240px;
+  }
+
+  .logo-image {
+    width: 48px;
+    height: 48px;
+    margin-right: 8px;
+  }
+
+  .btn-group .dropdown-menu {
+    right: 0;
+    left: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Very small screens - make things compact */
+  .navbar {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .navbar-brand .h6 {
+    font-size: 0.95rem;
+    line-height: 1;
+  }
+
+  /* shrink logo */
+  .logo-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+  }
+
+  /* make the search input much smaller so it doesn't force the row */
+  .input-group {
+    flex: 1 1 120px;
+    max-width: 140px;
+  }
+  .form-control-dark {
+    height: 40px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+
+  /* optionally hide long label in download button, keep icon accessible */
+  #downloadAllBtn .btn-text {
+    display: none;
+  }
+
+  /* make icon-only navbar buttons smaller */
+  .navbar .btn {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  /* ensure tile footers don't overflow */
+  .tile .meta {
+    max-width: 55%;
+  }
+
+  /* modal nav buttons — smaller and closer to edges but still visible and touch-friendly */
+  .modal-nav-btn {
+    width: 36px;
+    height: 56px;
+    font-size: 1.05rem;
+    opacity: 0.98;
+    background: rgba(0, 0, 0, 0.32);
+  }
+  .modal-nav-btn.prev {
+    left: 6px;
+  }
+  .modal-nav-btn.next {
+    right: 6px;
+  }
+}
+
+/* keep modal nav buttons available even on very narrow phones; reduce size slightly */
+@media (max-width: 420px) {
+  .modal-nav-btn {
+    width: 32px;
+    height: 52px;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.36);
+  }
+  .modal-nav-btn.prev {
+    left: 4px;
+  }
+  .modal-nav-btn.next {
+    right: 4px;
+  }
+}
+
+/* logo image style */
 .logo-image {
   width: 60px;
   height: 60px;
@@ -314,6 +432,7 @@ body {
   margin-right: 10px;
 }
 
+/* page fade in */
 body {
   animation: fadeInAnimation ease-in 1s;
   animation-iteration-count: 1;
@@ -323,7 +442,6 @@ body {
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
