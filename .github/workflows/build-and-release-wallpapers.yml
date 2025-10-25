@@ -1,0 +1,188 @@
+name: Build and Release Wallpapers
+
+# Run only when wallpapers/ or wallpapers-mobile/ change, or manually
+on:
+  push:
+    paths:
+      - 'wallpapers/**'
+      - 'wallpapers-mobile/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write   # needed to create/delete releases & tags
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    env:
+      ZIP1: wallpaper-all.zip
+      ZIP2: wallpaper-mobile-all.zip
+      TAG_PREFIX: wallpaper-archive-
+      KEEP_RELEASES: '3'
+      # timestamp used for tag (UTC)
+      TIMESTAMP: ${{ steps.set_timestamp.outputs.ts }}
+    steps:
+      - name: Checkout repository (full)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set UTC timestamp for tag name
+        id: set_timestamp
+        run: |
+          # example: 20251026T013045Z
+          ts=$(date -u +"%Y%m%dT%H%M%SZ")
+          echo "ts=$ts" >> "$GITHUB_OUTPUT"
+
+      - name: Ensure zip tool installed
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y zip
+
+      - name: Create wallpaper zips
+        id: create_zips
+        run: |
+          set -eux
+
+          ZIP1="${ZIP1}"
+          ZIP2="${ZIP2}"
+
+          # remove any stale zips
+          rm -f "${ZIP1}" "${ZIP2}"
+
+          zip_created=false
+          zip1_exists=false
+          zip2_exists=false
+
+          # Create wallpaper-all.zip if wallpapers/ exists and contains files
+          if [ -d "wallpapers" ] && [ "$(ls -A wallpapers || true)" ]; then
+            echo "Zipping wallpapers/ -> ${ZIP1}"
+            zip -r "${ZIP1}" wallpapers -x "*/.git/*"
+            if [ -f "${ZIP1}" ]; then
+              zip_created=true
+              zip1_exists=true
+            fi
+          else
+            echo "No wallpapers/ folder or it's empty — skipping ${ZIP1}"
+          fi
+
+          # Create wallpaper-mobile-all.zip if wallpapers-mobile/ exists and contains files
+          if [ -d "wallpapers-mobile" ] && [ "$(ls -A wallpapers-mobile || true)" ]; then
+            echo "Zipping wallpapers-mobile/ -> ${ZIP2}"
+            zip -r "${ZIP2}" wallpapers-mobile -x "*/.git/*"
+            if [ -f "${ZIP2}" ]; then
+              zip_created=true
+              zip2_exists=true
+            fi
+          else
+            echo "No wallpapers-mobile/ folder or it's empty — skipping ${ZIP2}"
+          fi
+
+          # Print file sizes and warn if >2GB (GitHub release single-file limit)
+          for f in "${ZIP1}" "${ZIP2}"; do
+            if [ -f "$f" ]; then
+              size=$(stat -c%s "$f")
+              human=$(ls -lh "$f" | awk '{print $5}')
+              echo "Created $f — size: $human ($size bytes)"
+              # 2 GiB = 2147483648 bytes
+              if [ "$size" -ge 2147483648 ]; then
+                echo "WARNING: $f is >= 2 GiB (GitHub release asset single-file limit). Consider hosting externally."
+              fi
+            fi
+          done
+
+          # Set outputs for subsequent steps
+          echo "zip_created=${zip_created}" >> "$GITHUB_OUTPUT"
+          echo "zip1_exists=${zip1_exists}" >> "$GITHUB_OUTPUT"
+          echo "zip2_exists=${zip2_exists}" >> "$GITHUB_OUTPUT"
+
+      - name: Create release (only if at least one zip created)
+        id: create_release
+        if: steps.create_zips.outputs.zip_created == 'true'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ env.TAG_PREFIX }}${{ steps.set_timestamp.outputs.ts }}
+          name: ${{ env.TAG_PREFIX }}${{ steps.set_timestamp.outputs.ts }}
+          body: |
+            Automated wallpaper zip build for commit `${{ github.sha }}`
+            Actor: `${{ github.actor }}`
+            Generated at (UTC): ${{ steps.set_timestamp.outputs.ts }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload wallpaper-all.zip (if exists)
+        if: steps.create_zips.outputs.zip1_exists == 'true'
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./wallpaper-all.zip
+          asset_name: wallpaper-all.zip
+          asset_content_type: application/zip
+
+      - name: Upload wallpaper-mobile-all.zip (if exists)
+        if: steps.create_zips.outputs.zip2_exists == 'true'
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./wallpaper-mobile-all.zip
+          asset_name: wallpaper-mobile-all.zip
+          asset_content_type: application/zip
+
+      - name: Prune old wallpaper releases (keep only ${{ env.KEEP_RELEASES }})
+        if: steps.create_zips.outputs.zip_created == 'true'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const prefix = process.env.TAG_PREFIX || 'wallpaper-archive-';
+            const keep = parseInt(process.env.KEEP_RELEASES || '3', 10);
+
+            const releasesResp = await github.rest.repos.listReleases({
+              owner,
+              repo,
+              per_page: 100
+            });
+
+            const releases = releasesResp.data
+              .filter(r => r.tag_name && r.tag_name.startsWith(prefix))
+              .sort((a,b) => new Date(b.created_at) - new Date(a.created_at));
+
+            core.info(`Found ${releases.length} "${prefix}" releases.`);
+
+            if (releases.length <= keep) {
+              core.info(`Nothing to prune (keep = ${keep}).`);
+              return;
+            }
+
+            const toDelete = releases.slice(keep);
+            core.info(`Will delete ${toDelete.length} old release(s).`);
+
+            for (const r of toDelete) {
+              try {
+                core.info(`Deleting release id=${r.id} tag=${r.tag_name} name="${r.name}"`);
+                await github.rest.repos.deleteRelease({
+                  owner,
+                  repo,
+                  release_id: r.id
+                });
+              } catch (err) {
+                core.warning(`Failed to delete release id=${r.id}: ${err}`);
+              }
+
+              // Try to delete the git tag reference as well
+              try {
+                const ref = `tags/${r.tag_name}`;
+                core.info(`Attempting to delete git ref ${ref}`);
+                await github.rest.git.deleteRef({
+                  owner,
+                  repo,
+                  ref
+                });
+              } catch (err) {
+                core.warning(`Failed to delete git tag for ${r.tag_name}: ${err.message || err}`);
+              }
+            }
+
+            core.info('Prune complete.');
