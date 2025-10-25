@@ -5,9 +5,8 @@ build_all.py
 Full pipeline that runs:
   1) generate_thumbs.py
   2) generate_json.py
-  3) create_zip.py
-  4) writes json/badge.json
-  5) generates json/badge.svg (static SVG badge that is embedded in README)
+  3) writes json/badge.json
+  4) generates json/badge.svg (static SVG badge that is embedded in README)
 
 Usage:
     python3 build_all.py
@@ -28,7 +27,6 @@ BADGE_SVG = JSON_DIR / "badge.svg"
 SCRIPTS = [
     ROOT / "generate_thumbs.py",
     ROOT / "generate_json.py",
-    ROOT / "create_zip.py",
 ]
 
 def run_script(script: Path):

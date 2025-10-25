@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-10-25T19:08:19.038067+00:00",
-  "count": 48,
+  "generated_at": "2025-10-25T21:11:52.392752+00:00",
+  "count": 60,
   "wallpapers": [
     {
       "filename": "3squares.png",
@@ -26,7 +26,7 @@
     {
       "filename": "anbu.jpg",
       "url": "wallpapers/anbu.jpg",
-      "thumb_url": null,
+      "thumb_url": "thumbnail/wallpapers-thumb/anbu.webp",
       "size": 76381,
       "modified": "2025-10-25T19:04:53.377420+00:00"
     },
@@ -47,7 +47,7 @@
     {
       "filename": "black_sun.png",
       "url": "wallpapers/black_sun.png",
-      "thumb_url": null,
+      "thumb_url": "thumbnail/wallpapers-thumb/black_sun.webp",
       "size": 1514864,
       "modified": "2025-10-25T19:02:16.537160+00:00"
     },
@@ -75,7 +75,7 @@
     {
       "filename": "comet.jpg",
       "url": "wallpapers/comet.jpg",
-      "thumb_url": null,
+      "thumb_url": "thumbnail/wallpapers-thumb/comet.webp",
       "size": 755227,
       "modified": "2025-10-25T19:07:04.631202+00:00"
     },
@@ -89,7 +89,7 @@
     {
       "filename": "cyberpunk_truck.jpg",
       "url": "wallpapers/cyberpunk_truck.jpg",
-      "thumb_url": null,
+      "thumb_url": "thumbnail/wallpapers-thumb/cyberpunk_truck.webp",
       "size": 1008784,
       "modified": "2025-10-25T19:05:42.604412+00:00"
     },
@@ -131,7 +131,7 @@
     {
       "filename": "eye.png",
       "url": "wallpapers/eye.png",
-      "thumb_url": null,
+      "thumb_url": "thumbnail/wallpapers-thumb/eye.webp",
       "size": 3201946,
       "modified": "2025-10-25T19:02:05.948498+00:00"
     },
@@ -145,7 +145,7 @@
     {
       "filename": "fantasy-world.jpg",
       "url": "wallpapers/fantasy-world.jpg",
-      "thumb_url": null,
+      "thumb_url": "thumbnail/wallpapers-thumb/fantasy-world.webp",
       "size": 1630261,
       "modified": "2025-10-25T19:06:13.709665+00:00"
     },
@@ -159,7 +159,7 @@
     {
       "filename": "firewatch-3.jpg",
       "url": "wallpapers/firewatch-3.jpg",
-      "thumb_url": null,
+      "thumb_url": "thumbnail/wallpapers-thumb/firewatch-3.webp",
       "size": 1211428,
       "modified": "2025-10-25T19:03:02.722685+00:00"
     },
@@ -201,7 +201,7 @@
     {
       "filename": "just-do-it.jpg",
       "url": "wallpapers/just-do-it.jpg",
-      "thumb_url": null,
+      "thumb_url": "thumbnail/wallpapers-thumb/just-do-it.webp",
       "size": 119861,
       "modified": "2025-10-25T19:05:28.759880+00:00"
     },
@@ -271,7 +271,7 @@
     {
       "filename": "old-house.png",
       "url": "wallpapers/old-house.png",
-      "thumb_url": null,
+      "thumb_url": "thumbnail/wallpapers-thumb/old-house.webp",
       "size": 11466317,
       "modified": "2025-10-25T19:03:50.703383+00:00"
     },
@@ -281,6 +281,13 @@
       "thumb_url": "thumbnail/wallpapers-thumb/poles.webp",
       "size": 7981049,
       "modified": "2025-10-24T20:13:32.480191+00:00"
+    },
+    {
+      "filename": "purple_plane_landscape.png",
+      "url": "wallpapers/purple_plane_landscape.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/purple_plane_landscape.webp",
+      "size": 537796,
+      "modified": "2025-10-25T21:06:13.769425+00:00"
     },
     {
       "filename": "red_planet.jpg",
@@ -297,18 +304,81 @@
       "modified": "2025-10-24T18:26:33.703261+00:00"
     },
     {
+      "filename": "river_to_castle_theme_blue.jpg",
+      "url": "wallpapers/river_to_castle_theme_blue.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/river_to_castle_theme_blue.webp",
+      "size": 3236401,
+      "modified": "2025-10-25T21:06:05.701101+00:00"
+    },
+    {
+      "filename": "rocket_launch.jpg",
+      "url": "wallpapers/rocket_launch.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/rocket_launch.webp",
+      "size": 9242228,
+      "modified": "2025-10-25T21:05:54.777033+00:00"
+    },
+    {
+      "filename": "room-dark.png",
+      "url": "wallpapers/room-dark.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/room-dark.webp",
+      "size": 4968876,
+      "modified": "2025-10-25T21:05:45.910492+00:00"
+    },
+    {
+      "filename": "shaded.png",
+      "url": "wallpapers/shaded.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/shaded.webp",
+      "size": 2548204,
+      "modified": "2025-10-25T21:05:40.729592+00:00"
+    },
+    {
+      "filename": "spaceship1.jpg",
+      "url": "wallpapers/spaceship1.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/spaceship1.webp",
+      "size": 2124890,
+      "modified": "2025-10-25T21:05:23.368777+00:00"
+    },
+    {
+      "filename": "spaceship2.jpg",
+      "url": "wallpapers/spaceship2.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/spaceship2.webp",
+      "size": 2800025,
+      "modified": "2025-10-25T21:05:18.881506+00:00"
+    },
+    {
+      "filename": "spaceshuttle.png",
+      "url": "wallpapers/spaceshuttle.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/spaceshuttle.webp",
+      "size": 17074902,
+      "modified": "2025-10-25T21:05:13.053861+00:00"
+    },
+    {
       "filename": "stare.png",
       "url": "wallpapers/stare.png",
-      "thumb_url": null,
+      "thumb_url": "thumbnail/wallpapers-thumb/stare.webp",
       "size": 413588,
       "modified": "2025-10-25T19:06:33.056074+00:00"
     },
     {
       "filename": "sudo-rm-rf.jpg",
       "url": "wallpapers/sudo-rm-rf.jpg",
-      "thumb_url": null,
+      "thumb_url": "thumbnail/wallpapers-thumb/sudo-rm-rf.webp",
       "size": 167901,
       "modified": "2025-10-25T19:05:12.893603+00:00"
+    },
+    {
+      "filename": "sunset-lookout.jpg",
+      "url": "wallpapers/sunset-lookout.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/sunset-lookout.webp",
+      "size": 2026948,
+      "modified": "2025-10-25T21:04:57.946708+00:00"
+    },
+    {
+      "filename": "sunset-scenery-minimalist.jpg",
+      "url": "wallpapers/sunset-scenery-minimalist.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/sunset-scenery-minimalist.webp",
+      "size": 72340,
+      "modified": "2025-10-25T21:04:53.628008+00:00"
     },
     {
       "filename": "tower_cloud.png",
@@ -316,6 +386,20 @@
       "thumb_url": "thumbnail/wallpapers-thumb/tower_cloud.webp",
       "size": 12260772,
       "modified": "2025-10-24T20:14:31.040921+00:00"
+    },
+    {
+      "filename": "train-lake.png",
+      "url": "wallpapers/train-lake.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/train-lake.webp",
+      "size": 5274800,
+      "modified": "2025-10-25T21:04:41.394138+00:00"
+    },
+    {
+      "filename": "trigonometry.png",
+      "url": "wallpapers/trigonometry.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/trigonometry.webp",
+      "size": 213808,
+      "modified": "2025-10-25T21:04:29.328288+00:00"
     },
     {
       "filename": "wallhaven-house.jpg",

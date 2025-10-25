@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-10-25T19:08:19.041122+00:00",
-  "count": 23,
+  "generated_at": "2025-10-25T21:11:52.396776+00:00",
+  "count": 35,
   "wallpapers": [
     {
       "filename": "Acclaimed_rectangle.jpg",
@@ -38,11 +38,46 @@
       "modified": "2025-10-24T20:09:16.227277+00:00"
     },
     {
+      "filename": "bcat_1.jpg",
+      "url": "wallpapers-mobile/bcat_1.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/bcat_1.webp",
+      "size": 15425,
+      "modified": "2025-10-25T21:02:54.269346+00:00"
+    },
+    {
+      "filename": "bcat_2.jpg",
+      "url": "wallpapers-mobile/bcat_2.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/bcat_2.webp",
+      "size": 99054,
+      "modified": "2025-10-25T21:03:05.314354+00:00"
+    },
+    {
+      "filename": "bcat_3.jpg",
+      "url": "wallpapers-mobile/bcat_3.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/bcat_3.webp",
+      "size": 259068,
+      "modified": "2025-10-25T21:03:15.372922+00:00"
+    },
+    {
+      "filename": "blurry-brown-trees.jpg",
+      "url": "wallpapers-mobile/blurry-brown-trees.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/blurry-brown-trees.webp",
+      "size": 2747473,
+      "modified": "2025-10-25T20:58:37.165065+00:00"
+    },
+    {
       "filename": "cat_landscape.jpg",
       "url": "wallpapers-mobile/cat_landscape.jpg",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/cat_landscape.webp",
       "size": 290995,
       "modified": "2025-10-24T18:24:37.166913+00:00"
+    },
+    {
+      "filename": "city_boat.jpg",
+      "url": "wallpapers-mobile/city_boat.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/city_boat.webp",
+      "size": 657302,
+      "modified": "2025-10-25T21:01:04.059237+00:00"
     },
     {
       "filename": "cube.jpg",
@@ -136,6 +171,27 @@
       "modified": "2025-10-24T20:11:23.515805+00:00"
     },
     {
+      "filename": "Minimal_landscape.jpeg",
+      "url": "wallpapers-mobile/Minimal_landscape.jpeg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/Minimal_landscape.webp",
+      "size": 316729,
+      "modified": "2025-10-25T20:59:54.614729+00:00"
+    },
+    {
+      "filename": "Minimal_mountains_1.png",
+      "url": "wallpapers-mobile/Minimal_mountains_1.png",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/Minimal_mountains_1.webp",
+      "size": 136376,
+      "modified": "2025-10-25T20:59:59.943048+00:00"
+    },
+    {
+      "filename": "Minimal_mountains_2.jpeg",
+      "url": "wallpapers-mobile/Minimal_mountains_2.jpeg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/Minimal_mountains_2.webp",
+      "size": 750770,
+      "modified": "2025-10-25T21:00:02.397738+00:00"
+    },
+    {
       "filename": "Pixelated_forest.png",
       "url": "wallpapers-mobile/Pixelated_forest.png",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/Pixelated_forest.webp",
@@ -150,6 +206,20 @@
       "modified": "2025-10-24T19:14:42.206516+00:00"
     },
     {
+      "filename": "robot-charge.jpg",
+      "url": "wallpapers-mobile/robot-charge.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/robot-charge.webp",
+      "size": 1536597,
+      "modified": "2025-10-25T21:02:07.815761+00:00"
+    },
+    {
+      "filename": "Saturn.jpeg",
+      "url": "wallpapers-mobile/Saturn.jpeg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/Saturn.webp",
+      "size": 623399,
+      "modified": "2025-10-25T21:01:36.827484+00:00"
+    },
+    {
       "filename": "skull.jpg",
       "url": "wallpapers-mobile/skull.jpg",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/skull.webp",
@@ -162,6 +232,20 @@
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/snow_cat.webp",
       "size": 300252,
       "modified": "2025-10-24T18:24:07.089094+00:00"
+    },
+    {
+      "filename": "tower.jpg",
+      "url": "wallpapers-mobile/tower.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/tower.webp",
+      "size": 372724,
+      "modified": "2025-10-25T21:03:57.538458+00:00"
+    },
+    {
+      "filename": "water-drops-microscope.jpg",
+      "url": "wallpapers-mobile/water-drops-microscope.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/water-drops-microscope.webp",
+      "size": 1626651,
+      "modified": "2025-10-25T20:58:37.184969+00:00"
     }
   ]
 }

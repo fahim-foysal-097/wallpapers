@@ -6,6 +6,8 @@
 
 A **static gallery site** to browse, preview, and download wallpapers stored in the repository's `wallpapers/` folder.
 
+Just go to the website, choose and download your wallpapers.
+
 If you want to **add wallpapers**, fork the repository --> add wallpapers --> open pull request.
 
 <p>
@@ -18,15 +20,14 @@ If you want to **add wallpapers**, fork the repository --> add wallpapers --> op
 
 Use the following Python scripts included in the repository (use in order) :
 
-| Script               | Description                                  |
-| -------------------- | -------------------------------------------- |
-| `generate_thumbs.py` | Generate `thumbnails` for all wallpapers.    |
-| `generate_json.py`   | Generate `json` for all wallpapers.          |
-| `add_favorites.py`   | Add a wallpaper to favorites list.           |
-| `create_zip.py`      | Create a zip file containing all wallpapers. |
+| Script               | Description                               |
+| -------------------- | ----------------------------------------- |
+| `generate_thumbs.py` | Generate `thumbnails` for all wallpapers. |
+| `generate_json.py`   | Generate `json` for all wallpapers.       |
+| `add_favorites.py`   | Add a wallpaper to favorites list.        |
 
 or you just run :
-`build_all.py` to do all at once.
+`build_all.py` to do all at once (except `add_favourites.py`).
 
 ## Note
 
