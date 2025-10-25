@@ -27,11 +27,10 @@ jobs:
       - name: Prepare timestamp
         id: set_timestamp
         run: |
-          # UTC timestamp safe for tags: YYYYMMDDTHHMMSSZ
           ts=$(date -u +"%Y%m%dT%H%M%SZ")
           echo "ts=$ts" >> "$GITHUB_OUTPUT"
 
-      - name: Install zip (if missing)
+      - name: Install zip
         run: |
           sudo apt-get update -y
           sudo apt-get install -y zip
@@ -40,40 +39,37 @@ jobs:
         id: create_zips
         run: |
           set -eux
-          ZIP1="${ZIP1}"
-          ZIP2="${ZIP2}"
 
-          # Clean any existing artifacts
-          rm -f "${ZIP1}" "${ZIP2}"
+          # use job env variables directly ($ZIP1, $ZIP2)
+          rm -f "$ZIP1" "$ZIP2"
 
           zip_created=false
           zip1_exists=false
           zip2_exists=false
 
           if [ -d "wallpapers" ] && [ "$(ls -A wallpapers || true)" ]; then
-            echo "Creating ${ZIP1} from wallpapers/"
-            zip -r "${ZIP1}" wallpapers -x "*/.git/*"
-            if [ -f "${ZIP1}" ]; then
+            echo "Zipping wallpapers/ -> $ZIP1"
+            zip -r "$ZIP1" wallpapers -x "*/.git/*"
+            if [ -f "$ZIP1" ]; then
               zip_created=true
               zip1_exists=true
             fi
           else
-            echo "No wallpapers/ folder or it's empty — skipping ${ZIP1}"
+            echo "No wallpapers/ folder or it's empty — skipping $ZIP1"
           fi
 
           if [ -d "wallpapers-mobile" ] && [ "$(ls -A wallpapers-mobile || true)" ]; then
-            echo "Creating ${ZIP2} from wallpapers-mobile/"
-            zip -r "${ZIP2}" wallpapers-mobile -x "*/.git/*"
-            if [ -f "${ZIP2}" ]; then
+            echo "Zipping wallpapers-mobile/ -> $ZIP2"
+            zip -r "$ZIP2" wallpapers-mobile -x "*/.git/*"
+            if [ -f "$ZIP2" ]; then
               zip_created=true
               zip2_exists=true
             fi
           else
-            echo "No wallpapers-mobile/ folder or it's empty — skipping ${ZIP2}"
+            echo "No wallpapers-mobile/ folder or it's empty — skipping $ZIP2"
           fi
 
-          # Output sizes and warn about 2GB+ files
-          for f in "${ZIP1}" "${ZIP2}"; do
+          for f in "$ZIP1" "$ZIP2"; do
             if [ -f "$f" ]; then
               size=$(stat -c%s "$f")
               human=$(ls -lh "$f" | awk '{print $5}')
@@ -84,7 +80,6 @@ jobs:
             fi
           done
 
-          # set outputs (via GITHUB_OUTPUT)
           echo "zip_created=${zip_created}" >> "$GITHUB_OUTPUT"
           echo "zip1_exists=${zip1_exists}" >> "$GITHUB_OUTPUT"
           echo "zip2_exists=${zip2_exists}" >> "$GITHUB_OUTPUT"
@@ -92,7 +87,7 @@ jobs:
       - name: Create GitHub Release (only if zip created)
         id: create_release
         if: steps.create_zips.outputs.zip_created == 'true'
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ env.TAG_PREFIX }}${{ steps.set_timestamp.outputs.ts }}
           name: ${{ env.TAG_PREFIX }}${{ steps.set_timestamp.outputs.ts }}
@@ -105,25 +100,89 @@ jobs:
 
       - name: Upload wallpaper-all.zip (if created)
         if: steps.create_zips.outputs.zip1_exists == 'true'
-        uses: actions/upload-release-asset@v1
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./wallpaper-all.zip
-          asset_name: wallpaper-all.zip
-          asset_content_type: application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -eux
+          ATTEMPTS=3
+          UPLOAD_URL="${{ steps.create_release.outputs.upload_url }}"
+          UPLOAD_URL_CLEAN="${UPLOAD_URL%\{*}"
+          ASSET_NAME="$ZIP1"
+          ASSET_PATH="./${ASSET_NAME}"
+
+          if [ ! -f "${ASSET_PATH}" ]; then
+            echo "Asset not found: ${ASSET_PATH}"
+            exit 1
+          fi
+
+          for i in $(seq 1 $ATTEMPTS); do
+            echo "Upload attempt $i for ${ASSET_NAME}"
+            RESP_HTTP=$(curl -sS -w "%{http_code}" -o /tmp/upload_resp \
+              -X POST \
+              -H "Authorization: token ${GITHUB_TOKEN}" \
+              -H "Content-Type: application/zip" \
+              --data-binary @"${ASSET_PATH}" \
+              "${UPLOAD_URL_CLEAN}?name=${ASSET_NAME}")
+
+            if [ "$RESP_HTTP" -ge 200 ] && [ "$RESP_HTTP" -lt 300 ]; then
+              echo "Upload succeeded (HTTP $RESP_HTTP)"
+              break
+            else
+              echo "Upload returned HTTP $RESP_HTTP - attempt $i failed"
+              cat /tmp/upload_resp || true
+              if [ "$i" -lt "$ATTEMPTS" ]; then
+                sleep $((i*2))
+              else
+                echo "All upload attempts failed"
+                exit 1
+              fi
+            fi
+          done
 
       - name: Upload wallpaper-mobile-all.zip (if created)
         if: steps.create_zips.outputs.zip2_exists == 'true'
-        uses: actions/upload-release-asset@v1
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./wallpaper-mobile-all.zip
-          asset_name: wallpaper-mobile-all.zip
-          asset_content_type: application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -eux
+          ATTEMPTS=3
+          UPLOAD_URL="${{ steps.create_release.outputs.upload_url }}"
+          UPLOAD_URL_CLEAN="${UPLOAD_URL%\{*}"
+          ASSET_NAME="$ZIP2"
+          ASSET_PATH="./${ASSET_NAME}"
+
+          if [ ! -f "${ASSET_PATH}" ]; then
+            echo "Asset not found: ${ASSET_PATH}"
+            exit 1
+          fi
+
+          for i in $(seq 1 $ATTEMPTS); do
+            echo "Upload attempt $i for ${ASSET_NAME}"
+            RESP_HTTP=$(curl -sS -w "%{http_code}" -o /tmp/upload_resp \
+              -X POST \
+              -H "Authorization: token ${GITHUB_TOKEN}" \
+              -H "Content-Type: application/zip" \
+              --data-binary @"${ASSET_PATH}" \
+              "${UPLOAD_URL_CLEAN}?name=${ASSET_NAME}")
+
+            if [ "$RESP_HTTP" -ge 200 ] && [ "$RESP_HTTP" -lt 300 ]; then
+              echo "Upload succeeded (HTTP $RESP_HTTP)"
+              break
+            else
+              echo "Upload returned HTTP $RESP_HTTP - attempt $i failed"
+              cat /tmp/upload_resp || true
+              if [ "$i" -lt "$ATTEMPTS" ]; then
+                sleep $((i*2))
+              else
+                echo "All upload attempts failed"
+                exit 1
+              fi
+            fi
+          done
 
       - name: Prune old wallpaper releases (keep only ${{ env.KEEP_RELEASES }})
         if: steps.create_zips.outputs.zip_created == 'true'
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
