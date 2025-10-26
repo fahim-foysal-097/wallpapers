@@ -1,4 +1,3 @@
-// js/scripts.js - gallery renderer used by index.html and favorites.html
 (() => {
   const JSON_PATH = "json/wallpapers.json";
   const CATEGORIES_PATH = "json/categories.json";

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-10-26T16:18:20.482340+00:00",
+  "generated_at": "2025-10-26T19:43:20.875739+00:00",
   "count": 84,
   "wallpapers": [
     {
@@ -69,7 +69,7 @@
     {
       "filename": "itachi-aesthetic.gif",
       "url": "wallpapers/anime/itachi-aesthetic.gif",
-      "thumb_url": "thumbnail/wallpapers-thumb/anime/itachi-aesthetic.webp",
+      "thumb_url": null,
       "size": 6592925,
       "modified": "2025-10-26T15:07:44.594557+00:00",
       "category": "anime"
@@ -285,7 +285,7 @@
     {
       "filename": "waterfall.gif",
       "url": "wallpapers/art/waterfall.gif",
-      "thumb_url": "thumbnail/wallpapers-thumb/art/waterfall.webp",
+      "thumb_url": null,
       "size": 170229,
       "modified": "2025-10-26T15:36:56.164076+00:00",
       "category": "art"
@@ -501,7 +501,7 @@
     {
       "filename": "charmander-hat.gif",
       "url": "wallpapers/pokemon/charmander-hat.gif",
-      "thumb_url": "thumbnail/wallpapers-thumb/pokemon/charmander-hat.webp",
+      "thumb_url": null,
       "size": 7185556,
       "modified": "2025-10-26T14:48:41.286993+00:00",
       "category": "pokemon"
@@ -661,7 +661,7 @@
     {
       "filename": "retro_pc.gif",
       "url": "wallpapers/tech/retro_pc.gif",
-      "thumb_url": "thumbnail/wallpapers-thumb/tech/retro_pc.webp",
+      "thumb_url": null,
       "size": 597307,
       "modified": "2025-10-24T18:26:33.703261+00:00",
       "category": "tech"
