@@ -1,17 +1,8 @@
 #!/usr/bin/env python3
 """
-build_all.py
-
-Full pipeline that runs:
-  1) generate_thumbs.py
-  2) generate_json.py
-  3) writes json/badge.json
-  4) generates json/badge.svg (static SVG badge that is embedded in README)
-
-Usage:
-    python3 build_all.py
+build_all.py - run full pipeline:
+  generate_thumbs.py -> generate_json.py -> write badges
 """
-
 from pathlib import Path
 import subprocess
 import sys
@@ -84,55 +75,33 @@ def write_badge_json(desktop_count, mobile_count, total):
         json.dump(payload, fh, indent=2, ensure_ascii=False)
     print(f"Wrote badge JSON -> {BADGE_JSON} (total={total})")
 
-# ---------- SVG badge generator ----------
-# Simple badge renderer inspired by shields style (label + value)
 def generate_badge_svg(label: str, value: str, color_hex: str = "#8A2BE2"):
-    """
-    Create a simple SVG badge with `label` (left) and `value` (right).
-    Returns SVG string.
-    """
-    # Safe-escape label and value for XML
     label_esc = html.escape(str(label))
     value_esc = html.escape(str(value))
-
-    # Basic metrics (approximate): per-char widths
-    # This is simple and works well for short labels/values.
-    char_w = 6.8  # approximate average char width in px for 11px Roboto-like font
-    pad_x = 10    # horizontal padding on each side of text area
+    char_w = 6.8
+    pad_x = 10
     height = 20
     left_font_size = 11
     right_font_size = 11
-
     left_width = max(40, int(len(label) * char_w) + pad_x * 2)
     right_width = max(40, int(len(value) * char_w) + pad_x * 2)
     total_width = left_width + right_width
-    rx = 4  # corner radius
-
+    rx = 4
     left_bg = "#555"
     right_bg = color_hex
-
     left_text_x = left_width / 2
     right_text_x = left_width + right_width / 2
-    text_y = (height / 2) + 4  # vertical alignment tweak
-
+    text_y = (height / 2) + 4
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{total_width}" height="{height}" role="img" aria-label="{label_esc}: {value_esc}">
   <title>{label_esc}: {value_esc}</title>
   <linearGradient id="s" x2="0" y2="100%">
     <stop offset="0" stop-color="#fff" stop-opacity=".1"/>
     <stop offset="1" stop-opacity=".05"/>
   </linearGradient>
-
-  <!-- background -->
   <rect rx="{rx}" width="{total_width}" height="{height}" fill="{left_bg}"/>
   <rect rx="{rx}" x="{left_width}" width="{right_width}" height="{height}" fill="{right_bg}"/>
-
-  <!-- overlay for subtle gloss -->
   <rect rx="{rx}" width="{total_width}" height="{height}" fill="url(#s)"/>
-
-  <!-- divider -->
   <rect x="{left_width}" width="1" height="{height}" fill="#000" opacity="0.2"/>
-
-  <!-- text -->
   <g fill="#fff" text-anchor="middle" font-family="Verdana,DejaVu Sans,Segoe UI,Arial,sans-serif" font-size="{left_font_size}">
     <text x="{left_text_x:.1f}" y="{text_y:.1f}" fill="#fff" fill-opacity="0.9">{label_esc}</text>
     <text x="{right_text_x:.1f}" y="{text_y:.1f}" fill="#fff" font-weight="700">{value_esc}</text>
@@ -141,7 +110,6 @@ def generate_badge_svg(label: str, value: str, color_hex: str = "#8A2BE2"):
     return svg
 
 def write_badge_svg(total):
-    # label left, value right
     label = "wallpapers"
     value = str(total)
     svg = generate_badge_svg(label, value, color_hex="#8A2BE2")
@@ -152,7 +120,6 @@ def write_badge_svg(total):
 
 def main():
     print("BUILD: starting full pipeline")
-    # run each script in order - if one fails, stop
     for script in SCRIPTS:
         try:
             run_script(script)
@@ -160,7 +127,6 @@ def main():
             print(f"ERROR: {e}")
             sys.exit(1)
 
-    # compute counts and write badge json + svg
     dcount, mcount, total = compute_counts()
     write_badge_json(dcount, mcount, total)
     write_badge_svg(total)

@@ -1,335 +1,422 @@
 {
-  "generated_at": "2025-10-26T00:02:43.838849+00:00",
-  "count": 47,
+  "generated_at": "2025-10-26T16:18:20.490576+00:00",
+  "count": 52,
   "wallpapers": [
-    {
-      "filename": "abstract.png",
-      "url": "wallpapers-mobile/abstract.png",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/abstract.webp",
-      "size": 2200775,
-      "modified": "2025-10-25T23:32:54.152755+00:00"
-    },
-    {
-      "filename": "Acclaimed_rectangle.jpg",
-      "url": "wallpapers-mobile/Acclaimed_rectangle.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/Acclaimed_rectangle.webp",
-      "size": 475560,
-      "modified": "2025-10-24T18:25:22.124443+00:00"
-    },
-    {
-      "filename": "Aesthetic_blue.jpeg",
-      "url": "wallpapers-mobile/Aesthetic_blue.jpeg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/Aesthetic_blue.webp",
-      "size": 2341173,
-      "modified": "2025-10-24T20:36:54.743869+00:00"
-    },
-    {
-      "filename": "asciiflowers.png",
-      "url": "wallpapers-mobile/asciiflowers.png",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/asciiflowers.webp",
-      "size": 2746224,
-      "modified": "2025-10-24T18:25:52.303389+00:00"
-    },
-    {
-      "filename": "Astronaut.jpeg",
-      "url": "wallpapers-mobile/Astronaut.jpeg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/Astronaut.webp",
-      "size": 187026,
-      "modified": "2025-10-24T20:09:01.111716+00:00"
-    },
-    {
-      "filename": "astronaut_space.jpg",
-      "url": "wallpapers-mobile/astronaut_space.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/astronaut_space.webp",
-      "size": 682862,
-      "modified": "2025-10-24T20:09:16.227277+00:00"
-    },
-    {
-      "filename": "bcat_1.jpg",
-      "url": "wallpapers-mobile/bcat_1.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/bcat_1.webp",
-      "size": 15425,
-      "modified": "2025-10-25T21:02:54.269346+00:00"
-    },
-    {
-      "filename": "bcat_2.jpg",
-      "url": "wallpapers-mobile/bcat_2.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/bcat_2.webp",
-      "size": 99054,
-      "modified": "2025-10-25T21:03:05.314354+00:00"
-    },
-    {
-      "filename": "bcat_3.jpg",
-      "url": "wallpapers-mobile/bcat_3.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/bcat_3.webp",
-      "size": 259068,
-      "modified": "2025-10-25T21:03:15.372922+00:00"
-    },
-    {
-      "filename": "blurry-brown-trees.jpg",
-      "url": "wallpapers-mobile/blurry-brown-trees.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/blurry-brown-trees.webp",
-      "size": 2747473,
-      "modified": "2025-10-25T20:58:37.165065+00:00"
-    },
-    {
-      "filename": "cat-in-forest.jpg",
-      "url": "wallpapers-mobile/cat-in-forest.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/cat-in-forest.webp",
-      "size": 554454,
-      "modified": "2025-10-25T23:30:42.062582+00:00"
-    },
-    {
-      "filename": "cat_landscape.jpg",
-      "url": "wallpapers-mobile/cat_landscape.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/cat_landscape.webp",
-      "size": 290995,
-      "modified": "2025-10-24T18:24:37.166913+00:00"
-    },
-    {
-      "filename": "city_boat.jpg",
-      "url": "wallpapers-mobile/city_boat.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/city_boat.webp",
-      "size": 657302,
-      "modified": "2025-10-25T21:01:04.059237+00:00"
-    },
     {
       "filename": "cube.jpg",
       "url": "wallpapers-mobile/cube.jpg",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/cube.webp",
       "size": 102261,
-      "modified": "2025-10-24T18:26:07.568568+00:00"
-    },
-    {
-      "filename": "cute.jpg",
-      "url": "wallpapers-mobile/cute.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/cute.webp",
-      "size": 445813,
-      "modified": "2025-10-24T20:40:21.690816+00:00"
-    },
-    {
-      "filename": "CYBERPUNK_samurai.jpeg",
-      "url": "wallpapers-mobile/CYBERPUNK_samurai.jpeg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/CYBERPUNK_samurai.webp",
-      "size": 1469964,
-      "modified": "2025-10-24T19:14:12.369885+00:00"
+      "modified": "2025-10-24T18:26:07.568568+00:00",
+      "category": "uncategorized"
     },
     {
       "filename": "Dark-Netflix.png",
       "url": "wallpapers-mobile/Dark-Netflix.png",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/Dark-Netflix.webp",
       "size": 2371659,
-      "modified": "2025-10-24T20:40:45.071066+00:00"
-    },
-    {
-      "filename": "ERR_NAME.jpeg",
-      "url": "wallpapers-mobile/ERR_NAME.jpeg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/ERR_NAME.webp",
-      "size": 403441,
-      "modified": "2025-10-24T19:15:01.894908+00:00"
-    },
-    {
-      "filename": "evening.jpg",
-      "url": "wallpapers-mobile/evening.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/evening.webp",
-      "size": 279976,
-      "modified": "2025-10-24T19:17:00.348897+00:00"
-    },
-    {
-      "filename": "finding_life.png",
-      "url": "wallpapers-mobile/finding_life.png",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/finding_life.webp",
-      "size": 4847155,
-      "modified": "2025-10-24T20:05:33.379583+00:00"
-    },
-    {
-      "filename": "Gangsta_Pikachu.jpeg",
-      "url": "wallpapers-mobile/Gangsta_Pikachu.jpeg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/Gangsta_Pikachu.webp",
-      "size": 125390,
-      "modified": "2025-10-24T20:37:37.881479+00:00"
+      "modified": "2025-10-24T20:40:45.071066+00:00",
+      "category": "uncategorized"
     },
     {
       "filename": "hexagon_colors.jpeg",
       "url": "wallpapers-mobile/hexagon_colors.jpeg",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/hexagon_colors.webp",
       "size": 208771,
-      "modified": "2025-10-24T20:06:06.650185+00:00"
-    },
-    {
-      "filename": "hollow-knight-wall.jpg",
-      "url": "wallpapers-mobile/hollow-knight-wall.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/hollow-knight-wall.webp",
-      "size": 97336,
-      "modified": "2025-10-25T23:32:06.428534+00:00"
-    },
-    {
-      "filename": "husk.jpg",
-      "url": "wallpapers-mobile/husk.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/husk.webp",
-      "size": 1536597,
-      "modified": "2025-10-24T20:42:12.145242+00:00"
-    },
-    {
-      "filename": "keyhole.png",
-      "url": "wallpapers-mobile/keyhole.png",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/keyhole.webp",
-      "size": 2053984,
-      "modified": "2025-10-24T18:25:58.700937+00:00"
-    },
-    {
-      "filename": "Landscape_moon.jpeg",
-      "url": "wallpapers-mobile/Landscape_moon.jpeg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/Landscape_moon.webp",
-      "size": 351929,
-      "modified": "2025-10-24T20:38:10.183229+00:00"
-    },
-    {
-      "filename": "Magenta_Lightning.jpg",
-      "url": "wallpapers-mobile/Magenta_Lightning.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/Magenta_Lightning.webp",
-      "size": 481483,
-      "modified": "2025-10-24T20:11:23.515805+00:00"
-    },
-    {
-      "filename": "minecraft-pixel.jpg",
-      "url": "wallpapers-mobile/minecraft-pixel.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/minecraft-pixel.webp",
-      "size": 539280,
-      "modified": "2025-10-25T23:30:29.174972+00:00"
-    },
-    {
-      "filename": "minecraft-sea.jpg",
-      "url": "wallpapers-mobile/minecraft-sea.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/minecraft-sea.webp",
-      "size": 350226,
-      "modified": "2025-10-25T23:31:45.491078+00:00"
-    },
-    {
-      "filename": "Minimal_landscape.jpeg",
-      "url": "wallpapers-mobile/Minimal_landscape.jpeg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/Minimal_landscape.webp",
-      "size": 316729,
-      "modified": "2025-10-25T20:59:54.614729+00:00"
-    },
-    {
-      "filename": "Minimal_mountains_1.png",
-      "url": "wallpapers-mobile/Minimal_mountains_1.png",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/Minimal_mountains_1.webp",
-      "size": 136376,
-      "modified": "2025-10-25T20:59:59.943048+00:00"
-    },
-    {
-      "filename": "Minimal_mountains_2.jpeg",
-      "url": "wallpapers-mobile/Minimal_mountains_2.jpeg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/Minimal_mountains_2.webp",
-      "size": 750770,
-      "modified": "2025-10-25T21:00:02.397738+00:00"
-    },
-    {
-      "filename": "no-internet-2.jpg",
-      "url": "wallpapers-mobile/no-internet-2.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/no-internet-2.webp",
-      "size": 276358,
-      "modified": "2025-10-25T23:31:29.716336+00:00"
-    },
-    {
-      "filename": "no-internet.jpg",
-      "url": "wallpapers-mobile/no-internet.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/no-internet.webp",
-      "size": 178423,
-      "modified": "2025-10-25T23:31:19.394652+00:00"
-    },
-    {
-      "filename": "pixel-pond.jpg",
-      "url": "wallpapers-mobile/pixel-pond.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/pixel-pond.webp",
-      "size": 393605,
-      "modified": "2025-10-25T23:31:56.753684+00:00"
-    },
-    {
-      "filename": "Pixelated_forest.png",
-      "url": "wallpapers-mobile/Pixelated_forest.png",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/Pixelated_forest.webp",
-      "size": 468454,
-      "modified": "2025-10-24T20:38:28.210634+00:00"
-    },
-    {
-      "filename": "pokemon-lugia.jpg",
-      "url": "wallpapers-mobile/pokemon-lugia.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/pokemon-lugia.webp",
-      "size": 348640,
-      "modified": "2025-10-25T23:32:17.459128+00:00"
+      "modified": "2025-10-24T20:06:06.650185+00:00",
+      "category": "uncategorized"
     },
     {
       "filename": "reach-for-it.png",
       "url": "wallpapers-mobile/reach-for-it.png",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/reach-for-it.webp",
       "size": 2087937,
-      "modified": "2025-10-24T19:14:42.206516+00:00"
-    },
-    {
-      "filename": "red-samurai.jpg",
-      "url": "wallpapers-mobile/red-samurai.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/red-samurai.webp",
-      "size": 169327,
-      "modified": "2025-10-25T23:30:57.953954+00:00"
-    },
-    {
-      "filename": "robot-charge.jpg",
-      "url": "wallpapers-mobile/robot-charge.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/robot-charge.webp",
-      "size": 1536597,
-      "modified": "2025-10-25T21:02:07.815761+00:00"
-    },
-    {
-      "filename": "Saturn.jpeg",
-      "url": "wallpapers-mobile/Saturn.jpeg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/Saturn.webp",
-      "size": 623399,
-      "modified": "2025-10-25T21:01:36.827484+00:00"
+      "modified": "2025-10-24T19:14:42.206516+00:00",
+      "category": "uncategorized"
     },
     {
       "filename": "skull.jpg",
       "url": "wallpapers-mobile/skull.jpg",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/skull.webp",
       "size": 1199636,
-      "modified": "2025-10-24T18:25:06.595993+00:00"
+      "modified": "2025-10-24T18:25:06.595993+00:00",
+      "category": "uncategorized"
     },
     {
-      "filename": "snow_cat.jpg",
-      "url": "wallpapers-mobile/snow_cat.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/snow_cat.webp",
-      "size": 300252,
-      "modified": "2025-10-24T18:24:07.089094+00:00"
+      "filename": "abstract-2.jpg",
+      "url": "wallpapers-mobile/abstract/abstract-2.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/abstract/abstract-2.webp",
+      "size": 143773,
+      "modified": "2025-10-25T23:16:43.019763+00:00",
+      "category": "abstract"
     },
     {
-      "filename": "spiderman-wall.png",
-      "url": "wallpapers-mobile/spiderman-wall.png",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/spiderman-wall.webp",
-      "size": 2880685,
-      "modified": "2025-10-25T23:32:28.518944+00:00"
+      "filename": "abstract-3.jpg",
+      "url": "wallpapers-mobile/abstract/abstract-3.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/abstract/abstract-3.webp",
+      "size": 279396,
+      "modified": "2025-10-26T15:29:23.794277+00:00",
+      "category": "abstract"
     },
     {
-      "filename": "tower.jpg",
-      "url": "wallpapers-mobile/tower.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/tower.webp",
-      "size": 372724,
-      "modified": "2025-10-25T21:03:57.538458+00:00"
+      "filename": "abstract-4.jpg",
+      "url": "wallpapers-mobile/abstract/abstract-4.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/abstract/abstract-4.webp",
+      "size": 492568,
+      "modified": "2025-10-26T15:29:57.767491+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "abstract.png",
+      "url": "wallpapers-mobile/abstract/abstract.png",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/abstract/abstract.webp",
+      "size": 2200775,
+      "modified": "2025-10-25T23:32:54.152755+00:00",
+      "category": "abstract"
     },
     {
       "filename": "water-drops-microscope.jpg",
-      "url": "wallpapers-mobile/water-drops-microscope.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/water-drops-microscope.webp",
+      "url": "wallpapers-mobile/abstract/water-drops-microscope.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/abstract/water-drops-microscope.webp",
       "size": 1626651,
-      "modified": "2025-10-25T20:58:37.184969+00:00"
+      "modified": "2025-10-25T20:58:37.184969+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "spiderman-wall.png",
+      "url": "wallpapers-mobile/aesthetic/spiderman-wall.png",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/aesthetic/spiderman-wall.webp",
+      "size": 2880685,
+      "modified": "2025-10-25T23:32:28.518944+00:00",
+      "category": "aesthetic"
+    },
+    {
+      "filename": "bcat_1.jpg",
+      "url": "wallpapers-mobile/animals/bcat_1.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/animals/bcat_1.webp",
+      "size": 15425,
+      "modified": "2025-10-25T21:02:54.269346+00:00",
+      "category": "animals"
+    },
+    {
+      "filename": "bcat_2.jpg",
+      "url": "wallpapers-mobile/animals/bcat_2.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/animals/bcat_2.webp",
+      "size": 99054,
+      "modified": "2025-10-25T21:03:05.314354+00:00",
+      "category": "animals"
+    },
+    {
+      "filename": "bcat_3.jpg",
+      "url": "wallpapers-mobile/animals/bcat_3.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/animals/bcat_3.webp",
+      "size": 259068,
+      "modified": "2025-10-25T21:03:15.372922+00:00",
+      "category": "animals"
+    },
+    {
+      "filename": "cat_landscape.jpg",
+      "url": "wallpapers-mobile/animals/cat_landscape.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/animals/cat_landscape.webp",
+      "size": 290995,
+      "modified": "2025-10-24T18:24:37.166913+00:00",
+      "category": "animals"
+    },
+    {
+      "filename": "cute.jpg",
+      "url": "wallpapers-mobile/animals/cute.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/animals/cute.webp",
+      "size": 445813,
+      "modified": "2025-10-24T20:40:21.690816+00:00",
+      "category": "animals"
+    },
+    {
+      "filename": "snow_cat.jpg",
+      "url": "wallpapers-mobile/animals/snow_cat.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/animals/snow_cat.webp",
+      "size": 300252,
+      "modified": "2025-10-24T18:24:07.089094+00:00",
+      "category": "animals"
+    },
+    {
+      "filename": "Acclaimed_rectangle.jpg",
+      "url": "wallpapers-mobile/art/Acclaimed_rectangle.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/Acclaimed_rectangle.webp",
+      "size": 475560,
+      "modified": "2025-10-24T18:25:22.124443+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "asciiflowers.png",
+      "url": "wallpapers-mobile/art/asciiflowers.png",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/asciiflowers.webp",
+      "size": 2746224,
+      "modified": "2025-10-24T18:25:52.303389+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "evening.jpg",
+      "url": "wallpapers-mobile/art/evening.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/evening.webp",
+      "size": 279976,
+      "modified": "2025-10-24T19:17:00.348897+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "pixel-pond.jpg",
+      "url": "wallpapers-mobile/art/pixel-pond.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/pixel-pond.webp",
+      "size": 393605,
+      "modified": "2025-10-25T23:31:56.753684+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "Pixelated_forest.png",
+      "url": "wallpapers-mobile/art/Pixelated_forest.png",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/Pixelated_forest.webp",
+      "size": 468454,
+      "modified": "2025-10-24T20:38:28.210634+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "pokemon-lugia.jpg",
+      "url": "wallpapers-mobile/art/pokemon-lugia.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/pokemon-lugia.webp",
+      "size": 348640,
+      "modified": "2025-10-25T23:32:17.459128+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "red-samurai.jpg",
+      "url": "wallpapers-mobile/art/red-samurai.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/red-samurai.webp",
+      "size": 169327,
+      "modified": "2025-10-25T23:30:57.953954+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "skull-ascii.jpg",
+      "url": "wallpapers-mobile/art/skull-ascii.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/skull-ascii.webp",
+      "size": 437025,
+      "modified": "2025-10-26T14:44:57.518796+00:00",
+      "category": "art"
     },
     {
       "filename": "window.png",
-      "url": "wallpapers-mobile/window.png",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/window.webp",
+      "url": "wallpapers-mobile/art/window.png",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/window.webp",
       "size": 1807331,
-      "modified": "2025-10-25T23:31:08.207886+00:00"
+      "modified": "2025-10-25T23:31:08.207886+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "tower.jpg",
+      "url": "wallpapers-mobile/cityscape/tower.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/cityscape/tower.webp",
+      "size": 372724,
+      "modified": "2025-10-25T21:03:57.538458+00:00",
+      "category": "cityscape"
+    },
+    {
+      "filename": "Gangsta_Pikachu.jpeg",
+      "url": "wallpapers-mobile/fun/Gangsta_Pikachu.jpeg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/fun/Gangsta_Pikachu.webp",
+      "size": 125390,
+      "modified": "2025-10-24T20:37:37.881479+00:00",
+      "category": "fun"
+    },
+    {
+      "filename": "CYBERPUNK_samurai.jpeg",
+      "url": "wallpapers-mobile/gaming/CYBERPUNK_samurai.jpeg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/gaming/CYBERPUNK_samurai.webp",
+      "size": 1469964,
+      "modified": "2025-10-24T19:14:12.369885+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "hollow-knight-wall.jpg",
+      "url": "wallpapers-mobile/gaming/hollow-knight-wall.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/gaming/hollow-knight-wall.webp",
+      "size": 97336,
+      "modified": "2025-10-25T23:32:06.428534+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "minecraft-pixel.jpg",
+      "url": "wallpapers-mobile/gaming/minecraft-pixel.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/gaming/minecraft-pixel.webp",
+      "size": 539280,
+      "modified": "2025-10-25T23:30:29.174972+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "minecraft-sea.jpg",
+      "url": "wallpapers-mobile/gaming/minecraft-sea.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/gaming/minecraft-sea.webp",
+      "size": 350226,
+      "modified": "2025-10-25T23:31:45.491078+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "Aesthetic_blue.jpeg",
+      "url": "wallpapers-mobile/landscape/Aesthetic_blue.jpeg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/landscape/Aesthetic_blue.webp",
+      "size": 2341173,
+      "modified": "2025-10-24T20:36:54.743869+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "blurry-brown-trees.jpg",
+      "url": "wallpapers-mobile/landscape/blurry-brown-trees.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/landscape/blurry-brown-trees.webp",
+      "size": 2747473,
+      "modified": "2025-10-25T20:58:37.165065+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "cat-in-forest.jpg",
+      "url": "wallpapers-mobile/landscape/cat-in-forest.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/landscape/cat-in-forest.webp",
+      "size": 554454,
+      "modified": "2025-10-25T23:30:42.062582+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "keyhole.png",
+      "url": "wallpapers-mobile/landscape/keyhole.png",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/landscape/keyhole.webp",
+      "size": 2053984,
+      "modified": "2025-10-24T18:25:58.700937+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "Landscape_moon.jpeg",
+      "url": "wallpapers-mobile/landscape/Landscape_moon.jpeg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/landscape/Landscape_moon.webp",
+      "size": 351929,
+      "modified": "2025-10-24T20:38:10.183229+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "Magenta_Lightning.jpg",
+      "url": "wallpapers-mobile/landscape/Magenta_Lightning.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/landscape/Magenta_Lightning.webp",
+      "size": 481483,
+      "modified": "2025-10-24T20:11:23.515805+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "Minimal_landscape.jpeg",
+      "url": "wallpapers-mobile/landscape/Minimal_landscape.jpeg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/landscape/Minimal_landscape.webp",
+      "size": 316729,
+      "modified": "2025-10-25T20:59:54.614729+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "Minimal_mountains_1.png",
+      "url": "wallpapers-mobile/landscape/Minimal_mountains_1.png",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/landscape/Minimal_mountains_1.webp",
+      "size": 136376,
+      "modified": "2025-10-25T20:59:59.943048+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "Minimal_mountains_2.jpeg",
+      "url": "wallpapers-mobile/landscape/Minimal_mountains_2.jpeg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/landscape/Minimal_mountains_2.webp",
+      "size": 750770,
+      "modified": "2025-10-25T21:00:02.397738+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "keep-going.jpg",
+      "url": "wallpapers-mobile/motivational/keep-going.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/motivational/keep-going.webp",
+      "size": 59758,
+      "modified": "2025-10-26T15:26:15.763086+00:00",
+      "category": "motivational"
+    },
+    {
+      "filename": "motivational-wallpaper.jpg",
+      "url": "wallpapers-mobile/motivational/motivational-wallpaper.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/motivational/motivational-wallpaper.webp",
+      "size": 187681,
+      "modified": "2025-10-26T15:27:28.060545+00:00",
+      "category": "motivational"
+    },
+    {
+      "filename": "Astronaut.jpeg",
+      "url": "wallpapers-mobile/sci-fi/Astronaut.jpeg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/sci-fi/Astronaut.webp",
+      "size": 187026,
+      "modified": "2025-10-24T20:09:01.111716+00:00",
+      "category": "sci-fi"
+    },
+    {
+      "filename": "astronaut_space.jpg",
+      "url": "wallpapers-mobile/sci-fi/astronaut_space.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/sci-fi/astronaut_space.webp",
+      "size": 682862,
+      "modified": "2025-10-24T20:09:16.227277+00:00",
+      "category": "sci-fi"
+    },
+    {
+      "filename": "city_boat.jpg",
+      "url": "wallpapers-mobile/sci-fi/city_boat.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/sci-fi/city_boat.webp",
+      "size": 657302,
+      "modified": "2025-10-25T21:01:04.059237+00:00",
+      "category": "sci-fi"
+    },
+    {
+      "filename": "finding_life.png",
+      "url": "wallpapers-mobile/sci-fi/finding_life.png",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/sci-fi/finding_life.webp",
+      "size": 4847155,
+      "modified": "2025-10-24T20:05:33.379583+00:00",
+      "category": "sci-fi"
+    },
+    {
+      "filename": "husk.jpg",
+      "url": "wallpapers-mobile/sci-fi/husk.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/sci-fi/husk.webp",
+      "size": 1536597,
+      "modified": "2025-10-24T20:42:12.145242+00:00",
+      "category": "sci-fi"
+    },
+    {
+      "filename": "Saturn.jpeg",
+      "url": "wallpapers-mobile/sci-fi/Saturn.jpeg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/sci-fi/Saturn.webp",
+      "size": 623399,
+      "modified": "2025-10-25T21:01:36.827484+00:00",
+      "category": "sci-fi"
+    },
+    {
+      "filename": "ERR_NAME.jpeg",
+      "url": "wallpapers-mobile/tech/ERR_NAME.jpeg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/tech/ERR_NAME.webp",
+      "size": 403441,
+      "modified": "2025-10-24T19:15:01.894908+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "no-internet-2.jpg",
+      "url": "wallpapers-mobile/tech/no-internet-2.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/tech/no-internet-2.webp",
+      "size": 276358,
+      "modified": "2025-10-25T23:31:29.716336+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "no-internet.jpg",
+      "url": "wallpapers-mobile/tech/no-internet.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/tech/no-internet.webp",
+      "size": 178423,
+      "modified": "2025-10-25T23:31:19.394652+00:00",
+      "category": "tech"
     }
   ]
 }

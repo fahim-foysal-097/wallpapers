@@ -1,12 +1,15 @@
-// js/mobile.js - mobile gallery script with release-backed Download All link
 (() => {
   const JSON_PATH = "json/wallpapers-mobile.json";
+  const CATEGORIES_PATH = "json/categories.json";
   const galleryEl = document.getElementById("gallery");
   const summaryEl = document.getElementById("summary");
   const emptyStateEl = document.getElementById("emptyState");
   const searchInput = document.getElementById("searchInput");
   const aspectSelect = document.getElementById("aspectSelect");
   const downloadAllBtn = document.getElementById("downloadAllBtn");
+  const chipsContainer = document.getElementById("categoryChips");
+  const chipsPrevBtn = document.getElementById("chipsPrev");
+  const chipsNextBtn = document.getElementById("chipsNext");
 
   // GITHUB RELEASES CONFIG
   const GITHUB_OWNER = "fahim-foysal-097";
@@ -29,18 +32,18 @@
   let wallpapers = [];
   let filtered = [];
   let currentIndex = 0;
+  let categories = { mobile: [] };
+  let selectedCategory = "all";
 
   const ASPECT_KEY = "mobileAspectRatio";
   const DEFAULT_ASPECT = "9/19";
 
   function setAspectOnThumbs(aspect) {
-    // apply inline style to each .thumb-wrap so CSS aspect-ratio is updated
     document.querySelectorAll(".thumb-wrap").forEach((el) => {
       el.style.aspectRatio = aspect;
     });
   }
 
-  // GitHub release asset helper (same logic as desktop)
   async function getLatestReleaseAsset(assetName) {
     try {
       const cacheKey = `gh_asset_cache_${GITHUB_OWNER}_${GITHUB_REPO}_${assetName}`;
@@ -84,42 +87,84 @@
     }
   }
 
-  // wire the downloadAllBtn to release asset
-  if (downloadAllBtn) {
-    const originalHref = downloadAllBtn.href || "wallpaper-mobile-all.zip";
-    downloadAllBtn.dataset.fallback = originalHref;
-    downloadAllBtn.classList.add("disabled");
-    downloadAllBtn.setAttribute("aria-disabled", "true");
-    downloadAllBtn.innerHTML = `<i class="bi bi-hourglass-split"></i>&nbsp;Checking latest...`;
-    (async () => {
-      try {
-        const url = await getLatestReleaseAsset("wallpaper-mobile-all.zip");
-        if (url) {
-          downloadAllBtn.href = url;
-          downloadAllBtn.setAttribute("download", "wallpaper-mobile-all.zip");
-          downloadAllBtn.classList.remove("disabled");
-          downloadAllBtn.removeAttribute("aria-disabled");
-          downloadAllBtn.innerHTML = `<i class="bi bi-file-earmark-zip-fill"></i>&nbsp;Download All Mobile`;
-          downloadAllBtn.title = "Download all mobile wallpapers";
-        } else {
-          // fallback
-          downloadAllBtn.href =
-            downloadAllBtn.dataset.fallback || "wallpaper-mobile-all.zip";
-          downloadAllBtn.setAttribute("download", "wallpaper-mobile-all.zip");
-          downloadAllBtn.classList.remove("disabled");
-          downloadAllBtn.removeAttribute("aria-disabled");
-          downloadAllBtn.innerHTML = `<i class="bi bi-file-earmark-zip-fill"></i>&nbsp;Download All`;
-          downloadAllBtn.title = "Download all mobile wallpapers";
-        }
-      } catch (e) {
-        console.warn("Error checking release:", e);
-        downloadAllBtn.href =
-          downloadAllBtn.dataset.fallback || "wallpaper-mobile-all.zip";
-        downloadAllBtn.classList.remove("disabled");
-        downloadAllBtn.removeAttribute("aria-disabled");
-        downloadAllBtn.innerHTML = `<i class="bi bi-file-earmark-zip-fill"></i>&nbsp;Download All`;
+  // CHIPS helpers
+  function buildChip(name, label, count, active) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "chip btn";
+    if (active) btn.classList.add("active");
+    btn.dataset.category = name;
+    btn.innerHTML = `${label} <span class="count ms-2">${count}</span>`;
+    btn.addEventListener("click", () => {
+      document
+        .querySelectorAll("#categoryChips .chip")
+        .forEach((c) => c.classList.remove("active"));
+      btn.classList.add("active");
+      selectedCategory = name;
+      applySearch("");
+    });
+    return btn;
+  }
+
+  function showHideChipNav() {
+    if (!chipsContainer || !chipsPrevBtn || !chipsNextBtn) return;
+    const el = chipsContainer;
+    if (el.scrollWidth <= el.clientWidth + 2) {
+      chipsPrevBtn.style.display = "none";
+      chipsNextBtn.style.display = "none";
+      return;
+    }
+    chipsPrevBtn.style.display = "";
+    chipsNextBtn.style.display = "";
+    chipsPrevBtn.disabled = el.scrollLeft <= 2;
+    chipsNextBtn.disabled =
+      el.scrollLeft + el.clientWidth >= el.scrollWidth - 2;
+  }
+
+  function scrollChips(direction = "right") {
+    if (!chipsContainer) return;
+    const el = chipsContainer;
+    const amount = Math.round(el.clientWidth * 0.66);
+    const target =
+      direction === "right" ? el.scrollLeft + amount : el.scrollLeft - amount;
+    el.scrollTo({ left: target, behavior: "smooth" });
+  }
+
+  if (chipsPrevBtn)
+    chipsPrevBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      scrollChips("left");
+    });
+  if (chipsNextBtn)
+    chipsNextBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      scrollChips("right");
+    });
+  if (chipsContainer) {
+    chipsContainer.addEventListener("scroll", () =>
+      requestAnimationFrame(showHideChipNav)
+    );
+    window.addEventListener("resize", () =>
+      requestAnimationFrame(showHideChipNav)
+    );
+    chipsContainer.addEventListener("keydown", (ev) => {
+      if (ev.key === "ArrowRight") {
+        ev.preventDefault();
+        scrollChips("right");
+      } else if (ev.key === "ArrowLeft") {
+        ev.preventDefault();
+        scrollChips("left");
+      } else if (ev.key === "Home") {
+        ev.preventDefault();
+        chipsContainer.scrollTo({ left: 0, behavior: "smooth" });
+      } else if (ev.key === "End") {
+        ev.preventDefault();
+        chipsContainer.scrollTo({
+          left: chipsContainer.scrollWidth,
+          behavior: "smooth",
+        });
       }
-    })();
+    });
   }
 
   function buildTile(entry, idx, aspect) {
@@ -234,18 +279,31 @@
     openModalAtIndex(currentIndex);
   }
 
-  // simple client-side search by filename
+  // search
   function applySearch(text) {
-    const q = text.trim().toLowerCase();
+    const q = (text || (searchInput ? searchInput.value : ""))
+      .trim()
+      .toLowerCase();
     if (!q) {
-      filtered = [...wallpapers];
+      filtered = wallpapers.filter((w) =>
+        selectedCategory === "all" || !selectedCategory
+          ? true
+          : w.category === selectedCategory
+      );
     } else {
-      filtered = wallpapers.filter((w) => w.filename.toLowerCase().includes(q));
+      filtered = wallpapers.filter((w) => {
+        if (
+          selectedCategory &&
+          selectedCategory !== "all" &&
+          w.category !== selectedCategory
+        )
+          return false;
+        return w.filename.toLowerCase().includes(q);
+      });
     }
     renderList(filtered);
   }
 
-  // Optional sort: name/time/size
   function applySort(mode) {
     const arr = [...filtered];
     switch (mode) {
@@ -274,7 +332,16 @@
     renderList(filtered);
   }
 
-  // fetch json and init
+  async function loadCategoriesJson() {
+    try {
+      const resp = await fetch(CATEGORIES_PATH, { cache: "no-store" });
+      if (!resp.ok) throw new Error("no categories.json");
+      return await resp.json();
+    } catch (e) {
+      return null;
+    }
+  }
+
   async function init() {
     // restore aspect ratio selection
     const savedAspect = localStorage.getItem(ASPECT_KEY) || DEFAULT_ASPECT;
@@ -290,19 +357,15 @@
     if (modalPrevBtn) modalPrevBtn.addEventListener("click", prev);
     if (modalNextBtn) modalNextBtn.addEventListener("click", next);
 
-    // search input
-    if (searchInput) {
+    if (searchInput)
       searchInput.addEventListener("input", (e) => {
         applySearch(e.target.value);
       });
-    }
 
-    // wire sort dropdown items (if present)
     document.querySelectorAll(".sort-option").forEach((el) => {
       el.addEventListener("click", (ev) => {
         ev.preventDefault();
-        const mode = el.dataset.sort;
-        applySort(mode);
+        applySort(el.dataset.sort);
       });
     });
 
@@ -314,8 +377,96 @@
       wallpapers = data.wallpapers || [];
       filtered = [...wallpapers];
 
-      // keep pre-existing downloadAllBtn fallback but the release-checker already ran earlier
+      // load categories JSON to get counts; if missing compute
+      const catObj = await loadCategoriesJson();
+      if (catObj && Array.isArray(catObj.mobile) && catObj.mobile.length) {
+        categories = catObj;
+      } else {
+        const map = new Map();
+        wallpapers.forEach((w) =>
+          map.set(
+            w.category || "uncategorized",
+            (map.get(w.category || "uncategorized") || 0) + 1
+          )
+        );
+        categories.mobile = [
+          { name: "all", label: "All", count: wallpapers.length },
+        ];
+        Array.from(map.keys())
+          .sort()
+          .forEach((k) =>
+            categories.mobile.push({ name: k, label: k, count: map.get(k) })
+          );
+      }
+
+      // render chips for mobile (we store mobile categories under categories.mobile)
+      if (chipsContainer) {
+        chipsContainer.innerHTML = "";
+        const list =
+          categories.mobile && categories.mobile.length
+            ? categories.mobile
+            : [{ name: "all", label: "All", count: wallpapers.length }];
+        const hasAll = list.some((c) => c.name === "all");
+        if (!hasAll)
+          list.unshift({ name: "all", label: "All", count: wallpapers.length });
+        list.forEach((c) =>
+          chipsContainer.appendChild(
+            buildChip(
+              c.name,
+              c.label || c.name,
+              c.count || 0,
+              c.name === selectedCategory
+            )
+          )
+        );
+        requestAnimationFrame(showHideChipNav);
+      }
+
+      selectedCategory = "all";
+      filtered = wallpapers.slice();
       renderList(filtered);
+
+      if (downloadAllBtn) {
+        const original = downloadAllBtn.href || "wallpaper-mobile-all.zip";
+        downloadAllBtn.dataset.fallback = original;
+        downloadAllBtn.classList.add("disabled");
+        downloadAllBtn.setAttribute("aria-disabled", "true");
+        downloadAllBtn.innerHTML = `<i class="bi bi-hourglass-split"></i>&nbsp;Checking latest...`;
+        (async () => {
+          try {
+            const url = await getLatestReleaseAsset("wallpaper-mobile-all.zip");
+            if (url) {
+              downloadAllBtn.href = url;
+              downloadAllBtn.setAttribute(
+                "download",
+                "wallpaper-mobile-all.zip"
+              );
+              downloadAllBtn.classList.remove("disabled");
+              downloadAllBtn.removeAttribute("aria-disabled");
+              downloadAllBtn.innerHTML = `<i class="bi bi-file-earmark-zip-fill"></i>&nbsp;Download All Mobile`;
+              downloadAllBtn.title = "Download all mobile wallpapers";
+            } else {
+              downloadAllBtn.href =
+                downloadAllBtn.dataset.fallback || "wallpaper-mobile-all.zip";
+              downloadAllBtn.setAttribute(
+                "download",
+                "wallpaper-mobile-all.zip"
+              );
+              downloadAllBtn.classList.remove("disabled");
+              downloadAllBtn.removeAttribute("aria-disabled");
+              downloadAllBtn.innerHTML = `<i class="bi bi-file-earmark-zip-fill"></i>&nbsp;Download All`;
+              downloadAllBtn.title = "Download all mobile wallpapers";
+            }
+          } catch (e) {
+            console.warn("Error checking release:", e);
+            downloadAllBtn.href =
+              downloadAllBtn.dataset.fallback || "wallpaper-mobile-all.zip";
+            downloadAllBtn.classList.remove("disabled");
+            downloadAllBtn.removeAttribute("aria-disabled");
+            downloadAllBtn.innerHTML = `<i class="bi bi-file-earmark-zip-fill"></i>&nbsp;Download All`;
+          }
+        })();
+      }
     } catch (err) {
       console.error("Error loading mobile wallpapers:", err);
       summaryEl.textContent = "Error loading mobile wallpapers";
@@ -329,6 +480,17 @@
     if (ev.key === "ArrowLeft") prev();
     if (ev.key === "ArrowRight") next();
   });
+
+  // small helper to load categories.json for mobile
+  async function loadCategoriesJson() {
+    try {
+      const r = await fetch(CATEGORIES_PATH, { cache: "no-store" });
+      if (!r.ok) throw new Error("no categories");
+      return await r.json();
+    } catch (e) {
+      return null;
+    }
+  }
 
   // init on DOM ready
   document.addEventListener("DOMContentLoaded", init);

@@ -1,0 +1,146 @@
+{
+  "desktop": [
+    {
+      "name": "all",
+      "label": "All",
+      "count": 84
+    },
+    {
+      "name": "abstract",
+      "label": "abstract",
+      "count": 2
+    },
+    {
+      "name": "aesthetic",
+      "label": "aesthetic",
+      "count": 2
+    },
+    {
+      "name": "anime",
+      "label": "anime",
+      "count": 4
+    },
+    {
+      "name": "art",
+      "label": "art",
+      "count": 25
+    },
+    {
+      "name": "cityscape",
+      "label": "cityscape",
+      "count": 5
+    },
+    {
+      "name": "fun",
+      "label": "fun",
+      "count": 1
+    },
+    {
+      "name": "gaming",
+      "label": "gaming",
+      "count": 5
+    },
+    {
+      "name": "landscape",
+      "label": "landscape",
+      "count": 9
+    },
+    {
+      "name": "minimal",
+      "label": "minimal",
+      "count": 2
+    },
+    {
+      "name": "motivational",
+      "label": "motivational",
+      "count": 4
+    },
+    {
+      "name": "pokemon",
+      "label": "pokemon",
+      "count": 8
+    },
+    {
+      "name": "sci-fi",
+      "label": "sci-fi",
+      "count": 6
+    },
+    {
+      "name": "tech",
+      "label": "tech",
+      "count": 8
+    },
+    {
+      "name": "uncategorized",
+      "label": "uncategorized",
+      "count": 3
+    }
+  ],
+  "mobile": [
+    {
+      "name": "all",
+      "label": "All",
+      "count": 52
+    },
+    {
+      "name": "abstract",
+      "label": "abstract",
+      "count": 5
+    },
+    {
+      "name": "aesthetic",
+      "label": "aesthetic",
+      "count": 1
+    },
+    {
+      "name": "animals",
+      "label": "animals",
+      "count": 6
+    },
+    {
+      "name": "art",
+      "label": "art",
+      "count": 9
+    },
+    {
+      "name": "cityscape",
+      "label": "cityscape",
+      "count": 1
+    },
+    {
+      "name": "fun",
+      "label": "fun",
+      "count": 1
+    },
+    {
+      "name": "gaming",
+      "label": "gaming",
+      "count": 4
+    },
+    {
+      "name": "landscape",
+      "label": "landscape",
+      "count": 9
+    },
+    {
+      "name": "motivational",
+      "label": "motivational",
+      "count": 2
+    },
+    {
+      "name": "sci-fi",
+      "label": "sci-fi",
+      "count": 6
+    },
+    {
+      "name": "tech",
+      "label": "tech",
+      "count": 3
+    },
+    {
+      "name": "uncategorized",
+      "label": "uncategorized",
+      "count": 5
+    }
+  ]
+}

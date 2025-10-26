@@ -1,6 +1,7 @@
 // js/scripts.js - gallery renderer used by index.html and favorites.html
 (() => {
   const JSON_PATH = "json/wallpapers.json";
+  const CATEGORIES_PATH = "json/categories.json";
   const FAVORITES_JSON = "json/favorites.json";
   const galleryEl = document.getElementById("gallery");
   const summaryEl = document.getElementById("summary");
@@ -9,6 +10,9 @@
   const sortOptions = document.querySelectorAll(".sort-option");
   const downloadAllBtn = document.getElementById("downloadAllBtn");
   const animatedEl = document.getElementById("animatedText");
+  const chipsContainer = document.getElementById("categoryChips");
+  const chipsPrevBtn = document.getElementById("chipsPrev");
+  const chipsNextBtn = document.getElementById("chipsNext");
 
   // GITHUB RELEASES CONFIG
   const GITHUB_OWNER = "fahim-foysal-097";
@@ -18,22 +22,14 @@
 
   // set downloadAll link if present (will be replaced after checking releases)
   if (downloadAllBtn) {
-    // keep default as fallback, but show fetching state
     const originalHref = downloadAllBtn.href || "wallpaper-all.zip";
     downloadAllBtn.dataset.fallback = originalHref;
-    // show loading state
     downloadAllBtn.classList.add("disabled");
     downloadAllBtn.setAttribute("aria-disabled", "true");
     downloadAllBtn.innerHTML = `<i class="bi bi-hourglass-split"></i>&nbsp;Checking latest...`;
-    // asynchronously resolve to release asset
     fetchReleaseAssetAndSetButton("wallpaper-all.zip", downloadAllBtn);
   }
 
-  /**
-   * getLatestReleaseAsset(assetName)
-   * - Looks up GitHub releases for this repo and returns the browser_download_url for the first matching asset
-   * - Uses localStorage caching to reduce API requests
-   */
   async function getLatestReleaseAsset(assetName) {
     try {
       const cacheKey = `gh_asset_cache_${GITHUB_OWNER}_${GITHUB_REPO}_${assetName}`;
@@ -64,7 +60,6 @@
         if (!rel.assets || !rel.assets.length) continue;
         const asset = rel.assets.find((a) => a.name === assetName);
         if (asset && asset.browser_download_url) {
-          // cache and return
           localStorage.setItem(
             cacheKey,
             JSON.stringify({ url: asset.browser_download_url, ts: Date.now() })
@@ -80,7 +75,6 @@
   }
 
   async function fetchReleaseAssetAndSetButton(assetName, btnEl) {
-    // try to get the release asset URL
     try {
       const url = await getLatestReleaseAsset(assetName);
       if (url) {
@@ -95,8 +89,7 @@
     } catch (e) {
       console.warn("Error while resolving release asset:", e);
     }
-
-    // fallback to local path if release not found
+    // fallback
     const fallback = btnEl.dataset.fallback || `/${assetName}`;
     btnEl.href = fallback;
     btnEl.setAttribute("download", assetName);
@@ -106,7 +99,6 @@
     btnEl.title = "Download all desktop wallpapers";
   }
 
-  // runtime mode: "all" or "favorites"
   const MODE = window.GALLERY_MODE === "favorites" ? "favorites" : "all";
   const INLINE_FAVORITES = Array.isArray(window.FAVORITES)
     ? window.FAVORITES
@@ -135,8 +127,7 @@
     return (n / 1024 / 1024 / 1024).toFixed(2) + " GB";
   }
 
-  /* -------------------- Typing animation -------------------- */
-  // Animates text switching between phrases
+  /* typing animation (kept from your code) */
   (function initTyping() {
     if (!animatedEl) return;
     const original =
@@ -144,14 +135,14 @@
     const alt = "Download Wallpapers";
     const alt2 = "If you want to add wallpapers, go to the github repository";
     const phrases = [original, alt, alt2];
-    const typingSpeed = 60; // ms per char
+    const typingSpeed = 60;
     const deletingSpeed = 40;
-    const pauseAfterTyping = 1200; // ms
-    const pauseAfterDeleting = 350; // ms
+    const pauseAfterTyping = 1200;
+    const pauseAfterDeleting = 350;
 
     let phraseIndex = 0;
     let charIndex = 0;
-    let mode = "typing"; // "typing" | "deleting"
+    let mode = "typing";
     let timeoutId = null;
 
     function step() {
@@ -172,7 +163,6 @@
         charIndex--;
         animatedEl.textContent = text.slice(0, charIndex);
         if (charIndex <= 0) {
-          // switch phrase
           phraseIndex = (phraseIndex + 1) % phrases.length;
           mode = "pauseAfterDeleting";
           timeoutId = setTimeout(() => {
@@ -184,16 +174,110 @@
         }
         timeoutId = setTimeout(step, deletingSpeed);
       } else {
-        // initial start
         mode = "typing";
         charIndex = 0;
         timeoutId = setTimeout(step, typingSpeed);
       }
     }
 
-    // start after small delay for smoothness
     timeoutId = setTimeout(step, 700);
   })();
+
+  /* ---------- CHIPS: build + scroll behavior ---------- */
+
+  function buildChip(name, label, count, isActive) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "chip btn";
+    if (isActive) btn.classList.add("active");
+    btn.dataset.category = name;
+    btn.setAttribute("role", "option");
+    btn.setAttribute("aria-selected", isActive ? "true" : "false");
+    btn.title = `${label} (${count})`;
+    // DO NOT truncate names — user requested full names and keep scrollbar
+    btn.innerHTML = `${label} <span class="count ms-2">${count}</span>`;
+    btn.addEventListener("click", () => {
+      document.querySelectorAll("#categoryChips .chip").forEach((c) => {
+        c.classList.remove("active");
+        c.setAttribute("aria-selected", "false");
+      });
+      btn.classList.add("active");
+      btn.setAttribute("aria-selected", "true");
+      selectedCategory = name;
+      applySearchSort();
+    });
+    return btn;
+  }
+
+  function showHideChipNav() {
+    // Show/hide nav buttons depending on scroll position and overflow
+    if (!chipsContainer || !chipsPrevBtn || !chipsNextBtn) return;
+    const el = chipsContainer;
+    // if no overflow -> hide both
+    if (el.scrollWidth <= el.clientWidth + 2) {
+      chipsPrevBtn.style.display = "none";
+      chipsNextBtn.style.display = "none";
+      return;
+    }
+    chipsPrevBtn.style.display = "";
+    chipsNextBtn.style.display = "";
+    // disable left if at leftmost
+    chipsPrevBtn.disabled = el.scrollLeft <= 2;
+    // disable right if at rightmost (allow small epsilon)
+    chipsNextBtn.disabled =
+      el.scrollLeft + el.clientWidth >= el.scrollWidth - 2;
+  }
+
+  // scroll by a fraction of the visible width
+  function scrollChips(direction = "right") {
+    if (!chipsContainer) return;
+    const el = chipsContainer;
+    const amount = Math.round(el.clientWidth * 0.66);
+    const target =
+      direction === "right" ? el.scrollLeft + amount : el.scrollLeft - amount;
+    el.scrollTo({ left: target, behavior: "smooth" });
+  }
+
+  // wire buttons
+  if (chipsPrevBtn)
+    chipsPrevBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      scrollChips("left");
+    });
+  if (chipsNextBtn)
+    chipsNextBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      scrollChips("right");
+    });
+
+  // show/hide on resize/scroll
+  if (chipsContainer) {
+    chipsContainer.addEventListener("scroll", () => {
+      requestAnimationFrame(showHideChipNav);
+    });
+    window.addEventListener("resize", () => {
+      requestAnimationFrame(showHideChipNav);
+    });
+    // keyboard: left/right/home/end to navigate the scroll area
+    chipsContainer.addEventListener("keydown", (ev) => {
+      if (ev.key === "ArrowRight") {
+        ev.preventDefault();
+        scrollChips("right");
+      } else if (ev.key === "ArrowLeft") {
+        ev.preventDefault();
+        scrollChips("left");
+      } else if (ev.key === "Home") {
+        ev.preventDefault();
+        chipsContainer.scrollTo({ left: 0, behavior: "smooth" });
+      } else if (ev.key === "End") {
+        ev.preventDefault();
+        chipsContainer.scrollTo({
+          left: chipsContainer.scrollWidth,
+          behavior: "smooth",
+        });
+      }
+    });
+  }
 
   /* -------------------- Gallery rendering -------------------- */
 
@@ -349,7 +433,6 @@
       showNext();
     });
 
-  // track modal show/hide to enable keyboard arrows only when modal visible
   if (previewModalEl) {
     previewModalEl.addEventListener("shown.bs.modal", () => {
       modalVisible = true;
@@ -369,7 +452,7 @@
       ev.preventDefault();
       showPrev();
     } else if (ev.key === "Escape") {
-      // let bootstrap handle escape to close modal
+      // let bootstrap handle
     }
   });
 
@@ -381,6 +464,12 @@
         ? searchInput.value.trim().toLowerCase()
         : "";
     filtered = data.filter((it) => {
+      if (
+        selectedCategory &&
+        selectedCategory !== "all" &&
+        it.category !== selectedCategory
+      )
+        return false;
       if (!q) return true;
       if (it.filename.toLowerCase().includes(q)) return true;
       if (humanSize(it.size).toLowerCase().includes(q)) return true;
@@ -430,6 +519,21 @@
     }
   }
 
+  async function loadCategories() {
+    try {
+      const resp = await fetch(CATEGORIES_PATH, { cache: "no-store" });
+      if (!resp.ok) throw new Error("Could not load categories.json");
+      const json = await resp.json();
+      return json || {};
+    } catch (err) {
+      console.warn(
+        "Could not load categories.json — will compute locally",
+        err
+      );
+      return null;
+    }
+  }
+
   async function loadFavoritesList() {
     // try favorites.json first
     try {
@@ -445,7 +549,36 @@
     return INLINE_FAVORITES || [];
   }
 
+  // category state
+  let categories = { desktop: [] };
+  let selectedCategory = "all";
+
+  async function renderCategoryChips() {
+    if (!chipsContainer) return;
+    chipsContainer.innerHTML = "";
+    const list =
+      categories.desktop && categories.desktop.length
+        ? categories.desktop
+        : [{ name: "all", label: "All", count: data.length }];
+    const hasAll = list.some((c) => c.name === "all");
+    if (!hasAll)
+      list.unshift({ name: "all", label: "All", count: data.length });
+
+    list.forEach((c) => {
+      const isActive = c.name === selectedCategory;
+      chipsContainer.appendChild(
+        buildChip(c.name, c.label || c.name, c.count || 0, isActive)
+      );
+    });
+
+    // update nav visibility
+    requestAnimationFrame(showHideChipNav);
+  }
+
   async function init() {
+    const catObj = await loadCategories();
+    if (catObj) categories = catObj;
+
     const all = await loadWallpapers();
 
     if (MODE === "all") {
@@ -453,8 +586,14 @@
       // default newest first
       data.sort((a, b) => new Date(b.modified) - new Date(a.modified));
       filtered = data.slice();
+      selectedCategory = "all";
+      renderCategoryChips();
       renderSummary();
       renderGrid(filtered);
+      // ensure chip nav configured
+      requestAnimationFrame(showHideChipNav);
+      // set download button to global asset (no per-category)
+      // (fetchReleaseAssetAndSetButton already called on load)
     } else if (MODE === "favorites") {
       const favList = await loadFavoritesList();
       if (!favList.length) {
@@ -462,6 +601,7 @@
         filtered = [];
         renderSummary();
         renderGrid(filtered);
+        renderCategoryChips();
         return;
       }
       const lookup = new Map(all.map((i) => [i.filename, i]));
@@ -471,9 +611,26 @@
       });
       data = favEntries;
       filtered = data.slice();
+      // compute categories from favorites
+      const counts = {};
+      data.forEach((it) => {
+        const c = it.category || "uncategorized";
+        counts[c] = (counts[c] || 0) + 1;
+      });
+      categories.desktop = [{ name: "all", label: "All", count: data.length }];
+      Object.keys(counts)
+        .sort()
+        .forEach((k) =>
+          categories.desktop.push({ name: k, label: k, count: counts[k] })
+        );
+      selectedCategory = "all";
+      renderCategoryChips();
       renderSummary();
       renderGrid(filtered);
     }
+
+    // ensure chip nav reacts to DOM sizes
+    requestAnimationFrame(showHideChipNav);
   }
 
   // events
@@ -486,6 +643,10 @@
     })
   );
 
-  // initialize
-  init();
+  // init
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
 })();

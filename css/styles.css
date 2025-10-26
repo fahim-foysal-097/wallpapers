@@ -455,3 +455,237 @@ body {
     opacity: 1;
   }
 }
+
+/* -------------------------
+   Category chips 
+   -------------------------
+*/
+
+/* Chip color vars (override here if you want different tones) */
+:root {
+  --chip-bg: rgba(255, 255, 255, 0.02);
+  --chip-border: rgba(255, 255, 255, 0.06);
+  --chip-text: #e8f0ff;
+  --chip-count-bg: rgba(0, 0, 0, 0.18);
+
+  /* Active (selected) chip colors — improved contrast & pop */
+  --chip-active-start: var(--accent-start, #7c5cff);
+  --chip-active-end: #3d84d6; /* cyan-ish highlight to complement purple */
+  --chip-active-text: #ffffff;
+  --chip-active-border: rgba(124, 92, 255, 0.3);
+  --chip-active-shadow: 0 14px 40px rgba(61, 87, 255, 0.18);
+  --chip-focus-ring: rgba(124, 92, 255, 0.2);
+}
+
+/* chips wrapper and nav buttons (single source of truth) */
+.chips-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  margin-left: -6px;
+  margin-right: -6px;
+}
+
+/* scrollable region (left <-> right) */
+.chips-scroll {
+  flex: 1 1 auto;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 6px 8px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+/* webkit scrollbar styling (horizontal) */
+.chips-scroll::-webkit-scrollbar {
+  height: 10px;
+}
+
+.chips-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.chips-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* chip (pill) base */
+.chips-scroll .chip,
+.chip {
+  -webkit-tap-highlight-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.42rem 0.75rem;
+  border-radius: 999px;
+  white-space: nowrap; /* preserve full label (no truncation) */
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--chip-text);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.015),
+    rgba(255, 255, 255, 0.01)
+  );
+  border: 1px solid var(--chip-border);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease,
+    border-color 0.12s ease;
+  min-height: 36px;
+  line-height: 1;
+}
+
+/* count badge inside chip */
+.chips-scroll .chip .count,
+.chip .count {
+  display: inline-block;
+  background: var(--chip-count-bg);
+  padding: 0.08rem 0.35rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  opacity: 0.95;
+  margin-left: 6px;
+}
+
+/* hover & active press feedback */
+.chips-scroll .chip:hover,
+.chip:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(2, 6, 23, 0.48);
+}
+
+.chips-scroll .chip:active,
+.chip:active {
+  transform: translateY(0);
+}
+
+/* ACTIVE (selected) chip — stronger, accessible visual */
+.chips-scroll .chip.active,
+.chip.active {
+  background: linear-gradient(
+    110deg,
+    var(--chip-active-start) 0%,
+    var(--chip-active-end) 100%
+  );
+  color: var(--chip-active-text);
+  border: 1px solid var(--chip-active-border);
+  box-shadow: var(--chip-active-shadow);
+  transform: translateY(-4px);
+}
+
+/* improve label contrast inside active chip (if you used custom spans) */
+.chips-scroll .chip.active .count,
+.chip.active .count {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--chip-active-text);
+  font-weight: 800;
+}
+
+/* focus-visible (keyboard) */
+.chips-scroll .chip:focus,
+.chips-scroll .chip:focus-visible,
+.chip:focus,
+.chip:focus-visible {
+  outline: 3px solid var(--chip-focus-ring);
+  outline-offset: 3px;
+  border-radius: 10px;
+  box-shadow: 0 8px 26px rgba(124, 92, 255, 0.12);
+}
+
+/* Chip nav (flanking buttons) */
+.chip-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 10px;
+
+  /* Base highlight for nav buttons */
+  background: linear-gradient(
+    135deg,
+    rgba(61, 87, 255, 0.15) 0%,
+    rgba(61, 214, 199, 0.12) 100%
+  );
+  border: 1px solid rgba(124, 92, 255, 0.2);
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(2, 6, 23, 0.48);
+  backdrop-filter: blur(8px) saturate(120%);
+  transition: transform 0.12s ease, background 0.12s ease, opacity 0.12s ease;
+}
+
+/* hover feedback: slightly brighter gradient */
+.chip-nav:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(
+    135deg,
+    rgba(61, 87, 255, 0.25) 0%,
+    rgba(61, 214, 199, 0.18) 100%
+  );
+  box-shadow: 0 12px 28px rgba(2, 6, 23, 0.52);
+}
+
+/* active press feedback */
+.chip-nav:active {
+  transform: translateY(0);
+  background: linear-gradient(
+    135deg,
+    rgba(61, 87, 255, 0.18) 0%,
+    rgba(61, 214, 199, 0.14) 100%
+  );
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.42);
+}
+
+/* disabled state */
+.chip-nav[disabled] {
+  opacity: 0.45;
+  pointer-events: none;
+  transform: translateY(0);
+  background: rgba(6, 8, 12, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* keyboard focus on the scroll container itself */
+.chips-scroll:focus {
+  outline: 2px solid rgba(124, 92, 255, 0.14);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* Ensure inner spans don't wrap */
+.chips-scroll .chip > * {
+  white-space: nowrap;
+}
+
+/* responsive adjustments */
+@media (max-width: 640px) {
+  .chip-nav {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+  }
+
+  .chips-scroll {
+    padding: 6px 6px;
+    gap: 0.4rem;
+  }
+
+  .chips-scroll .chip {
+    padding: 0.36rem 0.62rem;
+    font-size: 0.86rem;
+  }
+}
