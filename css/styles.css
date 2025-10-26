@@ -344,6 +344,15 @@ body {
   }
 }
 
+@media (max-width: 640px), (pointer: coarse) {
+  /* removes sticky-top navbar */
+  .navbar.sticky-top {
+    position: static !important;
+    top: auto !important;
+    z-index: auto !important;
+  }
+}
+
 @media (max-width: 576px) {
   /* Very small screens - make things compact */
   .navbar {
@@ -434,7 +443,7 @@ body {
 
 /* page fade in */
 body {
-  animation: fadeInAnimation ease-in 1s;
+  animation: fadeInAnimation ease 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }

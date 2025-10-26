@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-create_favorites.py
+add_favorites.py
 
 Append filenames to favorites.json without replacing existing entries.
 

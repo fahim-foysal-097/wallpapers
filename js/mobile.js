@@ -333,3 +333,85 @@
   // init on DOM ready
   document.addEventListener("DOMContentLoaded", init);
 })();
+
+// --- Typing animation for #animatedText for mobile page ---
+
+(function typingAnimation() {
+  const el = document.getElementById("animatedText");
+
+  if (!el) return; // nothing to do
+
+  // phrases to cycle through - you can edit these
+
+  const phrases = [
+    "Discover Beautiful Wallpapers",
+
+    "Portrait wallpapers for phones",
+
+    "High-resolution phone backgrounds",
+  ];
+
+  const TYPING_SPEED = 40; // ms per character
+
+  const ERASING_SPEED = 30; // ms per character when deleting
+
+  const PAUSE_AFTER = 1200; // pause after typing a phrase (ms)
+
+  let phraseIndex = 0;
+
+  let charIndex = 0;
+
+  let isDeleting = false;
+
+  function tick() {
+    const current = phrases[phraseIndex];
+
+    if (!isDeleting) {
+      // typing
+
+      el.textContent = current.slice(0, charIndex + 1);
+
+      charIndex++;
+
+      if (charIndex === current.length) {
+        // finished typing
+
+        isDeleting = true;
+
+        setTimeout(tick, PAUSE_AFTER);
+
+        return;
+      }
+
+      setTimeout(tick, TYPING_SPEED);
+    } else {
+      // deleting
+
+      el.textContent = current.slice(0, charIndex - 1);
+
+      charIndex--;
+
+      if (charIndex === 0) {
+        isDeleting = false;
+
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+
+        setTimeout(tick, TYPING_SPEED);
+
+        return;
+      }
+
+      setTimeout(tick, ERASING_SPEED);
+    }
+  }
+
+  // start when DOM ready (if script is appended at end it's usually safe, but be explicit)
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", () => {
+      setTimeout(tick, 300); // small initial delay
+    });
+  } else {
+    setTimeout(tick, 300);
+  }
+})();
