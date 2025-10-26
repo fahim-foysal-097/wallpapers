@@ -99,8 +99,8 @@
           downloadAllBtn.setAttribute("download", "wallpaper-mobile-all.zip");
           downloadAllBtn.classList.remove("disabled");
           downloadAllBtn.removeAttribute("aria-disabled");
-          downloadAllBtn.innerHTML = `<i class="bi bi-file-earmark-zip-fill"></i>&nbsp;Download All (latest)`;
-          downloadAllBtn.title = "Download latest mobile zip from release";
+          downloadAllBtn.innerHTML = `<i class="bi bi-file-earmark-zip-fill"></i>&nbsp;Download All Mobile`;
+          downloadAllBtn.title = "Download all mobile wallpapers";
         } else {
           // fallback
           downloadAllBtn.href =

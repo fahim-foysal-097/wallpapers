@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-10-25T21:11:52.392752+00:00",
-  "count": 60,
+  "generated_at": "2025-10-26T00:02:43.834611+00:00",
+  "count": 70,
   "wallpapers": [
     {
       "filename": "3squares.png",
@@ -36,6 +36,13 @@
       "thumb_url": "thumbnail/wallpapers-thumb/arch_1.webp",
       "size": 44974,
       "modified": "2025-10-24T20:30:11.531218+00:00"
+    },
+    {
+      "filename": "bastien-grivet-sketch.jpg",
+      "url": "wallpapers/bastien-grivet-sketch.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/bastien-grivet-sketch.webp",
+      "size": 265890,
+      "modified": "2025-10-25T23:11:47.241304+00:00"
     },
     {
       "filename": "big_robot.jpg",
@@ -85,6 +92,13 @@
       "thumb_url": "thumbnail/wallpapers-thumb/comp.webp",
       "size": 14655,
       "modified": "2025-10-24T20:31:43.298548+00:00"
+    },
+    {
+      "filename": "corndog.png",
+      "url": "wallpapers/corndog.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/corndog.webp",
+      "size": 17397427,
+      "modified": "2025-10-25T23:12:26.957652+00:00"
     },
     {
       "filename": "cyberpunk_truck.jpg",
@@ -227,6 +241,13 @@
       "modified": "2025-10-24T20:33:36.503025+00:00"
     },
     {
+      "filename": "lofiwallpaper.png",
+      "url": "wallpapers/lofiwallpaper.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/lofiwallpaper.webp",
+      "size": 2232137,
+      "modified": "2025-10-25T23:07:36.708854+00:00"
+    },
+    {
       "filename": "lone_house.jpg",
       "url": "wallpapers/lone_house.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/lone_house.webp",
@@ -246,6 +267,27 @@
       "thumb_url": "thumbnail/wallpapers-thumb/mountains.webp",
       "size": 10625271,
       "modified": "2025-10-24T20:14:12.367129+00:00"
+    },
+    {
+      "filename": "neon_car.jpg",
+      "url": "wallpapers/neon_car.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/neon_car.webp",
+      "size": 1183922,
+      "modified": "2025-10-25T23:09:32.902319+00:00"
+    },
+    {
+      "filename": "neon_city.jpg",
+      "url": "wallpapers/neon_city.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/neon_city.webp",
+      "size": 1237645,
+      "modified": "2025-10-25T23:09:35.531629+00:00"
+    },
+    {
+      "filename": "nice-blue-background.png",
+      "url": "wallpapers/nice-blue-background.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/nice-blue-background.webp",
+      "size": 7704488,
+      "modified": "2025-10-25T23:07:46.522903+00:00"
     },
     {
       "filename": "od_arch.png",
@@ -274,6 +316,27 @@
       "thumb_url": "thumbnail/wallpapers-thumb/old-house.webp",
       "size": 11466317,
       "modified": "2025-10-25T19:03:50.703383+00:00"
+    },
+    {
+      "filename": "pixel-art-steam.jpg",
+      "url": "wallpapers/pixel-art-steam.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/pixel-art-steam.webp",
+      "size": 773306,
+      "modified": "2025-10-25T23:07:21.919039+00:00"
+    },
+    {
+      "filename": "pixelated-forest-silhouette.jpg",
+      "url": "wallpapers/pixelated-forest-silhouette.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/pixelated-forest-silhouette.webp",
+      "size": 265473,
+      "modified": "2025-10-25T23:08:33.978675+00:00"
+    },
+    {
+      "filename": "planet_minimal.png",
+      "url": "wallpapers/planet_minimal.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/planet_minimal.webp",
+      "size": 335119,
+      "modified": "2025-10-25T23:08:36.562869+00:00"
     },
     {
       "filename": "poles.png",
@@ -386,6 +449,13 @@
       "thumb_url": "thumbnail/wallpapers-thumb/tower_cloud.webp",
       "size": 12260772,
       "modified": "2025-10-24T20:14:31.040921+00:00"
+    },
+    {
+      "filename": "train-in-cloud.png",
+      "url": "wallpapers/train-in-cloud.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/train-in-cloud.webp",
+      "size": 2112381,
+      "modified": "2025-10-25T23:10:30.831809+00:00"
     },
     {
       "filename": "train-lake.png",

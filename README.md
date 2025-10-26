@@ -2,7 +2,7 @@
   <img src="assets/icon.png" alt="Site Icon" width="80" />
 </p>
 
-# Wallpaper Gallery <img src="json/badge.svg" alt="(wallpaper-count)">
+# Wallpaper Gallery <img src="json/badge.svg" alt="(wallpaper-count)"> <img src="https://visitor-badge.laobi.icu/badge?page_id=fahim-foyasl-097.wallpapers">
 
 A **static gallery site** to browse, preview, and download wallpapers stored in the repository's `wallpapers/` folder.
 

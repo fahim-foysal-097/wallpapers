@@ -88,8 +88,8 @@
         btnEl.setAttribute("download", assetName);
         btnEl.classList.remove("disabled");
         btnEl.removeAttribute("aria-disabled");
-        btnEl.innerHTML = `<i class="bi bi-file-earmark-zip-fill"></i>&nbsp;Download All (latest)`;
-        btnEl.title = `Download ${assetName} from latest release`;
+        btnEl.innerHTML = `<i class="bi bi-file-earmark-zip-fill"></i>&nbsp;Download All Desktop`;
+        btnEl.title = `Download all desktop wallpapers`;
         return;
       }
     } catch (e) {

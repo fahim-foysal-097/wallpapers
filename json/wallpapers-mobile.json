@@ -1,7 +1,14 @@
 {
-  "generated_at": "2025-10-25T21:11:52.396776+00:00",
-  "count": 35,
+  "generated_at": "2025-10-26T00:02:43.838849+00:00",
+  "count": 47,
   "wallpapers": [
+    {
+      "filename": "abstract.png",
+      "url": "wallpapers-mobile/abstract.png",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/abstract.webp",
+      "size": 2200775,
+      "modified": "2025-10-25T23:32:54.152755+00:00"
+    },
     {
       "filename": "Acclaimed_rectangle.jpg",
       "url": "wallpapers-mobile/Acclaimed_rectangle.jpg",
@@ -64,6 +71,13 @@
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/blurry-brown-trees.webp",
       "size": 2747473,
       "modified": "2025-10-25T20:58:37.165065+00:00"
+    },
+    {
+      "filename": "cat-in-forest.jpg",
+      "url": "wallpapers-mobile/cat-in-forest.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/cat-in-forest.webp",
+      "size": 554454,
+      "modified": "2025-10-25T23:30:42.062582+00:00"
     },
     {
       "filename": "cat_landscape.jpg",
@@ -143,6 +157,13 @@
       "modified": "2025-10-24T20:06:06.650185+00:00"
     },
     {
+      "filename": "hollow-knight-wall.jpg",
+      "url": "wallpapers-mobile/hollow-knight-wall.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/hollow-knight-wall.webp",
+      "size": 97336,
+      "modified": "2025-10-25T23:32:06.428534+00:00"
+    },
+    {
       "filename": "husk.jpg",
       "url": "wallpapers-mobile/husk.jpg",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/husk.webp",
@@ -171,6 +192,20 @@
       "modified": "2025-10-24T20:11:23.515805+00:00"
     },
     {
+      "filename": "minecraft-pixel.jpg",
+      "url": "wallpapers-mobile/minecraft-pixel.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/minecraft-pixel.webp",
+      "size": 539280,
+      "modified": "2025-10-25T23:30:29.174972+00:00"
+    },
+    {
+      "filename": "minecraft-sea.jpg",
+      "url": "wallpapers-mobile/minecraft-sea.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/minecraft-sea.webp",
+      "size": 350226,
+      "modified": "2025-10-25T23:31:45.491078+00:00"
+    },
+    {
       "filename": "Minimal_landscape.jpeg",
       "url": "wallpapers-mobile/Minimal_landscape.jpeg",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/Minimal_landscape.webp",
@@ -192,6 +227,27 @@
       "modified": "2025-10-25T21:00:02.397738+00:00"
     },
     {
+      "filename": "no-internet-2.jpg",
+      "url": "wallpapers-mobile/no-internet-2.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/no-internet-2.webp",
+      "size": 276358,
+      "modified": "2025-10-25T23:31:29.716336+00:00"
+    },
+    {
+      "filename": "no-internet.jpg",
+      "url": "wallpapers-mobile/no-internet.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/no-internet.webp",
+      "size": 178423,
+      "modified": "2025-10-25T23:31:19.394652+00:00"
+    },
+    {
+      "filename": "pixel-pond.jpg",
+      "url": "wallpapers-mobile/pixel-pond.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/pixel-pond.webp",
+      "size": 393605,
+      "modified": "2025-10-25T23:31:56.753684+00:00"
+    },
+    {
       "filename": "Pixelated_forest.png",
       "url": "wallpapers-mobile/Pixelated_forest.png",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/Pixelated_forest.webp",
@@ -199,11 +255,25 @@
       "modified": "2025-10-24T20:38:28.210634+00:00"
     },
     {
+      "filename": "pokemon-lugia.jpg",
+      "url": "wallpapers-mobile/pokemon-lugia.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/pokemon-lugia.webp",
+      "size": 348640,
+      "modified": "2025-10-25T23:32:17.459128+00:00"
+    },
+    {
       "filename": "reach-for-it.png",
       "url": "wallpapers-mobile/reach-for-it.png",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/reach-for-it.webp",
       "size": 2087937,
       "modified": "2025-10-24T19:14:42.206516+00:00"
+    },
+    {
+      "filename": "red-samurai.jpg",
+      "url": "wallpapers-mobile/red-samurai.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/red-samurai.webp",
+      "size": 169327,
+      "modified": "2025-10-25T23:30:57.953954+00:00"
     },
     {
       "filename": "robot-charge.jpg",
@@ -234,6 +304,13 @@
       "modified": "2025-10-24T18:24:07.089094+00:00"
     },
     {
+      "filename": "spiderman-wall.png",
+      "url": "wallpapers-mobile/spiderman-wall.png",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/spiderman-wall.webp",
+      "size": 2880685,
+      "modified": "2025-10-25T23:32:28.518944+00:00"
+    },
+    {
       "filename": "tower.jpg",
       "url": "wallpapers-mobile/tower.jpg",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/tower.webp",
@@ -246,6 +323,13 @@
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/water-drops-microscope.webp",
       "size": 1626651,
       "modified": "2025-10-25T20:58:37.184969+00:00"
+    },
+    {
+      "filename": "window.png",
+      "url": "wallpapers-mobile/window.png",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/window.webp",
+      "size": 1807331,
+      "modified": "2025-10-25T23:31:08.207886+00:00"
     }
   ]
 }
