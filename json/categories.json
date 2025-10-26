@@ -3,27 +3,27 @@
     {
       "name": "all",
       "label": "All",
-      "count": 84
+      "count": 131
     },
     {
       "name": "abstract",
       "label": "abstract",
-      "count": 2
+      "count": 8
     },
     {
       "name": "aesthetic",
       "label": "aesthetic",
-      "count": 2
+      "count": 6
     },
     {
       "name": "anime",
       "label": "anime",
-      "count": 4
+      "count": 19
     },
     {
       "name": "art",
       "label": "art",
-      "count": 25
+      "count": 26
     },
     {
       "name": "cityscape",
@@ -38,7 +38,7 @@
     {
       "name": "gaming",
       "label": "gaming",
-      "count": 5
+      "count": 16
     },
     {
       "name": "landscape",
@@ -53,12 +53,12 @@
     {
       "name": "motivational",
       "label": "motivational",
-      "count": 4
+      "count": 10
     },
     {
       "name": "pokemon",
       "label": "pokemon",
-      "count": 8
+      "count": 12
     },
     {
       "name": "sci-fi",
@@ -80,17 +80,17 @@
     {
       "name": "all",
       "label": "All",
-      "count": 52
+      "count": 73
     },
     {
       "name": "abstract",
       "label": "abstract",
-      "count": 5
+      "count": 14
     },
     {
       "name": "aesthetic",
       "label": "aesthetic",
-      "count": 1
+      "count": 3
     },
     {
       "name": "animals",
@@ -100,7 +100,7 @@
     {
       "name": "art",
       "label": "art",
-      "count": 9
+      "count": 11
     },
     {
       "name": "cityscape",
@@ -110,12 +110,12 @@
     {
       "name": "fun",
       "label": "fun",
-      "count": 1
+      "count": 4
     },
     {
       "name": "gaming",
       "label": "gaming",
-      "count": 4
+      "count": 5
     },
     {
       "name": "landscape",
@@ -125,7 +125,7 @@
     {
       "name": "motivational",
       "label": "motivational",
-      "count": 2
+      "count": 4
     },
     {
       "name": "sci-fi",
@@ -135,7 +135,7 @@
     {
       "name": "tech",
       "label": "tech",
-      "count": 3
+      "count": 5
     },
     {
       "name": "uncategorized",

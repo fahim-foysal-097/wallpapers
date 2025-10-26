@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-10-26T19:43:20.875739+00:00",
-  "count": 84,
+  "generated_at": "2025-10-26T20:39:25.571548+00:00",
+  "count": 131,
   "wallpapers": [
     {
       "filename": "green-sun.jpg",
@@ -43,6 +43,78 @@
       "category": "abstract"
     },
     {
+      "filename": "abstract-3.jpg",
+      "url": "wallpapers/abstract/abstract-3.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/abstract/abstract-3.webp",
+      "size": 970150,
+      "modified": "2025-10-26T15:20:48.133980+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "abstract-diamond.jpg",
+      "url": "wallpapers/abstract/abstract-diamond.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/abstract/abstract-diamond.webp",
+      "size": 790917,
+      "modified": "2025-10-26T20:11:36.473880+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "abstract-shape.jpg",
+      "url": "wallpapers/abstract/abstract-shape.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/abstract/abstract-shape.webp",
+      "size": 387091,
+      "modified": "2025-10-26T20:11:40.207935+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "cube-1.jpg",
+      "url": "wallpapers/abstract/cube-1.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/abstract/cube-1.webp",
+      "size": 569819,
+      "modified": "2025-10-26T20:11:16.045583+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "cube-2.jpg",
+      "url": "wallpapers/abstract/cube-2.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/abstract/cube-2.webp",
+      "size": 430507,
+      "modified": "2025-10-26T20:11:08.552473+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "lines.jpg",
+      "url": "wallpapers/abstract/lines.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/abstract/lines.webp",
+      "size": 806378,
+      "modified": "2025-10-26T20:24:29.908731+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "aesthetic_deer.jpg",
+      "url": "wallpapers/aesthetic/aesthetic_deer.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/aesthetic/aesthetic_deer.webp",
+      "size": 2329147,
+      "modified": "2025-05-09T06:25:40.738708+00:00",
+      "category": "aesthetic"
+    },
+    {
+      "filename": "autumn_leaves.jpg",
+      "url": "wallpapers/aesthetic/autumn_leaves.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/aesthetic/autumn_leaves.webp",
+      "size": 2889598,
+      "modified": "2025-09-22T05:53:03.955486+00:00",
+      "category": "aesthetic"
+    },
+    {
+      "filename": "brain.jpg",
+      "url": "wallpapers/aesthetic/brain.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/aesthetic/brain.webp",
+      "size": 18482676,
+      "modified": "2025-10-26T15:20:38.494917+00:00",
+      "category": "aesthetic"
+    },
+    {
       "filename": "estrategy-minimal.png",
       "url": "wallpapers/aesthetic/estrategy-minimal.png",
       "thumb_url": "thumbnail/wallpapers-thumb/aesthetic/estrategy-minimal.webp",
@@ -59,6 +131,22 @@
       "category": "aesthetic"
     },
     {
+      "filename": "under-sea.jpg",
+      "url": "wallpapers/aesthetic/under-sea.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/aesthetic/under-sea.webp",
+      "size": 751923,
+      "modified": "2025-09-22T05:24:34.267015+00:00",
+      "category": "aesthetic"
+    },
+    {
+      "filename": "akatsuki.jpg",
+      "url": "wallpapers/anime/akatsuki.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/anime/akatsuki.webp",
+      "size": 1006052,
+      "modified": "2025-10-26T20:04:11.881124+00:00",
+      "category": "anime"
+    },
+    {
       "filename": "anbu.jpg",
       "url": "wallpapers/anime/anbu.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/anime/anbu.webp",
@@ -67,11 +155,107 @@
       "category": "anime"
     },
     {
+      "filename": "anime-girl-eye.jpg",
+      "url": "wallpapers/anime/anime-girl-eye.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/anime/anime-girl-eye.webp",
+      "size": 974572,
+      "modified": "2025-10-26T14:54:37.284957+00:00",
+      "category": "anime"
+    },
+    {
+      "filename": "aot-cover.jpg",
+      "url": "wallpapers/anime/aot-cover.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/anime/aot-cover.webp",
+      "size": 1643998,
+      "modified": "2025-10-26T20:01:04.224011+00:00",
+      "category": "anime"
+    },
+    {
+      "filename": "aot.jpg",
+      "url": "wallpapers/anime/aot.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/anime/aot.webp",
+      "size": 1078153,
+      "modified": "2025-10-26T20:00:39.665586+00:00",
+      "category": "anime"
+    },
+    {
+      "filename": "chibi-totoro.gif",
+      "url": "wallpapers/anime/chibi-totoro.gif",
+      "thumb_url": null,
+      "size": 9103292,
+      "modified": "2025-10-26T15:06:48.235124+00:00",
+      "category": "anime"
+    },
+    {
+      "filename": "demon-slayer-campfire.jpg",
+      "url": "wallpapers/anime/demon-slayer-campfire.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/anime/demon-slayer-campfire.webp",
+      "size": 2401625,
+      "modified": "2025-10-26T15:08:27.767883+00:00",
+      "category": "anime"
+    },
+    {
+      "filename": "demon-slayer.jpg",
+      "url": "wallpapers/anime/demon-slayer.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/anime/demon-slayer.webp",
+      "size": 1208540,
+      "modified": "2025-10-26T20:02:26.846408+00:00",
+      "category": "anime"
+    },
+    {
+      "filename": "demons.jpg",
+      "url": "wallpapers/anime/demons.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/anime/demons.webp",
+      "size": 850138,
+      "modified": "2025-10-26T20:02:17.980260+00:00",
+      "category": "anime"
+    },
+    {
+      "filename": "eren-blade.jpg",
+      "url": "wallpapers/anime/eren-blade.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/anime/eren-blade.webp",
+      "size": 644972,
+      "modified": "2025-10-26T20:00:44.404669+00:00",
+      "category": "anime"
+    },
+    {
+      "filename": "ghibli-studio.jpg",
+      "url": "wallpapers/anime/ghibli-studio.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/anime/ghibli-studio.webp",
+      "size": 356588,
+      "modified": "2025-10-26T15:18:50.406210+00:00",
+      "category": "anime"
+    },
+    {
+      "filename": "hashira.jpg",
+      "url": "wallpapers/anime/hashira.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/anime/hashira.webp",
+      "size": 1910602,
+      "modified": "2025-10-26T20:02:24.694372+00:00",
+      "category": "anime"
+    },
+    {
       "filename": "itachi-aesthetic.gif",
       "url": "wallpapers/anime/itachi-aesthetic.gif",
       "thumb_url": null,
       "size": 6592925,
       "modified": "2025-10-26T15:07:44.594557+00:00",
+      "category": "anime"
+    },
+    {
+      "filename": "jjk-gojo.jpg",
+      "url": "wallpapers/anime/jjk-gojo.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/anime/jjk-gojo.webp",
+      "size": 525349,
+      "modified": "2025-10-26T20:02:36.810574+00:00",
+      "category": "anime"
+    },
+    {
+      "filename": "konan.jpg",
+      "url": "wallpapers/anime/konan.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/anime/konan.webp",
+      "size": 772259,
+      "modified": "2025-10-26T20:04:05.844027+00:00",
       "category": "anime"
     },
     {
@@ -91,11 +275,35 @@
       "category": "anime"
     },
     {
+      "filename": "naruto.jpg",
+      "url": "wallpapers/anime/naruto.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/anime/naruto.webp",
+      "size": 309859,
+      "modified": "2025-10-26T20:03:09.317110+00:00",
+      "category": "anime"
+    },
+    {
+      "filename": "totoro-under-tree.jpg",
+      "url": "wallpapers/anime/totoro-under-tree.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/anime/totoro-under-tree.webp",
+      "size": 1667759,
+      "modified": "2025-10-26T14:56:21.802536+00:00",
+      "category": "anime"
+    },
+    {
       "filename": "abandoned_boat.png",
       "url": "wallpapers/art/abandoned_boat.png",
       "thumb_url": "thumbnail/wallpapers-thumb/art/abandoned_boat.webp",
       "size": 5106881,
       "modified": "2025-10-24T20:15:36.583526+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "anime-eye-sky.jpg",
+      "url": "wallpapers/art/anime-eye-sky.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/anime-eye-sky.webp",
+      "size": 1267305,
+      "modified": "2025-10-26T14:54:43.011988+00:00",
       "category": "art"
     },
     {
@@ -339,6 +547,22 @@
       "category": "fun"
     },
     {
+      "filename": "botw-cover.jpg",
+      "url": "wallpapers/gaming/botw-cover.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/gaming/botw-cover.webp",
+      "size": 1756102,
+      "modified": "2025-10-26T15:21:41.423326+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "botw-link.jpg",
+      "url": "wallpapers/gaming/botw-link.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/gaming/botw-link.webp",
+      "size": 2715634,
+      "modified": "2025-10-26T15:22:01.599457+00:00",
+      "category": "gaming"
+    },
+    {
       "filename": "firewatch-2.png",
       "url": "wallpapers/gaming/firewatch-2.png",
       "thumb_url": "thumbnail/wallpapers-thumb/gaming/firewatch-2.webp",
@@ -371,11 +595,83 @@
       "category": "gaming"
     },
     {
+      "filename": "link-arrow.jpg",
+      "url": "wallpapers/gaming/link-arrow.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/gaming/link-arrow.webp",
+      "size": 1184845,
+      "modified": "2025-10-26T15:21:34.552282+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "link-climb.jpg",
+      "url": "wallpapers/gaming/link-climb.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/gaming/link-climb.webp",
+      "size": 1613163,
+      "modified": "2025-10-26T15:21:31.544262+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "master-sword.jpg",
+      "url": "wallpapers/gaming/master-sword.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/gaming/master-sword.webp",
+      "size": 870248,
+      "modified": "2025-10-26T15:21:38.605308+00:00",
+      "category": "gaming"
+    },
+    {
       "filename": "minecraft.jpg",
       "url": "wallpapers/gaming/minecraft.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/gaming/minecraft.webp",
       "size": 1032026,
       "modified": "2025-10-24T19:11:37.859327+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "rdr-sunset.jpg",
+      "url": "wallpapers/gaming/rdr-sunset.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/gaming/rdr-sunset.webp",
+      "size": 596754,
+      "modified": "2025-10-26T15:23:04.598863+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "rdr.jpg",
+      "url": "wallpapers/gaming/rdr.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/gaming/rdr.webp",
+      "size": 2126329,
+      "modified": "2025-10-26T15:23:08.933891+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "re-village-cover.jpg",
+      "url": "wallpapers/gaming/re-village-cover.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/gaming/re-village-cover.webp",
+      "size": 909014,
+      "modified": "2025-10-26T15:23:33.450048+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "re-village.jpg",
+      "url": "wallpapers/gaming/re-village.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/gaming/re-village.webp",
+      "size": 922656,
+      "modified": "2025-10-26T15:23:58.460209+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "resident-evil-village-halloween.jpg",
+      "url": "wallpapers/gaming/resident-evil-village-halloween.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/gaming/resident-evil-village-halloween.webp",
+      "size": 671559,
+      "modified": "2025-10-26T15:24:43.486497+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "resident-evil-village-wallpaper.jpg",
+      "url": "wallpapers/gaming/resident-evil-village-wallpaper.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/gaming/resident-evil-village-wallpaper.webp",
+      "size": 1263519,
+      "modified": "2025-10-26T15:23:30.577030+00:00",
       "category": "gaming"
     },
     {
@@ -467,6 +763,30 @@
       "category": "minimal"
     },
     {
+      "filename": "believe.jpg",
+      "url": "wallpapers/motivational/believe.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/motivational/believe.webp",
+      "size": 44600,
+      "modified": "2025-10-26T15:27:45.529656+00:00",
+      "category": "motivational"
+    },
+    {
+      "filename": "focus.jpg",
+      "url": "wallpapers/motivational/focus.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/motivational/focus.webp",
+      "size": 59311,
+      "modified": "2025-10-26T20:21:43.180438+00:00",
+      "category": "motivational"
+    },
+    {
+      "filename": "good-things-time.jpg",
+      "url": "wallpapers/motivational/good-things-time.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/motivational/good-things-time.webp",
+      "size": 1395874,
+      "modified": "2025-10-26T15:26:10.427052+00:00",
+      "category": "motivational"
+    },
+    {
       "filename": "just-do-it-2.jpg",
       "url": "wallpapers/motivational/just-do-it-2.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/motivational/just-do-it-2.webp",
@@ -483,11 +803,35 @@
       "category": "motivational"
     },
     {
+      "filename": "lone-king.jpg",
+      "url": "wallpapers/motivational/lone-king.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/motivational/lone-king.webp",
+      "size": 157888,
+      "modified": "2025-10-26T15:27:17.692479+00:00",
+      "category": "motivational"
+    },
+    {
+      "filename": "motivational-background-2.jpg",
+      "url": "wallpapers/motivational/motivational-background-2.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/motivational/motivational-background-2.webp",
+      "size": 45158,
+      "modified": "2025-10-26T15:26:20.634726+00:00",
+      "category": "motivational"
+    },
+    {
       "filename": "motivational-background.jpg",
       "url": "wallpapers/motivational/motivational-background.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/motivational/motivational-background.webp",
       "size": 765164,
       "modified": "2025-10-26T15:26:48.501294+00:00",
+      "category": "motivational"
+    },
+    {
+      "filename": "stay-focused.png",
+      "url": "wallpapers/motivational/stay-focused.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/motivational/stay-focused.webp",
+      "size": 350349,
+      "modified": "2025-09-25T15:28:30.969236+00:00",
       "category": "motivational"
     },
     {
@@ -499,11 +843,35 @@
       "category": "motivational"
     },
     {
+      "filename": "adorable-pikachu.jpg",
+      "url": "wallpapers/pokemon/adorable-pikachu.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/pokemon/adorable-pikachu.webp",
+      "size": 498262,
+      "modified": "2025-10-26T14:52:56.807401+00:00",
+      "category": "pokemon"
+    },
+    {
+      "filename": "charizard-black-.jpg",
+      "url": "wallpapers/pokemon/charizard-black-.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/pokemon/charizard-black-.webp",
+      "size": 551426,
+      "modified": "2025-10-26T14:52:01.197093+00:00",
+      "category": "pokemon"
+    },
+    {
       "filename": "charmander-hat.gif",
       "url": "wallpapers/pokemon/charmander-hat.gif",
       "thumb_url": null,
       "size": 7185556,
       "modified": "2025-10-26T14:48:41.286993+00:00",
+      "category": "pokemon"
+    },
+    {
+      "filename": "cute-snorlax.jpg",
+      "url": "wallpapers/pokemon/cute-snorlax.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/pokemon/cute-snorlax.webp",
+      "size": 579519,
+      "modified": "2025-10-26T14:52:09.389139+00:00",
       "category": "pokemon"
     },
     {
@@ -560,6 +928,14 @@
       "thumb_url": "thumbnail/wallpapers-thumb/pokemon/spooky-gengar.webp",
       "size": 1555828,
       "modified": "2025-10-26T14:48:50.876045+00:00",
+      "category": "pokemon"
+    },
+    {
+      "filename": "two-pikachu-cuddling.jpg",
+      "url": "wallpapers/pokemon/two-pikachu-cuddling.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/pokemon/two-pikachu-cuddling.webp",
+      "size": 343581,
+      "modified": "2025-10-26T14:52:34.350277+00:00",
       "category": "pokemon"
     },
     {

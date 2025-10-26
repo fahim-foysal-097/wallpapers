@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-10-26T19:43:20.888076+00:00",
-  "count": 52,
+  "generated_at": "2025-10-26T20:39:25.585943+00:00",
+  "count": 73,
   "wallpapers": [
     {
       "filename": "cube.jpg",
@@ -43,6 +43,30 @@
       "category": "uncategorized"
     },
     {
+      "filename": "abstract-1.png",
+      "url": "wallpapers-mobile/abstract/abstract-1.png",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/abstract/abstract-1.webp",
+      "size": 2200775,
+      "modified": "2025-10-25T23:32:54.152755+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "abstract-10.jpg",
+      "url": "wallpapers-mobile/abstract/abstract-10.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/abstract/abstract-10.webp",
+      "size": 804482,
+      "modified": "2025-10-26T17:44:28.745281+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "abstract-11.jpg",
+      "url": "wallpapers-mobile/abstract/abstract-11.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/abstract/abstract-11.webp",
+      "size": 1109392,
+      "modified": "2025-10-26T20:28:45.975228+00:00",
+      "category": "abstract"
+    },
+    {
       "filename": "abstract-2.jpg",
       "url": "wallpapers-mobile/abstract/abstract-2.jpg",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/abstract/abstract-2.webp",
@@ -67,11 +91,51 @@
       "category": "abstract"
     },
     {
-      "filename": "abstract.png",
-      "url": "wallpapers-mobile/abstract/abstract.png",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/abstract/abstract.webp",
-      "size": 2200775,
-      "modified": "2025-10-25T23:32:54.152755+00:00",
+      "filename": "abstract-5.jpg",
+      "url": "wallpapers-mobile/abstract/abstract-5.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/abstract/abstract-5.webp",
+      "size": 477223,
+      "modified": "2025-10-26T17:48:14.422575+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "abstract-6.jpg",
+      "url": "wallpapers-mobile/abstract/abstract-6.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/abstract/abstract-6.webp",
+      "size": 533951,
+      "modified": "2025-10-26T17:45:16.254245+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "abstract-7.jpg",
+      "url": "wallpapers-mobile/abstract/abstract-7.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/abstract/abstract-7.webp",
+      "size": 523528,
+      "modified": "2025-10-26T17:45:28.998468+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "abstract-8.jpg",
+      "url": "wallpapers-mobile/abstract/abstract-8.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/abstract/abstract-8.webp",
+      "size": 434623,
+      "modified": "2025-10-26T17:45:18.383283+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "abstract-9-dark.jpg",
+      "url": "wallpapers-mobile/abstract/abstract-9-dark.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/abstract/abstract-9-dark.webp",
+      "size": 836919,
+      "modified": "2025-10-26T20:29:44.211021+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "abstract-9.jpg",
+      "url": "wallpapers-mobile/abstract/abstract-9.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/abstract/abstract-9.webp",
+      "size": 734340,
+      "modified": "2025-10-26T17:46:58.249743+00:00",
       "category": "abstract"
     },
     {
@@ -81,6 +145,30 @@
       "size": 1626651,
       "modified": "2025-10-25T20:58:37.184969+00:00",
       "category": "abstract"
+    },
+    {
+      "filename": "x-o.jpg",
+      "url": "wallpapers-mobile/abstract/x-o.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/abstract/x-o.webp",
+      "size": 1286273,
+      "modified": "2025-10-26T20:28:33.893064+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "aesthetic-guitar.jpg",
+      "url": "wallpapers-mobile/aesthetic/aesthetic-guitar.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/aesthetic/aesthetic-guitar.webp",
+      "size": 1437233,
+      "modified": "2025-10-26T17:45:11.780163+00:00",
+      "category": "aesthetic"
+    },
+    {
+      "filename": "alley.jpg",
+      "url": "wallpapers-mobile/aesthetic/alley.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/aesthetic/alley.webp",
+      "size": 1947421,
+      "modified": "2025-10-26T15:19:49.312596+00:00",
+      "category": "aesthetic"
     },
     {
       "filename": "spiderman-wall.png",
@@ -155,11 +243,27 @@
       "category": "art"
     },
     {
+      "filename": "cat-in-rain.jpg",
+      "url": "wallpapers-mobile/art/cat-in-rain.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/cat-in-rain.webp",
+      "size": 498977,
+      "modified": "2025-10-26T15:29:29.289312+00:00",
+      "category": "art"
+    },
+    {
       "filename": "evening.jpg",
       "url": "wallpapers-mobile/art/evening.jpg",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/evening.webp",
       "size": 279976,
       "modified": "2025-10-24T19:17:00.348897+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "eye.jpg",
+      "url": "wallpapers-mobile/art/eye.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/eye.webp",
+      "size": 1211412,
+      "modified": "2025-10-26T17:44:03.393659+00:00",
       "category": "art"
     },
     {
@@ -219,11 +323,35 @@
       "category": "cityscape"
     },
     {
+      "filename": "5825433.jpg",
+      "url": "wallpapers-mobile/fun/5825433.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/fun/5825433.webp",
+      "size": 839333,
+      "modified": "2025-10-26T17:45:42.852696+00:00",
+      "category": "fun"
+    },
+    {
+      "filename": "dont-touch.jpg",
+      "url": "wallpapers-mobile/fun/dont-touch.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/fun/dont-touch.webp",
+      "size": 45784,
+      "modified": "2025-10-26T15:27:57.687733+00:00",
+      "category": "fun"
+    },
+    {
       "filename": "Gangsta_Pikachu.jpeg",
       "url": "wallpapers-mobile/fun/Gangsta_Pikachu.jpeg",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/fun/Gangsta_Pikachu.webp",
       "size": 125390,
       "modified": "2025-10-24T20:37:37.881479+00:00",
+      "category": "fun"
+    },
+    {
+      "filename": "locked.jpg",
+      "url": "wallpapers-mobile/fun/locked.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/fun/locked.webp",
+      "size": 40458,
+      "modified": "2025-10-26T15:28:26.705916+00:00",
       "category": "fun"
     },
     {
@@ -256,6 +384,14 @@
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/gaming/minecraft-sea.webp",
       "size": 350226,
       "modified": "2025-10-25T23:31:45.491078+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "rdr-horse.jpg",
+      "url": "wallpapers-mobile/gaming/rdr-horse.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/gaming/rdr-horse.webp",
+      "size": 253596,
+      "modified": "2025-10-26T15:23:25.665998+00:00",
       "category": "gaming"
     },
     {
@@ -331,11 +467,27 @@
       "category": "landscape"
     },
     {
+      "filename": "dont-doubt.jpg",
+      "url": "wallpapers-mobile/motivational/dont-doubt.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/motivational/dont-doubt.webp",
+      "size": 35518,
+      "modified": "2025-10-26T20:21:25.415871+00:00",
+      "category": "motivational"
+    },
+    {
       "filename": "keep-going.jpg",
       "url": "wallpapers-mobile/motivational/keep-going.jpg",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/motivational/keep-going.webp",
       "size": 59758,
       "modified": "2025-10-26T15:26:15.763086+00:00",
+      "category": "motivational"
+    },
+    {
+      "filename": "motivational-background-photo.jpg",
+      "url": "wallpapers-mobile/motivational/motivational-background-photo.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/motivational/motivational-background-photo.webp",
+      "size": 189747,
+      "modified": "2025-10-26T20:21:55.188603+00:00",
       "category": "motivational"
     },
     {
@@ -400,6 +552,22 @@
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/tech/ERR_NAME.webp",
       "size": 403441,
       "modified": "2025-10-24T19:15:01.894908+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "laptop.jpg",
+      "url": "wallpapers-mobile/tech/laptop.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/tech/laptop.webp",
+      "size": 1021283,
+      "modified": "2025-10-26T17:44:04.809696+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "mobile-lego.jpg",
+      "url": "wallpapers-mobile/tech/mobile-lego.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/tech/mobile-lego.webp",
+      "size": 1297668,
+      "modified": "2025-10-26T17:43:46.998208+00:00",
       "category": "tech"
     },
     {
