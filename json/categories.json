@@ -3,12 +3,12 @@
     {
       "name": "all",
       "label": "All",
-      "count": 131
+      "count": 211
     },
     {
       "name": "abstract",
       "label": "abstract",
-      "count": 8
+      "count": 11
     },
     {
       "name": "aesthetic",
@@ -23,32 +23,32 @@
     {
       "name": "art",
       "label": "art",
-      "count": 26
+      "count": 46
     },
     {
-      "name": "cityscape",
-      "label": "cityscape",
-      "count": 5
+      "name": "cyber-cityscape",
+      "label": "cyber-cityscape",
+      "count": 9
     },
     {
       "name": "fun",
       "label": "fun",
-      "count": 4
+      "count": 8
     },
     {
       "name": "gaming",
       "label": "gaming",
-      "count": 16
+      "count": 22
     },
     {
       "name": "landscape",
       "label": "landscape",
-      "count": 9
+      "count": 23
     },
     {
       "name": "minimal",
       "label": "minimal",
-      "count": 2
+      "count": 7
     },
     {
       "name": "motivational",
@@ -58,7 +58,7 @@
     {
       "name": "pokemon",
       "label": "pokemon",
-      "count": 12
+      "count": 13
     },
     {
       "name": "sci-fi",
@@ -68,19 +68,19 @@
     {
       "name": "tech",
       "label": "tech",
-      "count": 5
+      "count": 23
     },
     {
       "name": "uncategorized",
       "label": "uncategorized",
-      "count": 3
+      "count": 8
     }
   ],
   "mobile": [
     {
       "name": "all",
       "label": "All",
-      "count": 73
+      "count": 89
     },
     {
       "name": "abstract",
@@ -98,14 +98,19 @@
       "count": 6
     },
     {
-      "name": "art",
-      "label": "art",
-      "count": 11
+      "name": "anime",
+      "label": "anime",
+      "count": 4
     },
     {
-      "name": "cityscape",
-      "label": "cityscape",
-      "count": 1
+      "name": "art",
+      "label": "art",
+      "count": 16
+    },
+    {
+      "name": "cyber-cityscape",
+      "label": "cyber-cityscape",
+      "count": 3
     },
     {
       "name": "fun",
@@ -115,7 +120,7 @@
     {
       "name": "gaming",
       "label": "gaming",
-      "count": 5
+      "count": 9
     },
     {
       "name": "landscape",
@@ -140,7 +145,7 @@
     {
       "name": "uncategorized",
       "label": "uncategorized",
-      "count": 5
+      "count": 6
     }
   ]
 }

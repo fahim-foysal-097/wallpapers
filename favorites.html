@@ -125,6 +125,7 @@
     <div class="modal fade" id="previewModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen-sm-down modal-xl modal-dialog-centered">
             <div class="modal-content bg-dark border-0 position-relative">
+                <!-- Prev / Next buttons -->
                 <button class="modal-nav-btn prev" id="modalPrevBtn" title="Previous (←)"><i
                         class="bi bi-chevron-left"></i></button>
                 <button class="modal-nav-btn next" id="modalNextBtn" title="Next (→)"><i
@@ -148,13 +149,21 @@
                     </div>
 
                     <div class="mt-3 d-flex justify-content-center align-items-center position-relative">
-                        <img id="modalImage" src="" alt="preview" class="img-fluid rounded shadow-lg"
-                            style="max-height:80vh; object-fit:contain;" />
+                        <!-- wrapper to hold spinner + image -->
+                        <div class="modal-preview-wrap" style="width:100%;">
+                            <div class="modal-img-overlay" aria-hidden="true">
+                                <div id="modalSpinner" class="modal-spinner" role="status" aria-hidden="true"></div>
+                            </div>
+
+                            <!-- the image element — keep same id used in your JS -->
+                            <img id="modalImage" src="" alt="preview" class="img-fluid rounded shadow-lg" />
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <script>
         window.GALLERY_MODE = "favorites";

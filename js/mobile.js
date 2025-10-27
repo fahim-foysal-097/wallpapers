@@ -22,7 +22,7 @@
   const bsModal = previewModalEl
     ? new bootstrap.Modal(previewModalEl, {})
     : null;
-  const modalImage = document.getElementById("modalImage");
+  let modalImage = document.getElementById("modalImage"); // changed to let
   const modalFilename = document.getElementById("modalFilename");
   const modalMeta = document.getElementById("modalMeta");
   const modalDownload = document.getElementById("modalDownload");
@@ -259,17 +259,124 @@
     }`;
   }
 
+  // helper to preload image URL and resolve when loaded or reject
+  function preloadImage(url) {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => resolve(img);
+      img.onerror = (e) => reject(e);
+      img.src = url;
+    });
+  }
+
+  // returns true if file is likely an animated gif (cheap check)
+  function isGifUrl(url) {
+    return typeof url === "string" && url.toLowerCase().endsWith(".gif");
+  }
+
+  function showSpinner(show = true) {
+    const spinner = document.getElementById("modalSpinner");
+    if (!spinner) return;
+    spinner.style.display = show ? "" : "none";
+  }
+
+  // crossfade swap: replace current modalImage.src with newImageElement's src
+  function swapModalImageElement(newImgEl) {
+    if (!modalImage) return;
+    try {
+      modalImage.classList.remove("modal-img-loaded");
+      modalImage.classList.add("modal-img-fade");
+      requestAnimationFrame(() => {
+        modalImage.src = newImgEl.src;
+        modalImage.alt = newImgEl.alt || modalImage.alt || "";
+        modalImage.classList.remove("modal-img-blur");
+        modalImage.classList.add("modal-img-loaded");
+        showSpinner(false);
+        modalImage.classList.add("modal-img-visible");
+      });
+    } catch (e) {
+      modalImage.src = newImgEl.src;
+      showSpinner(false);
+      modalImage.classList.remove("modal-img-blur");
+      modalImage.classList.add("modal-img-loaded", "modal-img-visible");
+    }
+  }
+
+  function showModalImageError() {
+    if (!modalImage) return;
+    showSpinner(false);
+    modalImage.className = "";
+    modalImage.removeAttribute("src");
+    modalImage.outerHTML = `<div class="modal-image-error">Image failed to load</div>`;
+  }
+
   function openModalAtIndex(i) {
     currentIndex = i;
     const entry = filtered[i];
     if (!entry) return;
-    modalImage.src = entry.url;
-    modalFilename.textContent = entry.filename;
-    modalMeta.textContent = `${Math.round(entry.size / 1024)} KB • ${new Date(
-      entry.modified
-    ).toLocaleString()}`;
-    modalDownload.href = entry.url;
-    modalDownload.setAttribute("download", entry.filename);
+
+    // recreate modalImage if previously replaced by an error box
+    if (!document.getElementById("modalImage")) {
+      const wrap = document.querySelector(".modal-preview-wrap");
+      if (wrap) {
+        const newImg = document.createElement("img");
+        newImg.id = "modalImage";
+        newImg.className = "img-fluid rounded shadow-lg";
+        newImg.style.maxHeight = "80vh";
+        newImg.style.objectFit = "contain";
+        wrap.appendChild(newImg);
+        modalImage = document.getElementById("modalImage");
+      }
+    }
+
+    if (modalFilename) modalFilename.textContent = entry.filename;
+    if (modalMeta)
+      modalMeta.textContent = `${Math.round(entry.size / 1024)} KB • ${new Date(
+        entry.modified
+      ).toLocaleString()}`;
+    if (modalDownload) {
+      modalDownload.href = entry.url;
+      modalDownload.setAttribute("download", entry.filename);
+    }
+
+    // reset classes
+    if (modalImage) {
+      modalImage.className = "img-fluid rounded shadow-lg";
+      modalImage.classList.remove(
+        "modal-img-blur",
+        "modal-img-loaded",
+        "modal-img-fade",
+        "modal-img-visible"
+      );
+    }
+
+    const hasThumb = entry.thumb_url && entry.thumb_url.trim().length;
+    const urlIsGif = isGifUrl(entry.url);
+
+    if (hasThumb && !urlIsGif) {
+      modalImage.src = entry.thumb_url;
+      modalImage.alt = entry.filename;
+      modalImage.classList.add("modal-img-blur", "modal-img-visible");
+      showSpinner(true);
+      preloadImage(entry.url)
+        .then((loaded) => swapModalImageElement(loaded))
+        .catch((err) => {
+          console.warn("Mobile full image preload failed:", err);
+          showSpinner(false);
+          modalImage.classList.remove("modal-img-blur");
+          modalImage.classList.add("modal-img-loaded", "modal-img-visible");
+        });
+    } else {
+      modalImage.classList.add("modal-img-fade");
+      showSpinner(true);
+      preloadImage(entry.url)
+        .then((loaded) => swapModalImageElement(loaded))
+        .catch((err) => {
+          console.error("Mobile modal load error:", err);
+          showModalImageError();
+        });
+    }
+
     if (bsModal) bsModal.show();
   }
 
@@ -533,7 +640,9 @@
   document.addEventListener("DOMContentLoaded", init);
 })();
 
-// --- Typing animation for #animatedText for mobile page ---
+/* ---------------------
+   Typing animation (keeps as-is)
+   --------------------- */
 
 (function typingAnimation() {
   const el = document.getElementById("animatedText");

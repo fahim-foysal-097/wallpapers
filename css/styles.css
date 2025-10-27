@@ -689,3 +689,101 @@ body {
     font-size: 0.86rem;
   }
 }
+
+/* Progressive modal preview styles */
+.modal-preview-wrap {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+/* spinner overlay centered */
+.modal-spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  display: none;
+  width: 48px;
+  height: 48px;
+  pointer-events: none;
+}
+
+/* simple spinner (using border) */
+.modal-spinner::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 4px solid rgba(255, 255, 255, 0.15);
+  border-top-color: rgba(255, 255, 255, 0.9);
+  animation: modal-spin 1s linear infinite;
+}
+
+@keyframes modal-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* blurred placeholder effect while loading full-res */
+.modal-img-blur {
+  filter: blur(8px) saturate(0.95);
+  transform: scale(1.02);
+  transition: filter 300ms ease, opacity 250ms ease, transform 300ms ease;
+}
+
+/* when fully loaded: remove blur */
+.modal-img-loaded {
+  filter: none;
+  transform: none;
+  opacity: 1;
+  transition: opacity 220ms ease;
+}
+
+/* crossfade helper: image initially invisible then fade in */
+.modal-img-fade {
+  opacity: 0;
+  transition: opacity 260ms ease;
+}
+
+/* visible */
+.modal-img-visible {
+  opacity: 1;
+}
+
+/* keep image responsive */
+#modalImage {
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* overlay to ensure spinner is above blurred image */
+.modal-img-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  pointer-events: none;
+}
+
+/* fallback message style if image fails */
+.modal-image-error {
+  width: 100%;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+  background: #07111c;
+  border-radius: 8px;
+}

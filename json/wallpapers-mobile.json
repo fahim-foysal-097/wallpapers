@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-10-26T20:50:27.015779+00:00",
-  "count": 73,
+  "generated_at": "2025-10-27T08:45:17.095470+00:00",
+  "count": 89,
   "wallpapers": [
     {
       "filename": "cube.jpg",
@@ -32,6 +32,14 @@
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/reach-for-it.webp",
       "size": 2087937,
       "modified": "2025-10-24T19:14:42.206516+00:00",
+      "category": "uncategorized"
+    },
+    {
+      "filename": "science.jpg",
+      "url": "wallpapers-mobile/science.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/science.webp",
+      "size": 1228822,
+      "modified": "2025-10-26T17:44:41.785569+00:00",
       "category": "uncategorized"
     },
     {
@@ -227,6 +235,38 @@
       "category": "animals"
     },
     {
+      "filename": "5825372.jpg",
+      "url": "wallpapers-mobile/anime/5825372.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/anime/5825372.webp",
+      "size": 855476,
+      "modified": "2025-10-26T15:30:17.818618+00:00",
+      "category": "anime"
+    },
+    {
+      "filename": "cyberpunk-edgerunners-image.jpg",
+      "url": "wallpapers-mobile/anime/cyberpunk-edgerunners-image.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/anime/cyberpunk-edgerunners-image.webp",
+      "size": 2662505,
+      "modified": "2025-10-27T05:36:40.677881+00:00",
+      "category": "anime"
+    },
+    {
+      "filename": "cyberpunk-edgerunners.jpg",
+      "url": "wallpapers-mobile/anime/cyberpunk-edgerunners.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/anime/cyberpunk-edgerunners.webp",
+      "size": 835588,
+      "modified": "2025-10-27T05:36:43.028950+00:00",
+      "category": "anime"
+    },
+    {
+      "filename": "naruto-six-sage.jpg",
+      "url": "wallpapers-mobile/anime/naruto-six-sage.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/anime/naruto-six-sage.webp",
+      "size": 218151,
+      "modified": "2025-10-26T15:28:33.966962+00:00",
+      "category": "anime"
+    },
+    {
       "filename": "Acclaimed_rectangle.jpg",
       "url": "wallpapers-mobile/art/Acclaimed_rectangle.jpg",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/Acclaimed_rectangle.webp",
@@ -299,11 +339,51 @@
       "category": "art"
     },
     {
+      "filename": "road.jpg",
+      "url": "wallpapers-mobile/art/road.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/road.webp",
+      "size": 1672524,
+      "modified": "2025-10-26T20:29:57.956208+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "sakura.jpg",
+      "url": "wallpapers-mobile/art/sakura.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/sakura.webp",
+      "size": 1794343,
+      "modified": "2025-10-26T20:29:11.828580+00:00",
+      "category": "art"
+    },
+    {
       "filename": "skull-ascii.jpg",
       "url": "wallpapers-mobile/art/skull-ascii.jpg",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/skull-ascii.webp",
       "size": 437025,
       "modified": "2025-10-26T14:44:57.518796+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "studio-ghibli-wallpaper.jpg",
+      "url": "wallpapers-mobile/art/studio-ghibli-wallpaper.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/studio-ghibli-wallpaper.webp",
+      "size": 1014780,
+      "modified": "2025-10-26T15:19:17.924391+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "sunset-house.jpg",
+      "url": "wallpapers-mobile/art/sunset-house.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/sunset-house.webp",
+      "size": 2747636,
+      "modified": "2025-10-26T15:19:03.386295+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "tree-boy.jpg",
+      "url": "wallpapers-mobile/art/tree-boy.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/tree-boy.webp",
+      "size": 6330128,
+      "modified": "2025-10-26T15:19:42.227550+00:00",
       "category": "art"
     },
     {
@@ -315,12 +395,28 @@
       "category": "art"
     },
     {
+      "filename": "city.jpg",
+      "url": "wallpapers-mobile/cyber-cityscape/city.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/cyber-cityscape/city.webp",
+      "size": 137411,
+      "modified": "2025-10-24T10:13:48.776155+00:00",
+      "category": "cyber-cityscape"
+    },
+    {
+      "filename": "house.jpg",
+      "url": "wallpapers-mobile/cyber-cityscape/house.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/cyber-cityscape/house.webp",
+      "size": 252642,
+      "modified": "2025-10-24T10:13:48.778155+00:00",
+      "category": "cyber-cityscape"
+    },
+    {
       "filename": "tower.jpg",
-      "url": "wallpapers-mobile/cityscape/tower.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/cityscape/tower.webp",
+      "url": "wallpapers-mobile/cyber-cityscape/tower.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/cyber-cityscape/tower.webp",
       "size": 372724,
       "modified": "2025-10-25T21:03:57.538458+00:00",
-      "category": "cityscape"
+      "category": "cyber-cityscape"
     },
     {
       "filename": "5825433.jpg",
@@ -355,6 +451,22 @@
       "category": "fun"
     },
     {
+      "filename": "botw-zelda.jpg",
+      "url": "wallpapers-mobile/gaming/botw-zelda.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/gaming/botw-zelda.webp",
+      "size": 83198,
+      "modified": "2025-10-26T15:22:35.759677+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "cyberpunk-2077-wallpaper.jpg",
+      "url": "wallpapers-mobile/gaming/cyberpunk-2077-wallpaper.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/gaming/cyberpunk-2077-wallpaper.webp",
+      "size": 888641,
+      "modified": "2025-10-27T05:36:32.067629+00:00",
+      "category": "gaming"
+    },
+    {
       "filename": "CYBERPUNK_samurai.jpeg",
       "url": "wallpapers-mobile/gaming/CYBERPUNK_samurai.jpeg",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/gaming/CYBERPUNK_samurai.webp",
@@ -368,6 +480,22 @@
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/gaming/hollow-knight-wall.webp",
       "size": 97336,
       "modified": "2025-10-25T23:32:06.428534+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "link-majoras-mask.jpg",
+      "url": "wallpapers-mobile/gaming/link-majoras-mask.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/gaming/link-majoras-mask.webp",
+      "size": 718575,
+      "modified": "2025-10-26T15:22:15.593547+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "link.jpg",
+      "url": "wallpapers-mobile/gaming/link.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/gaming/link.webp",
+      "size": 526323,
+      "modified": "2025-10-26T15:22:24.004601+00:00",
       "category": "gaming"
     },
     {

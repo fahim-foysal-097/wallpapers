@@ -1,13 +1,45 @@
 {
-  "generated_at": "2025-10-26T20:50:27.000819+00:00",
-  "count": 131,
+  "generated_at": "2025-10-27T08:45:17.082319+00:00",
+  "count": 211,
   "wallpapers": [
+    {
+      "filename": "blackhole-interstellar.jpg",
+      "url": "wallpapers/blackhole-interstellar.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/blackhole-interstellar.webp",
+      "size": 1571282,
+      "modified": "2025-10-26T15:25:23.643754+00:00",
+      "category": "uncategorized"
+    },
+    {
+      "filename": "chip-intel.png",
+      "url": "wallpapers/chip-intel.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/chip-intel.webp",
+      "size": 18728,
+      "modified": "2025-09-22T05:51:27.709409+00:00",
+      "category": "uncategorized"
+    },
     {
       "filename": "green-sun.jpg",
       "url": "wallpapers/green-sun.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/green-sun.webp",
       "size": 26453,
       "modified": "2025-10-24T19:13:09.837331+00:00",
+      "category": "uncategorized"
+    },
+    {
+      "filename": "mecha-keyboard.jpg",
+      "url": "wallpapers/mecha-keyboard.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/mecha-keyboard.webp",
+      "size": 1178840,
+      "modified": "2025-09-22T05:21:08.052069+00:00",
+      "category": "uncategorized"
+    },
+    {
+      "filename": "odd.jpg",
+      "url": "wallpapers/odd.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/odd.webp",
+      "size": 578466,
+      "modified": "2025-10-24T10:13:51.059186+00:00",
       "category": "uncategorized"
     },
     {
@@ -24,6 +56,14 @@
       "thumb_url": "thumbnail/wallpapers-thumb/trigonometry.webp",
       "size": 213808,
       "modified": "2025-10-25T21:04:29.328288+00:00",
+      "category": "uncategorized"
+    },
+    {
+      "filename": "wide_tokyonight_lines.png",
+      "url": "wallpapers/wide_tokyonight_lines.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/wide_tokyonight_lines.webp",
+      "size": 250730,
+      "modified": "2025-09-22T05:50:39.653395+00:00",
       "category": "uncategorized"
     },
     {
@@ -67,6 +107,14 @@
       "category": "abstract"
     },
     {
+      "filename": "abstract-win.jpg",
+      "url": "wallpapers/abstract/abstract-win.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/abstract/abstract-win.webp",
+      "size": 128679,
+      "modified": "2025-10-27T07:59:38.897125+00:00",
+      "category": "abstract"
+    },
+    {
       "filename": "cube-1.jpg",
       "url": "wallpapers/abstract/cube-1.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/abstract/cube-1.webp",
@@ -83,11 +131,27 @@
       "category": "abstract"
     },
     {
+      "filename": "dark-star.jpg",
+      "url": "wallpapers/abstract/dark-star.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/abstract/dark-star.webp",
+      "size": 246054,
+      "modified": "2025-05-09T06:25:41.565710+00:00",
+      "category": "abstract"
+    },
+    {
       "filename": "lines.jpg",
       "url": "wallpapers/abstract/lines.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/abstract/lines.webp",
       "size": 806378,
       "modified": "2025-10-26T20:24:29.908731+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "technical.jpg",
+      "url": "wallpapers/abstract/technical.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/abstract/technical.webp",
+      "size": 253026,
+      "modified": "2025-05-09T06:25:43.513812+00:00",
       "category": "abstract"
     },
     {
@@ -299,11 +363,27 @@
       "category": "art"
     },
     {
+      "filename": "aesthetic-green-grass.jpg",
+      "url": "wallpapers/art/aesthetic-green-grass.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/aesthetic-green-grass.webp",
+      "size": 4764644,
+      "modified": "2025-10-26T14:58:34.954761+00:00",
+      "category": "art"
+    },
+    {
       "filename": "anime-eye-sky.jpg",
       "url": "wallpapers/art/anime-eye-sky.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/art/anime-eye-sky.webp",
       "size": 1267305,
       "modified": "2025-10-26T14:54:43.011988+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "autumn-landscape.jpg",
+      "url": "wallpapers/art/autumn-landscape.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/autumn-landscape.webp",
+      "size": 2629918,
+      "modified": "2025-10-26T14:57:45.086236+00:00",
       "category": "art"
     },
     {
@@ -331,6 +411,14 @@
       "category": "art"
     },
     {
+      "filename": "branch-with-white-blossoms-spring.jpg",
+      "url": "wallpapers/art/branch-with-white-blossoms-spring.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/branch-with-white-blossoms-spring.webp",
+      "size": 2780548,
+      "modified": "2025-10-26T14:57:51.012299+00:00",
+      "category": "art"
+    },
+    {
       "filename": "broken-dimensions-shards.png",
       "url": "wallpapers/art/broken-dimensions-shards.png",
       "thumb_url": "thumbnail/wallpapers-thumb/art/broken-dimensions-shards.webp",
@@ -344,6 +432,14 @@
       "thumb_url": "thumbnail/wallpapers-thumb/art/castle.webp",
       "size": 3627582,
       "modified": "2025-10-24T20:17:36.726415+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "cherry-blossom-park.jpg",
+      "url": "wallpapers/art/cherry-blossom-park.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/cherry-blossom-park.webp",
+      "size": 2408752,
+      "modified": "2025-10-26T14:56:49.688691+00:00",
       "category": "art"
     },
     {
@@ -379,11 +475,59 @@
       "category": "art"
     },
     {
+      "filename": "floral-field-springtime.jpg",
+      "url": "wallpapers/art/floral-field-springtime.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/floral-field-springtime.webp",
+      "size": 3798821,
+      "modified": "2025-10-26T15:09:14.998234+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "forest-stream-sunlight.jpg",
+      "url": "wallpapers/art/forest-stream-sunlight.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/forest-stream-sunlight.webp",
+      "size": 3863907,
+      "modified": "2025-10-26T14:58:27.881688+00:00",
+      "category": "art"
+    },
+    {
       "filename": "futuristicAncientTree.png",
       "url": "wallpapers/art/futuristicAncientTree.png",
       "thumb_url": "thumbnail/wallpapers-thumb/art/futuristicAncientTree.webp",
       "size": 3467130,
       "modified": "2025-10-24T19:12:45.868115+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "hd-leaves.jpg",
+      "url": "wallpapers/art/hd-leaves.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/hd-leaves.webp",
+      "size": 753883,
+      "modified": "2025-10-26T17:53:46.076417+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "horse.jpg",
+      "url": "wallpapers/art/horse.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/horse.webp",
+      "size": 1064649,
+      "modified": "2025-09-22T05:33:16.124509+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "house-in-a-field.jpg",
+      "url": "wallpapers/art/house-in-a-field.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/house-in-a-field.webp",
+      "size": 1792373,
+      "modified": "2025-10-26T15:10:35.329820+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "lake.jpg",
+      "url": "wallpapers/art/lake.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/lake.webp",
+      "size": 439402,
+      "modified": "2025-10-24T10:13:51.831196+00:00",
       "category": "art"
     },
     {
@@ -403,6 +547,14 @@
       "category": "art"
     },
     {
+      "filename": "majestic-tree-meadow.jpg",
+      "url": "wallpapers/art/majestic-tree-meadow.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/majestic-tree-meadow.webp",
+      "size": 1522038,
+      "modified": "2025-10-26T15:10:17.364690+00:00",
+      "category": "art"
+    },
+    {
       "filename": "mountains.png",
       "url": "wallpapers/art/mountains.png",
       "thumb_url": "thumbnail/wallpapers-thumb/art/mountains.webp",
@@ -419,6 +571,14 @@
       "category": "art"
     },
     {
+      "filename": "pastel-field-aesthetic.jpg",
+      "url": "wallpapers/art/pastel-field-aesthetic.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/pastel-field-aesthetic.webp",
+      "size": 4952996,
+      "modified": "2025-10-26T14:58:19.343599+00:00",
+      "category": "art"
+    },
+    {
       "filename": "pixel-art-steam.jpg",
       "url": "wallpapers/art/pixel-art-steam.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/art/pixel-art-steam.webp",
@@ -432,6 +592,14 @@
       "thumb_url": "thumbnail/wallpapers-thumb/art/pixelated-forest-silhouette.webp",
       "size": 265473,
       "modified": "2025-10-25T23:08:33.978675+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "poppy-field-butterflies.gif",
+      "url": "wallpapers/art/poppy-field-butterflies.gif",
+      "thumb_url": null,
+      "size": 23379802,
+      "modified": "2025-10-26T15:10:34.915817+00:00",
       "category": "art"
     },
     {
@@ -459,6 +627,38 @@
       "category": "art"
     },
     {
+      "filename": "sakura-bloom.jpg",
+      "url": "wallpapers/art/sakura-bloom.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/sakura-bloom.webp",
+      "size": 924142,
+      "modified": "2025-10-26T15:08:58.537112+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "sunbeams-in-forest.jpg",
+      "url": "wallpapers/art/sunbeams-in-forest.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/sunbeams-in-forest.webp",
+      "size": 3277836,
+      "modified": "2025-10-26T14:58:04.687445+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "technecians.jpg",
+      "url": "wallpapers/art/technecians.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/technecians.webp",
+      "size": 827671,
+      "modified": "2025-10-24T10:13:51.464191+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "technicians-on-call.jpg",
+      "url": "wallpapers/art/technicians-on-call.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/technicians-on-call.webp",
+      "size": 944769,
+      "modified": "2025-10-24T10:13:51.118186+00:00",
+      "category": "art"
+    },
+    {
       "filename": "tower_cloud.png",
       "url": "wallpapers/art/tower_cloud.png",
       "thumb_url": "thumbnail/wallpapers-thumb/art/tower_cloud.webp",
@@ -483,6 +683,22 @@
       "category": "art"
     },
     {
+      "filename": "wall_secondary.png",
+      "url": "wallpapers/art/wall_secondary.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/wall_secondary.webp",
+      "size": 28983,
+      "modified": "2025-10-24T10:13:51.717194+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "wallhaven-art.jpg",
+      "url": "wallpapers/art/wallhaven-art.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/wallhaven-art.webp",
+      "size": 3552584,
+      "modified": "2025-10-24T10:13:51.786195+00:00",
+      "category": "art"
+    },
+    {
       "filename": "wallhaven-house.jpg",
       "url": "wallpapers/art/wallhaven-house.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/art/wallhaven-house.webp",
@@ -499,51 +715,107 @@
       "category": "art"
     },
     {
+      "filename": "wildflowers-watercolor.jpg",
+      "url": "wallpapers/art/wildflowers-watercolor.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/wildflowers-watercolor.webp",
+      "size": 2832925,
+      "modified": "2025-10-26T15:09:07.002175+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "building_cyber.jpg",
+      "url": "wallpapers/cyber-cityscape/building_cyber.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/cyber-cityscape/building_cyber.webp",
+      "size": 1631061,
+      "modified": "2025-05-09T06:25:41.186547+00:00",
+      "category": "cyber-cityscape"
+    },
+    {
+      "filename": "city-scape.png",
+      "url": "wallpapers/cyber-cityscape/city-scape.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/cyber-cityscape/city-scape.webp",
+      "size": 56978,
+      "modified": "2025-10-24T10:13:49.829169+00:00",
+      "category": "cyber-cityscape"
+    },
+    {
+      "filename": "city-view.jpg",
+      "url": "wallpapers/cyber-cityscape/city-view.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/cyber-cityscape/city-view.webp",
+      "size": 1653122,
+      "modified": "2025-10-24T10:13:53.633220+00:00",
+      "category": "cyber-cityscape"
+    },
+    {
       "filename": "corndog.png",
-      "url": "wallpapers/cityscape/corndog.png",
-      "thumb_url": "thumbnail/wallpapers-thumb/cityscape/corndog.webp",
+      "url": "wallpapers/cyber-cityscape/corndog.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/cyber-cityscape/corndog.webp",
       "size": 17397427,
       "modified": "2025-10-25T23:12:26.957652+00:00",
-      "category": "cityscape"
+      "category": "cyber-cityscape"
     },
     {
       "filename": "futuristic-cityscape.jpg",
-      "url": "wallpapers/cityscape/futuristic-cityscape.jpg",
-      "thumb_url": "thumbnail/wallpapers-thumb/cityscape/futuristic-cityscape.webp",
+      "url": "wallpapers/cyber-cityscape/futuristic-cityscape.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/cyber-cityscape/futuristic-cityscape.webp",
       "size": 2036509,
       "modified": "2025-10-24T19:12:42.632503+00:00",
-      "category": "cityscape"
+      "category": "cyber-cityscape"
     },
     {
       "filename": "lofiwallpaper.png",
-      "url": "wallpapers/cityscape/lofiwallpaper.png",
-      "thumb_url": "thumbnail/wallpapers-thumb/cityscape/lofiwallpaper.webp",
+      "url": "wallpapers/cyber-cityscape/lofiwallpaper.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/cyber-cityscape/lofiwallpaper.webp",
       "size": 2232137,
       "modified": "2025-10-25T23:07:36.708854+00:00",
-      "category": "cityscape"
+      "category": "cyber-cityscape"
     },
     {
       "filename": "neon_car.jpg",
-      "url": "wallpapers/cityscape/neon_car.jpg",
-      "thumb_url": "thumbnail/wallpapers-thumb/cityscape/neon_car.webp",
+      "url": "wallpapers/cyber-cityscape/neon_car.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/cyber-cityscape/neon_car.webp",
       "size": 1183922,
       "modified": "2025-10-25T23:09:32.902319+00:00",
-      "category": "cityscape"
+      "category": "cyber-cityscape"
     },
     {
       "filename": "neon_city.jpg",
-      "url": "wallpapers/cityscape/neon_city.jpg",
-      "thumb_url": "thumbnail/wallpapers-thumb/cityscape/neon_city.webp",
+      "url": "wallpapers/cyber-cityscape/neon_city.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/cyber-cityscape/neon_city.webp",
       "size": 1237645,
       "modified": "2025-10-25T23:09:35.531629+00:00",
-      "category": "cityscape"
+      "category": "cyber-cityscape"
     },
     {
-      "filename": "comp.jpg",
-      "url": "wallpapers/fun/comp.jpg",
-      "thumb_url": "thumbnail/wallpapers-thumb/fun/comp.webp",
-      "size": 14655,
-      "modified": "2025-10-24T20:31:43.298548+00:00",
+      "filename": "shop.jpg",
+      "url": "wallpapers/cyber-cityscape/shop.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/cyber-cityscape/shop.webp",
+      "size": 990802,
+      "modified": "2025-09-22T05:24:24.413888+00:00",
+      "category": "cyber-cityscape"
+    },
+    {
+      "filename": "broken-display.jpg",
+      "url": "wallpapers/fun/broken-display.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/fun/broken-display.webp",
+      "size": 191721,
+      "modified": "2025-10-27T07:59:16.424541+00:00",
+      "category": "fun"
+    },
+    {
+      "filename": "broken-screen-lines.webp",
+      "url": "wallpapers/fun/broken-screen-lines.webp",
+      "thumb_url": "thumbnail/wallpapers-thumb/fun/broken-screen-lines.webp",
+      "size": 36372,
+      "modified": "2025-10-27T08:17:09.317417+00:00",
+      "category": "fun"
+    },
+    {
+      "filename": "get-away.jpg",
+      "url": "wallpapers/fun/get-away.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/fun/get-away.webp",
+      "size": 75978,
+      "modified": "2025-10-27T07:50:57.340458+00:00",
       "category": "fun"
     },
     {
@@ -552,6 +824,14 @@
       "thumb_url": "thumbnail/wallpapers-thumb/fun/kitty_BOD.webp",
       "size": 174352,
       "modified": "2025-10-24T20:30:29.249687+00:00",
+      "category": "fun"
+    },
+    {
+      "filename": "lazy.jpg",
+      "url": "wallpapers/fun/lazy.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/fun/lazy.webp",
+      "size": 56782,
+      "modified": "2025-10-27T07:54:54.451260+00:00",
       "category": "fun"
     },
     {
@@ -568,6 +848,14 @@
       "thumb_url": "thumbnail/wallpapers-thumb/fun/sudo-rm-rf.webp",
       "size": 167901,
       "modified": "2025-10-25T19:05:12.893603+00:00",
+      "category": "fun"
+    },
+    {
+      "filename": "your-age.jpg",
+      "url": "wallpapers/fun/your-age.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/fun/your-age.webp",
+      "size": 25635,
+      "modified": "2025-10-27T07:56:09.212379+00:00",
       "category": "fun"
     },
     {
@@ -611,6 +899,14 @@
       "category": "gaming"
     },
     {
+      "filename": "firewatch-sun.jpg",
+      "url": "wallpapers/gaming/firewatch-sun.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/gaming/firewatch-sun.webp",
+      "size": 486015,
+      "modified": "2025-04-25T09:07:45.925326+00:00",
+      "category": "gaming"
+    },
+    {
       "filename": "firewatch.png",
       "url": "wallpapers/gaming/firewatch.png",
       "thumb_url": "thumbnail/wallpapers-thumb/gaming/firewatch.webp",
@@ -648,6 +944,46 @@
       "thumb_url": "thumbnail/wallpapers-thumb/gaming/minecraft.webp",
       "size": 1032026,
       "modified": "2025-10-24T19:11:37.859327+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "od_botw_z.png",
+      "url": "wallpapers/gaming/od_botw_z.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/gaming/od_botw_z.webp",
+      "size": 47349,
+      "modified": "2025-09-22T06:02:59.644916+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "od_hylian_crest.png",
+      "url": "wallpapers/gaming/od_hylian_crest.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/gaming/od_hylian_crest.webp",
+      "size": 87611,
+      "modified": "2025-09-22T06:04:09.304149+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "od_master_sword.png",
+      "url": "wallpapers/gaming/od_master_sword.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/gaming/od_master_sword.webp",
+      "size": 55448,
+      "modified": "2025-09-22T06:04:18.178921+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "od_ouroboros.png",
+      "url": "wallpapers/gaming/od_ouroboros.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/gaming/od_ouroboros.webp",
+      "size": 104594,
+      "modified": "2025-09-22T06:04:21.933862+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "od_stamina+.png",
+      "url": "wallpapers/gaming/od_stamina+.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/gaming/od_stamina+.webp",
+      "size": 206431,
+      "modified": "2025-09-22T06:04:24.667123+00:00",
       "category": "gaming"
     },
     {
@@ -699,6 +1035,38 @@
       "category": "gaming"
     },
     {
+      "filename": "beautiful-tree-on-hill.jpg",
+      "url": "wallpapers/landscape/beautiful-tree-on-hill.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/beautiful-tree-on-hill.webp",
+      "size": 4117961,
+      "modified": "2025-10-26T14:58:02.859425+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "bridge.jpg",
+      "url": "wallpapers/landscape/bridge.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/bridge.webp",
+      "size": 1284836,
+      "modified": "2025-10-24T10:13:52.595206+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "cascading-water-tropical-paradise.jpg",
+      "url": "wallpapers/landscape/cascading-water-tropical-paradise.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/cascading-water-tropical-paradise.webp",
+      "size": 1737539,
+      "modified": "2025-10-26T14:58:30.394714+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "charming-riverside-cottage.jpg",
+      "url": "wallpapers/landscape/charming-riverside-cottage.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/charming-riverside-cottage.webp",
+      "size": 1288488,
+      "modified": "2025-10-26T14:56:45.880670+00:00",
+      "category": "landscape"
+    },
+    {
       "filename": "deer_and_sunset.jpg",
       "url": "wallpapers/landscape/deer_and_sunset.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/landscape/deer_and_sunset.webp",
@@ -723,11 +1091,59 @@
       "category": "landscape"
     },
     {
+      "filename": "Foggy-green-waterfall.jpeg",
+      "url": "wallpapers/landscape/Foggy-green-waterfall.jpeg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/Foggy-green-waterfall.webp",
+      "size": 502511,
+      "modified": "2025-09-25T15:51:19.303230+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "garden-path.jpg",
+      "url": "wallpapers/landscape/garden-path.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/garden-path.webp",
+      "size": 2080302,
+      "modified": "2025-10-26T14:56:10.801475+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "lake.jpg",
+      "url": "wallpapers/landscape/lake.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/lake.webp",
+      "size": 1278424,
+      "modified": "2025-10-24T10:13:52.511205+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "nature.jpg",
+      "url": "wallpapers/landscape/nature.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/nature.webp",
+      "size": 655701,
+      "modified": "2025-05-09T06:25:42.480264+00:00",
+      "category": "landscape"
+    },
+    {
       "filename": "nice-blue-background.png",
       "url": "wallpapers/landscape/nice-blue-background.png",
       "thumb_url": "thumbnail/wallpapers-thumb/landscape/nice-blue-background.webp",
       "size": 7704488,
       "modified": "2025-10-25T23:07:46.522903+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "nord-bridge-landscape.png",
+      "url": "wallpapers/landscape/nord-bridge-landscape.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/nord-bridge-landscape.webp",
+      "size": 546199,
+      "modified": "2025-09-25T15:48:46.087139+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "park-background.jpg",
+      "url": "wallpapers/landscape/park-background.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/park-background.webp",
+      "size": 2606698,
+      "modified": "2025-10-26T17:52:18.720971+00:00",
       "category": "landscape"
     },
     {
@@ -755,11 +1171,43 @@
       "category": "landscape"
     },
     {
+      "filename": "shining-ocean.jpg",
+      "url": "wallpapers/landscape/shining-ocean.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/shining-ocean.webp",
+      "size": 1498214,
+      "modified": "2025-10-26T14:57:38.075161+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "studio-ghibli-stone.jpg",
+      "url": "wallpapers/landscape/studio-ghibli-stone.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/studio-ghibli-stone.webp",
+      "size": 6552957,
+      "modified": "2025-10-26T15:12:08.300482+00:00",
+      "category": "landscape"
+    },
+    {
       "filename": "sunset-scenery-minimalist.jpg",
       "url": "wallpapers/landscape/sunset-scenery-minimalist.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/landscape/sunset-scenery-minimalist.webp",
       "size": 72340,
       "modified": "2025-10-25T21:04:53.628008+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "the-snap-hunt-camping.png",
+      "url": "wallpapers/landscape/the-snap-hunt-camping.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/the-snap-hunt-camping.webp",
+      "size": 8213673,
+      "modified": "2025-05-09T06:25:43.563152+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "wall.jpg",
+      "url": "wallpapers/landscape/wall.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/wall.webp",
+      "size": 1363229,
+      "modified": "2025-10-24T10:13:51.693194+00:00",
       "category": "landscape"
     },
     {
@@ -776,6 +1224,46 @@
       "thumb_url": "thumbnail/wallpapers-thumb/minimal/3squares.webp",
       "size": 3815,
       "modified": "2025-10-23T19:06:36.414313+00:00",
+      "category": "minimal"
+    },
+    {
+      "filename": "house-in-sea.png",
+      "url": "wallpapers/minimal/house-in-sea.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/minimal/house-in-sea.webp",
+      "size": 1658406,
+      "modified": "2025-10-24T10:13:53.133213+00:00",
+      "category": "minimal"
+    },
+    {
+      "filename": "nord_minimal_cat.png",
+      "url": "wallpapers/minimal/nord_minimal_cat.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/minimal/nord_minimal_cat.webp",
+      "size": 16132,
+      "modified": "2025-09-22T05:41:15.059287+00:00",
+      "category": "minimal"
+    },
+    {
+      "filename": "od_brush.png",
+      "url": "wallpapers/minimal/od_brush.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/minimal/od_brush.webp",
+      "size": 53484,
+      "modified": "2025-09-22T06:04:26.749334+00:00",
+      "category": "minimal"
+    },
+    {
+      "filename": "od_discovery.png",
+      "url": "wallpapers/minimal/od_discovery.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/minimal/od_discovery.webp",
+      "size": 605225,
+      "modified": "2025-09-22T06:06:45.058697+00:00",
+      "category": "minimal"
+    },
+    {
+      "filename": "od_space02.png",
+      "url": "wallpapers/minimal/od_space02.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/minimal/od_space02.webp",
+      "size": 1304057,
+      "modified": "2025-09-22T06:06:52.545835+00:00",
       "category": "minimal"
     },
     {
@@ -872,6 +1360,14 @@
       "thumb_url": "thumbnail/wallpapers-thumb/pokemon/adorable-pikachu.webp",
       "size": 498262,
       "modified": "2025-10-26T14:52:56.807401+00:00",
+      "category": "pokemon"
+    },
+    {
+      "filename": "ash-pikachu-mountain.jpg",
+      "url": "wallpapers/pokemon/ash-pikachu-mountain.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/pokemon/ash-pikachu-mountain.webp",
+      "size": 1345418,
+      "modified": "2025-10-26T14:51:31.876932+00:00",
       "category": "pokemon"
     },
     {
@@ -1011,11 +1507,27 @@
       "category": "sci-fi"
     },
     {
+      "filename": "arch-nord-dark.png",
+      "url": "wallpapers/tech/arch-nord-dark.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/arch-nord-dark.webp",
+      "size": 372990,
+      "modified": "2025-09-22T05:43:53.458250+00:00",
+      "category": "tech"
+    },
+    {
       "filename": "arch_1.jpg",
       "url": "wallpapers/tech/arch_1.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/tech/arch_1.webp",
       "size": 44974,
       "modified": "2025-10-24T20:30:11.531218+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "b-224.jpg",
+      "url": "wallpapers/tech/b-224.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/b-224.webp",
+      "size": 175843,
+      "modified": "2025-09-22T05:23:38.982285+00:00",
       "category": "tech"
     },
     {
@@ -1027,11 +1539,43 @@
       "category": "tech"
     },
     {
+      "filename": "nes-2.png",
+      "url": "wallpapers/tech/nes-2.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/nes-2.webp",
+      "size": 1520039,
+      "modified": "2025-10-24T10:13:51.349189+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "nes.jpg",
+      "url": "wallpapers/tech/nes.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/nes.webp",
+      "size": 1524088,
+      "modified": "2025-09-22T05:19:22.388278+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "nord-hacker.png",
+      "url": "wallpapers/tech/nord-hacker.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/nord-hacker.webp",
+      "size": 1182306,
+      "modified": "2025-09-25T15:55:39.089676+00:00",
+      "category": "tech"
+    },
+    {
       "filename": "od_arch.png",
       "url": "wallpapers/tech/od_arch.png",
       "thumb_url": "thumbnail/wallpapers-thumb/tech/od_arch.webp",
       "size": 67563,
-      "modified": "2025-10-24T20:34:08.123023+00:00",
+      "modified": "2025-09-22T06:07:00.607919+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "od_artix.png",
+      "url": "wallpapers/tech/od_artix.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/od_artix.webp",
+      "size": 69481,
+      "modified": "2025-09-22T06:07:03.342609+00:00",
       "category": "tech"
     },
     {
@@ -1039,7 +1583,87 @@
       "url": "wallpapers/tech/od_bash.png",
       "thumb_url": "thumbnail/wallpapers-thumb/tech/od_bash.webp",
       "size": 51519,
-      "modified": "2025-10-24T20:34:35.266694+00:00",
+      "modified": "2025-09-22T06:07:07.494181+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "od_breadbrd.jpg",
+      "url": "wallpapers/tech/od_breadbrd.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/od_breadbrd.webp",
+      "size": 1139531,
+      "modified": "2025-09-22T06:06:30.465523+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "od_firefox.png",
+      "url": "wallpapers/tech/od_firefox.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/od_firefox.webp",
+      "size": 39344,
+      "modified": "2025-09-22T06:07:10.832319+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "od_git.png",
+      "url": "wallpapers/tech/od_git.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/od_git.webp",
+      "size": 60947,
+      "modified": "2025-09-22T06:07:13.596288+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "od_hyprland.png",
+      "url": "wallpapers/tech/od_hyprland.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/od_hyprland.webp",
+      "size": 96219,
+      "modified": "2025-09-22T06:07:21.468235+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "od_kde.png",
+      "url": "wallpapers/tech/od_kde.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/od_kde.webp",
+      "size": 79065,
+      "modified": "2025-09-22T06:07:23.901943+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "od_ometer.png",
+      "url": "wallpapers/tech/od_ometer.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/od_ometer.webp",
+      "size": 36717,
+      "modified": "2025-09-22T06:04:31.600136+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "od_qtile.png",
+      "url": "wallpapers/tech/od_qtile.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/od_qtile.webp",
+      "size": 66063,
+      "modified": "2025-09-22T06:07:26.578849+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "od_rpi.jpg",
+      "url": "wallpapers/tech/od_rpi.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/od_rpi.webp",
+      "size": 660171,
+      "modified": "2025-09-22T06:06:47.657707+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "python-dev.png",
+      "url": "wallpapers/tech/python-dev.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/python-dev.webp",
+      "size": 515691,
+      "modified": "2025-09-22T05:46:01.837749+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "python-minim.png",
+      "url": "wallpapers/tech/python-minim.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/python-minim.webp",
+      "size": 23344,
+      "modified": "2025-09-22T05:46:32.769666+00:00",
       "category": "tech"
     },
     {
@@ -1048,6 +1672,22 @@
       "thumb_url": null,
       "size": 597307,
       "modified": "2025-10-24T18:26:33.703261+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "various-arch-1-4k.png",
+      "url": "wallpapers/tech/various-arch-1-4k.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/various-arch-1-4k.webp",
+      "size": 73783,
+      "modified": "2025-09-22T05:44:04.516196+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "vim-key.jpg",
+      "url": "wallpapers/tech/vim-key.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/vim-key.webp",
+      "size": 161101,
+      "modified": "2025-09-22T05:19:57.904905+00:00",
       "category": "tech"
     }
   ]

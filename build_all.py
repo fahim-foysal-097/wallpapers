@@ -451,7 +451,7 @@ def main(argv=None):
         lines.append(f"  Time: {human_ms(script_times.get('generate_thumbs.py', 0))}")
 
     lines.append("")
-    lines.append(green("JSON Files:"))
+    lines.append(green("{} JSON Files:"))
     if "json" in summaries and summaries["json"]:
         js = summaries["json"]
         jd = js.get("desktop", dcount)

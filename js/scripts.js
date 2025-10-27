@@ -109,7 +109,7 @@
   // modal elements and navigation
   const previewModalEl = document.getElementById("previewModal");
   const modal = previewModalEl ? new bootstrap.Modal(previewModalEl) : null;
-  const modalImage = document.getElementById("modalImage");
+  let modalImage = document.getElementById("modalImage"); // changed to let
   const modalFilename = document.getElementById("modalFilename");
   const modalMeta = document.getElementById("modalMeta");
   const modalDownload = document.getElementById("modalDownload");
@@ -376,7 +376,60 @@
     galleryEl.appendChild(frag);
   }
 
-  /* -------------------- Modal navigation -------------------- */
+  /* -------------------- Modal navigation + progressive loader -------------------- */
+
+  // helper to preload image URL and resolve when loaded or reject
+  function preloadImage(url) {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => resolve(img);
+      img.onerror = (e) => reject(e);
+      img.src = url;
+    });
+  }
+
+  // returns true if file is likely an animated gif (cheap check)
+  function isGifUrl(url) {
+    return typeof url === "string" && url.toLowerCase().endsWith(".gif");
+  }
+
+  function showSpinner(show = true) {
+    const spinner = document.getElementById("modalSpinner");
+    if (!spinner) return;
+    spinner.style.display = show ? "" : "none";
+  }
+
+  // crossfade swap: replace current modalImage.src with newImageElement's src
+  function swapModalImageElement(newImgEl) {
+    // current element
+    if (!modalImage) return;
+    try {
+      modalImage.classList.remove("modal-img-loaded");
+      modalImage.classList.add("modal-img-fade");
+      requestAnimationFrame(() => {
+        modalImage.src = newImgEl.src;
+        modalImage.alt = newImgEl.alt || modalImage.alt || "";
+        modalImage.classList.remove("modal-img-blur");
+        modalImage.classList.add("modal-img-loaded");
+        showSpinner(false);
+        modalImage.classList.add("modal-img-visible");
+      });
+    } catch (e) {
+      modalImage.src = newImgEl.src;
+      showSpinner(false);
+      modalImage.classList.remove("modal-img-blur");
+      modalImage.classList.add("modal-img-loaded", "modal-img-visible");
+    }
+  }
+
+  // If an error occurs loading full-res, show a fallback svg block
+  function showModalImageError() {
+    if (!modalImage) return;
+    showSpinner(false);
+    modalImage.className = "";
+    modalImage.removeAttribute("src");
+    modalImage.outerHTML = `<div class="modal-image-error">Image failed to load</div>`;
+  }
 
   function openPreviewAtIndex(idx) {
     if (!Array.isArray(filtered) || idx < 0 || idx >= filtered.length) return;
@@ -385,13 +438,24 @@
     if (modal) modal.show();
   }
 
-  function showImageAt(idx) {
+  async function showImageAt(idx) {
     const item = filtered[idx];
     if (!item) return;
-    if (modalImage) {
-      modalImage.src = item.url;
-      modalImage.alt = item.filename;
+
+    // Recreate modalImage if it was replaced by an error box earlier
+    if (!document.getElementById("modalImage")) {
+      const wrap = document.querySelector(".modal-preview-wrap");
+      if (!wrap) return;
+      const newImg = document.createElement("img");
+      newImg.id = "modalImage";
+      newImg.className = "img-fluid rounded shadow-lg";
+      newImg.style.maxHeight = "80vh";
+      newImg.style.objectFit = "contain";
+      wrap.appendChild(newImg);
+      modalImage = document.getElementById("modalImage");
     }
+
+    // metadata
     if (modalFilename) modalFilename.textContent = item.filename;
     if (modalMeta)
       modalMeta.textContent = `${new Date(
@@ -401,9 +465,54 @@
       modalDownload.href = item.url;
       modalDownload.setAttribute("download", item.filename);
     }
-    // update nav visibility (if at edges)
+
+    // nav buttons states
     if (modalPrevBtn) modalPrevBtn.disabled = idx <= 0;
     if (modalNextBtn) modalNextBtn.disabled = idx >= filtered.length - 1;
+
+    // Clear any classes from previous loads
+    modalImage.className = "img-fluid rounded shadow-lg";
+    modalImage.classList.remove(
+      "modal-img-blur",
+      "modal-img-loaded",
+      "modal-img-fade",
+      "modal-img-visible"
+    );
+
+    const hasThumb = item.thumb_url && item.thumb_url.trim().length;
+    const urlIsGif = isGifUrl(item.url);
+
+    if (hasThumb && !urlIsGif) {
+      // show thumbnail immediately (fast)
+      modalImage.src = item.thumb_url;
+      modalImage.alt = item.filename;
+      modalImage.classList.add("modal-img-blur", "modal-img-visible");
+      showSpinner(true);
+
+      // preload full image in background
+      try {
+        const loaded = await preloadImage(item.url);
+        swapModalImageElement(loaded);
+      } catch (err) {
+        console.warn("Full image failed to preload:", item.url, err);
+        showSpinner(false);
+        modalImage.classList.remove("modal-img-blur");
+        modalImage.classList.add("modal-img-loaded", "modal-img-visible");
+      }
+      return;
+    }
+
+    // If there's no thumbnail or it is a gif: load the actual URL directly.
+    modalImage.classList.add("modal-img-fade");
+    showSpinner(true);
+
+    try {
+      const loaded = await preloadImage(item.url);
+      swapModalImageElement(loaded);
+    } catch (err) {
+      console.error("Modal image load error:", err);
+      showModalImageError();
+    }
   }
 
   function showNext() {
