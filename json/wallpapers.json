@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-10-26T20:39:25.571548+00:00",
+  "generated_at": "2025-10-26T20:50:27.000819+00:00",
   "count": 131,
   "wallpapers": [
     {
@@ -547,6 +547,30 @@
       "category": "fun"
     },
     {
+      "filename": "kitty_BOD.jpg",
+      "url": "wallpapers/fun/kitty_BOD.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/fun/kitty_BOD.webp",
+      "size": 174352,
+      "modified": "2025-10-24T20:30:29.249687+00:00",
+      "category": "fun"
+    },
+    {
+      "filename": "od_error.png",
+      "url": "wallpapers/fun/od_error.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/fun/od_error.webp",
+      "size": 40816,
+      "modified": "2025-10-24T20:34:46.218214+00:00",
+      "category": "fun"
+    },
+    {
+      "filename": "sudo-rm-rf.jpg",
+      "url": "wallpapers/fun/sudo-rm-rf.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/fun/sudo-rm-rf.webp",
+      "size": 167901,
+      "modified": "2025-10-25T19:05:12.893603+00:00",
+      "category": "fun"
+    },
+    {
       "filename": "botw-cover.jpg",
       "url": "wallpapers/gaming/botw-cover.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/gaming/botw-cover.webp",
@@ -1003,14 +1027,6 @@
       "category": "tech"
     },
     {
-      "filename": "kitty_BOD.jpg",
-      "url": "wallpapers/tech/kitty_BOD.jpg",
-      "thumb_url": "thumbnail/wallpapers-thumb/tech/kitty_BOD.webp",
-      "size": 174352,
-      "modified": "2025-10-24T20:30:29.249687+00:00",
-      "category": "tech"
-    },
-    {
       "filename": "od_arch.png",
       "url": "wallpapers/tech/od_arch.png",
       "thumb_url": "thumbnail/wallpapers-thumb/tech/od_arch.webp",
@@ -1027,27 +1043,11 @@
       "category": "tech"
     },
     {
-      "filename": "od_error.png",
-      "url": "wallpapers/tech/od_error.png",
-      "thumb_url": "thumbnail/wallpapers-thumb/tech/od_error.webp",
-      "size": 40816,
-      "modified": "2025-10-24T20:34:46.218214+00:00",
-      "category": "tech"
-    },
-    {
       "filename": "retro_pc.gif",
       "url": "wallpapers/tech/retro_pc.gif",
       "thumb_url": null,
       "size": 597307,
       "modified": "2025-10-24T18:26:33.703261+00:00",
-      "category": "tech"
-    },
-    {
-      "filename": "sudo-rm-rf.jpg",
-      "url": "wallpapers/tech/sudo-rm-rf.jpg",
-      "thumb_url": "thumbnail/wallpapers-thumb/tech/sudo-rm-rf.webp",
-      "size": 167901,
-      "modified": "2025-10-25T19:05:12.893603+00:00",
       "category": "tech"
     }
   ]

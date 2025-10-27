@@ -94,12 +94,17 @@
     btn.className = "chip btn";
     if (active) btn.classList.add("active");
     btn.dataset.category = name;
+    btn.setAttribute("role", "option");
+    btn.setAttribute("aria-selected", active ? "true" : "false");
+    btn.title = `${label} (${count})`;
     btn.innerHTML = `${label} <span class="count ms-2">${count}</span>`;
     btn.addEventListener("click", () => {
-      document
-        .querySelectorAll("#categoryChips .chip")
-        .forEach((c) => c.classList.remove("active"));
+      document.querySelectorAll("#categoryChips .chip").forEach((c) => {
+        c.classList.remove("active");
+        c.setAttribute("aria-selected", "false");
+      });
       btn.classList.add("active");
+      btn.setAttribute("aria-selected", "true");
       selectedCategory = name;
       applySearch("");
     });
@@ -399,17 +404,48 @@
           );
       }
 
-      // render chips for mobile (we store mobile categories under categories.mobile)
+      // render chips for mobile (sorted by count desc, "All" kept first)
       if (chipsContainer) {
         chipsContainer.innerHTML = "";
-        const list =
+
+        // shallow copy so we don't mutate original
+        const rawList =
           categories.mobile && categories.mobile.length
-            ? categories.mobile
+            ? categories.mobile.slice()
             : [{ name: "all", label: "All", count: wallpapers.length }];
-        const hasAll = list.some((c) => c.name === "all");
-        if (!hasAll)
-          list.unshift({ name: "all", label: "All", count: wallpapers.length });
-        list.forEach((c) =>
+
+        // extract or create "all"
+        let allItem = null;
+        const allIndex = rawList.findIndex((c) => c.name === "all");
+        if (allIndex === -1) {
+          allItem = { name: "all", label: "All", count: wallpapers.length };
+        } else {
+          allItem = rawList.splice(allIndex, 1)[0];
+          if (!allItem.count) allItem.count = wallpapers.length;
+        }
+
+        // sort remaining categories by count desc, then label/name
+        const others = rawList.slice().sort((a, b) => {
+          const ca = a.count || 0;
+          const cb = b.count || 0;
+          if (cb !== ca) return cb - ca;
+          const la = (a.label || a.name || "").toString();
+          const lb = (b.label || b.name || "").toString();
+          return la.localeCompare(lb);
+        });
+
+        // append "All" first
+        chipsContainer.appendChild(
+          buildChip(
+            allItem.name,
+            allItem.label || allItem.name,
+            allItem.count || 0,
+            allItem.name === selectedCategory
+          )
+        );
+
+        // then append sorted others
+        others.forEach((c) =>
           chipsContainer.appendChild(
             buildChip(
               c.name,
@@ -419,6 +455,7 @@
             )
           )
         );
+
         requestAnimationFrame(showHideChipNav);
       }
 

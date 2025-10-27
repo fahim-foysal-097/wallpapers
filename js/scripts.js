@@ -552,18 +552,54 @@
   let categories = { desktop: [] };
   let selectedCategory = "all";
 
+  /**
+   * Render category chips, ordering by count (high -> low).
+   * Keeps "All" as the first chip.
+   */
   async function renderCategoryChips() {
     if (!chipsContainer) return;
     chipsContainer.innerHTML = "";
-    const list =
-      categories.desktop && categories.desktop.length
-        ? categories.desktop
-        : [{ name: "all", label: "All", count: data.length }];
-    const hasAll = list.some((c) => c.name === "all");
-    if (!hasAll)
-      list.unshift({ name: "all", label: "All", count: data.length });
 
-    list.forEach((c) => {
+    // Use a shallow copy so we don't mutate original categories.desktop array
+    const rawList =
+      categories.desktop && categories.desktop.length
+        ? categories.desktop.slice()
+        : [{ name: "all", label: "All", count: data.length }];
+
+    // Extract 'all' (if present), otherwise create it
+    let allItem = null;
+    const allIndex = rawList.findIndex((c) => c.name === "all");
+    if (allIndex === -1) {
+      allItem = { name: "all", label: "All", count: data.length };
+    } else {
+      allItem = rawList.splice(allIndex, 1)[0];
+      // make sure its count matches data length if count missing/zero
+      if (!allItem.count) allItem.count = data.length;
+    }
+
+    // Sort remaining categories by count desc, then by label/name as tiebreaker
+    const others = rawList.slice().sort((a, b) => {
+      const ca = a.count || 0;
+      const cb = b.count || 0;
+      if (cb !== ca) return cb - ca; // high -> low
+      const la = (a.label || a.name || "").toString();
+      const lb = (b.label || b.name || "").toString();
+      return la.localeCompare(lb);
+    });
+
+    // Append 'All' first
+    const isActiveAll = allItem.name === selectedCategory;
+    chipsContainer.appendChild(
+      buildChip(
+        allItem.name,
+        allItem.label || allItem.name,
+        allItem.count || 0,
+        isActiveAll
+      )
+    );
+
+    // Then append the sorted others
+    others.forEach((c) => {
       const isActive = c.name === selectedCategory;
       chipsContainer.appendChild(
         buildChip(c.name, c.label || c.name, c.count || 0, isActive)
@@ -610,18 +646,30 @@
       });
       data = favEntries;
       filtered = data.slice();
-      // compute categories from favorites
+
+      // compute categories from favorites and sort by count desc
       const counts = {};
       data.forEach((it) => {
         const c = it.category || "uncategorized";
         counts[c] = (counts[c] || 0) + 1;
       });
-      categories.desktop = [{ name: "all", label: "All", count: data.length }];
-      Object.keys(counts)
-        .sort()
-        .forEach((k) =>
-          categories.desktop.push({ name: k, label: k, count: counts[k] })
-        );
+
+      // Build categories.desktop: "All" first, then entries sorted by count desc
+      const entries = Object.keys(counts).map((k) => ({
+        name: k,
+        label: k,
+        count: counts[k],
+      }));
+
+      entries.sort((a, b) => {
+        if (b.count !== a.count) return b.count - a.count;
+        return (a.name || "").localeCompare(b.name || "");
+      });
+
+      categories.desktop = [
+        { name: "all", label: "All", count: data.length },
+      ].concat(entries);
+
       selectedCategory = "all";
       renderCategoryChips();
       renderSummary();
