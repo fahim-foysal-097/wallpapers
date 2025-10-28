@@ -3,7 +3,7 @@
     {
       "name": "all",
       "label": "All",
-      "count": 211
+      "count": 236
     },
     {
       "name": "abstract",
@@ -18,12 +18,12 @@
     {
       "name": "anime",
       "label": "anime",
-      "count": 19
+      "count": 20
     },
     {
       "name": "art",
       "label": "art",
-      "count": 46
+      "count": 48
     },
     {
       "name": "cyber-cityscape",
@@ -38,17 +38,17 @@
     {
       "name": "gaming",
       "label": "gaming",
-      "count": 22
+      "count": 24
     },
     {
       "name": "landscape",
       "label": "landscape",
-      "count": 23
+      "count": 26
     },
     {
       "name": "minimal",
       "label": "minimal",
-      "count": 7
+      "count": 14
     },
     {
       "name": "motivational",
@@ -58,7 +58,7 @@
     {
       "name": "pokemon",
       "label": "pokemon",
-      "count": 13
+      "count": 17
     },
     {
       "name": "sci-fi",
@@ -68,19 +68,19 @@
     {
       "name": "tech",
       "label": "tech",
-      "count": 23
+      "count": 24
     },
     {
       "name": "uncategorized",
       "label": "uncategorized",
-      "count": 8
+      "count": 13
     }
   ],
   "mobile": [
     {
       "name": "all",
       "label": "All",
-      "count": 89
+      "count": 94
     },
     {
       "name": "abstract",
@@ -100,12 +100,12 @@
     {
       "name": "anime",
       "label": "anime",
-      "count": 4
+      "count": 3
     },
     {
       "name": "art",
       "label": "art",
-      "count": 16
+      "count": 15
     },
     {
       "name": "cyber-cityscape",
@@ -125,12 +125,17 @@
     {
       "name": "landscape",
       "label": "landscape",
-      "count": 9
+      "count": 10
     },
     {
       "name": "motivational",
       "label": "motivational",
       "count": 4
+    },
+    {
+      "name": "pokemon",
+      "label": "pokemon",
+      "count": 5
     },
     {
       "name": "sci-fi",
@@ -145,7 +150,7 @@
     {
       "name": "uncategorized",
       "label": "uncategorized",
-      "count": 6
+      "count": 7
     }
   ]
 }

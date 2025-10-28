@@ -1,7 +1,23 @@
 {
-  "generated_at": "2025-10-27T08:45:17.082319+00:00",
-  "count": 211,
+  "generated_at": "2025-10-28T17:39:28.255683+00:00",
+  "count": 236,
   "wallpapers": [
+    {
+      "filename": "4k-keyboard.jpg",
+      "url": "wallpapers/4k-keyboard.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/4k-keyboard.webp",
+      "size": 204162,
+      "modified": "2025-09-22T05:45:21.699878+00:00",
+      "category": "uncategorized"
+    },
+    {
+      "filename": "arch_nz.png",
+      "url": "wallpapers/arch_nz.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/arch_nz.webp",
+      "size": 424254,
+      "modified": "2025-10-28T17:51:51.603141+00:00",
+      "category": "uncategorized"
+    },
     {
       "filename": "blackhole-interstellar.jpg",
       "url": "wallpapers/blackhole-interstellar.jpg",
@@ -11,19 +27,19 @@
       "category": "uncategorized"
     },
     {
+      "filename": "bloodrock-steppes.png",
+      "url": "wallpapers/bloodrock-steppes.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/bloodrock-steppes.webp",
+      "size": 13097864,
+      "modified": "2025-05-09T06:25:41.164929+00:00",
+      "category": "uncategorized"
+    },
+    {
       "filename": "chip-intel.png",
       "url": "wallpapers/chip-intel.png",
       "thumb_url": "thumbnail/wallpapers-thumb/chip-intel.webp",
       "size": 18728,
       "modified": "2025-09-22T05:51:27.709409+00:00",
-      "category": "uncategorized"
-    },
-    {
-      "filename": "green-sun.jpg",
-      "url": "wallpapers/green-sun.jpg",
-      "thumb_url": "thumbnail/wallpapers-thumb/green-sun.webp",
-      "size": 26453,
-      "modified": "2025-10-24T19:13:09.837331+00:00",
       "category": "uncategorized"
     },
     {
@@ -59,11 +75,35 @@
       "category": "uncategorized"
     },
     {
+      "filename": "tron-ares.jpg",
+      "url": "wallpapers/tron-ares.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/tron-ares.webp",
+      "size": 4596791,
+      "modified": "2025-05-09T06:25:43.689222+00:00",
+      "category": "uncategorized"
+    },
+    {
+      "filename": "tron_legacy4.jpg",
+      "url": "wallpapers/tron_legacy4.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/tron_legacy4.webp",
+      "size": 299224,
+      "modified": "2025-05-09T06:25:43.712364+00:00",
+      "category": "uncategorized"
+    },
+    {
       "filename": "wide_tokyonight_lines.png",
       "url": "wallpapers/wide_tokyonight_lines.png",
       "thumb_url": "thumbnail/wallpapers-thumb/wide_tokyonight_lines.webp",
       "size": 250730,
       "modified": "2025-09-22T05:50:39.653395+00:00",
+      "category": "uncategorized"
+    },
+    {
+      "filename": "wildarch2.png",
+      "url": "wallpapers/wildarch2.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/wildarch2.webp",
+      "size": 394985,
+      "modified": "2025-10-28T17:52:34.013641+00:00",
       "category": "uncategorized"
     },
     {
@@ -307,6 +347,14 @@
       "category": "anime"
     },
     {
+      "filename": "itachi-sasuke.jpg",
+      "url": "wallpapers/anime/itachi-sasuke.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/anime/itachi-sasuke.webp",
+      "size": 122024,
+      "modified": "2025-10-28T17:59:43.662533+00:00",
+      "category": "anime"
+    },
+    {
       "filename": "jjk-gojo.jpg",
       "url": "wallpapers/anime/jjk-gojo.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/anime/jjk-gojo.webp",
@@ -387,6 +435,14 @@
       "category": "art"
     },
     {
+      "filename": "bamboo.jpg",
+      "url": "wallpapers/art/bamboo.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/bamboo.webp",
+      "size": 200824,
+      "modified": "2025-10-28T17:58:04.708755+00:00",
+      "category": "art"
+    },
+    {
       "filename": "bastien-grivet-sketch.jpg",
       "url": "wallpapers/art/bastien-grivet-sketch.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/art/bastien-grivet-sketch.webp",
@@ -424,6 +480,14 @@
       "thumb_url": "thumbnail/wallpapers-thumb/art/broken-dimensions-shards.webp",
       "size": 7660649,
       "modified": "2025-10-24T20:31:14.043420+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "car-mountain.jpg",
+      "url": "wallpapers/art/car-mountain.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/car-mountain.webp",
+      "size": 313004,
+      "modified": "2025-10-28T18:00:01.724847+00:00",
       "category": "art"
     },
     {
@@ -875,6 +939,14 @@
       "category": "gaming"
     },
     {
+      "filename": "elden-ring.jpg",
+      "url": "wallpapers/gaming/elden-ring.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/gaming/elden-ring.webp",
+      "size": 5632252,
+      "modified": "2025-10-28T17:55:21.098600+00:00",
+      "category": "gaming"
+    },
+    {
       "filename": "firewatch-2.png",
       "url": "wallpapers/gaming/firewatch-2.png",
       "thumb_url": "thumbnail/wallpapers-thumb/gaming/firewatch-2.webp",
@@ -891,14 +963,6 @@
       "category": "gaming"
     },
     {
-      "filename": "firewatch-4.jpg",
-      "url": "wallpapers/gaming/firewatch-4.jpg",
-      "thumb_url": "thumbnail/wallpapers-thumb/gaming/firewatch-4.webp",
-      "size": 2026948,
-      "modified": "2025-10-25T21:04:57.946708+00:00",
-      "category": "gaming"
-    },
-    {
       "filename": "firewatch-sun.jpg",
       "url": "wallpapers/gaming/firewatch-sun.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/gaming/firewatch-sun.webp",
@@ -912,6 +976,22 @@
       "thumb_url": "thumbnail/wallpapers-thumb/gaming/firewatch.webp",
       "size": 7873799,
       "modified": "2025-10-24T20:33:09.471745+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "firewatch_green_day.jpg",
+      "url": "wallpapers/gaming/firewatch_green_day.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/gaming/firewatch_green_day.webp",
+      "size": 142533,
+      "modified": "2025-05-09T06:25:41.697708+00:00",
+      "category": "gaming"
+    },
+    {
+      "filename": "firewatch_orange_sunset.jpg",
+      "url": "wallpapers/gaming/firewatch_orange_sunset.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/gaming/firewatch_orange_sunset.webp",
+      "size": 166496,
+      "modified": "2025-05-09T06:25:41.698912+00:00",
       "category": "gaming"
     },
     {
@@ -1067,6 +1147,22 @@
       "category": "landscape"
     },
     {
+      "filename": "cloud-moon.jpg",
+      "url": "wallpapers/landscape/cloud-moon.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/cloud-moon.webp",
+      "size": 64482,
+      "modified": "2025-09-22T05:18:57.474821+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "creature.jpg",
+      "url": "wallpapers/landscape/creature.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/creature.webp",
+      "size": 105893,
+      "modified": "2025-09-22T05:19:02.771919+00:00",
+      "category": "landscape"
+    },
+    {
       "filename": "deer_and_sunset.jpg",
       "url": "wallpapers/landscape/deer_and_sunset.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/landscape/deer_and_sunset.webp",
@@ -1112,6 +1208,14 @@
       "thumb_url": "thumbnail/wallpapers-thumb/landscape/lake.webp",
       "size": 1278424,
       "modified": "2025-10-24T10:13:52.511205+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "mountains.jpg",
+      "url": "wallpapers/landscape/mountains.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/mountains.webp",
+      "size": 882328,
+      "modified": "2025-05-09T06:25:43.727698+00:00",
       "category": "landscape"
     },
     {
@@ -1227,11 +1331,51 @@
       "category": "minimal"
     },
     {
+      "filename": "boat.jpg",
+      "url": "wallpapers/minimal/boat.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/minimal/boat.webp",
+      "size": 520480,
+      "modified": "2025-09-22T05:26:31.527443+00:00",
+      "category": "minimal"
+    },
+    {
+      "filename": "feather.png",
+      "url": "wallpapers/minimal/feather.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/minimal/feather.webp",
+      "size": 549695,
+      "modified": "2025-10-28T17:51:13.123685+00:00",
+      "category": "minimal"
+    },
+    {
+      "filename": "geology.png",
+      "url": "wallpapers/minimal/geology.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/minimal/geology.webp",
+      "size": 300222,
+      "modified": "2025-10-28T17:51:43.164041+00:00",
+      "category": "minimal"
+    },
+    {
+      "filename": "green-sun.jpg",
+      "url": "wallpapers/minimal/green-sun.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/minimal/green-sun.webp",
+      "size": 26453,
+      "modified": "2025-10-24T19:13:09.837331+00:00",
+      "category": "minimal"
+    },
+    {
       "filename": "house-in-sea.png",
       "url": "wallpapers/minimal/house-in-sea.png",
       "thumb_url": "thumbnail/wallpapers-thumb/minimal/house-in-sea.webp",
       "size": 1658406,
       "modified": "2025-10-24T10:13:53.133213+00:00",
+      "category": "minimal"
+    },
+    {
+      "filename": "kali-contours.png",
+      "url": "wallpapers/minimal/kali-contours.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/minimal/kali-contours.webp",
+      "size": 1609092,
+      "modified": "2025-10-28T17:51:21.437784+00:00",
       "category": "minimal"
     },
     {
@@ -1272,6 +1416,22 @@
       "thumb_url": "thumbnail/wallpapers-thumb/minimal/planet_minimal.webp",
       "size": 335119,
       "modified": "2025-10-25T23:08:36.562869+00:00",
+      "category": "minimal"
+    },
+    {
+      "filename": "waves.png",
+      "url": "wallpapers/minimal/waves.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/minimal/waves.webp",
+      "size": 199973,
+      "modified": "2025-10-28T17:51:37.252971+00:00",
+      "category": "minimal"
+    },
+    {
+      "filename": "wire2.png",
+      "url": "wallpapers/minimal/wire2.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/minimal/wire2.webp",
+      "size": 89235,
+      "modified": "2025-10-28T17:51:31.215899+00:00",
       "category": "minimal"
     },
     {
@@ -1371,6 +1531,14 @@
       "category": "pokemon"
     },
     {
+      "filename": "black-white.jpg",
+      "url": "wallpapers/pokemon/black-white.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/pokemon/black-white.webp",
+      "size": 273559,
+      "modified": "2025-10-28T17:37:24.526980+00:00",
+      "category": "pokemon"
+    },
+    {
       "filename": "charizard-black-.jpg",
       "url": "wallpapers/pokemon/charizard-black-.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/pokemon/charizard-black-.webp",
@@ -1427,11 +1595,35 @@
       "category": "pokemon"
     },
     {
+      "filename": "mimikyu-shy.jpg",
+      "url": "wallpapers/pokemon/mimikyu-shy.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/pokemon/mimikyu-shy.webp",
+      "size": 946959,
+      "modified": "2025-10-28T17:38:46.415998+00:00",
+      "category": "pokemon"
+    },
+    {
+      "filename": "N.jpg",
+      "url": "wallpapers/pokemon/N.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/pokemon/N.webp",
+      "size": 904267,
+      "modified": "2025-10-28T17:37:29.541042+00:00",
+      "category": "pokemon"
+    },
+    {
       "filename": "pikachu-autumn-scarf.jpg",
       "url": "wallpapers/pokemon/pikachu-autumn-scarf.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/pokemon/pikachu-autumn-scarf.webp",
       "size": 738704,
       "modified": "2025-10-26T14:48:34.132953+00:00",
+      "category": "pokemon"
+    },
+    {
+      "filename": "pokemon-cyndaqui.jpg",
+      "url": "wallpapers/pokemon/pokemon-cyndaqui.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/pokemon/pokemon-cyndaqui.webp",
+      "size": 3549412,
+      "modified": "2025-10-28T17:40:18.840147+00:00",
       "category": "pokemon"
     },
     {
@@ -1672,6 +1864,14 @@
       "thumb_url": null,
       "size": 597307,
       "modified": "2025-10-24T18:26:33.703261+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "simple.png",
+      "url": "wallpapers/tech/simple.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/simple.webp",
+      "size": 30720,
+      "modified": "2025-10-28T17:52:16.074430+00:00",
       "category": "tech"
     },
     {

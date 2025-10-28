@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-10-27T08:45:17.095470+00:00",
-  "count": 89,
+  "generated_at": "2025-10-28T17:39:28.269821+00:00",
+  "count": 94,
   "wallpapers": [
     {
       "filename": "cube.jpg",
@@ -48,6 +48,14 @@
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/skull.webp",
       "size": 1199636,
       "modified": "2025-10-24T18:25:06.595993+00:00",
+      "category": "uncategorized"
+    },
+    {
+      "filename": "tree-light.jpg",
+      "url": "wallpapers-mobile/tree-light.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/tree-light.webp",
+      "size": 3233541,
+      "modified": "2025-10-24T10:13:49.397163+00:00",
       "category": "uncategorized"
     },
     {
@@ -235,14 +243,6 @@
       "category": "animals"
     },
     {
-      "filename": "5825372.jpg",
-      "url": "wallpapers-mobile/anime/5825372.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/anime/5825372.webp",
-      "size": 855476,
-      "modified": "2025-10-26T15:30:17.818618+00:00",
-      "category": "anime"
-    },
-    {
       "filename": "cyberpunk-edgerunners-image.jpg",
       "url": "wallpapers-mobile/anime/cyberpunk-edgerunners-image.jpg",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/anime/cyberpunk-edgerunners-image.webp",
@@ -320,14 +320,6 @@
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/Pixelated_forest.webp",
       "size": 468454,
       "modified": "2025-10-24T20:38:28.210634+00:00",
-      "category": "art"
-    },
-    {
-      "filename": "pokemon-lugia.jpg",
-      "url": "wallpapers-mobile/art/pokemon-lugia.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/pokemon-lugia.webp",
-      "size": 348640,
-      "modified": "2025-10-25T23:32:17.459128+00:00",
       "category": "art"
     },
     {
@@ -595,6 +587,14 @@
       "category": "landscape"
     },
     {
+      "filename": "Sky_fish.jpg",
+      "url": "wallpapers-mobile/landscape/Sky_fish.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/landscape/Sky_fish.webp",
+      "size": 256948,
+      "modified": "2025-10-24T10:13:49.186161+00:00",
+      "category": "landscape"
+    },
+    {
       "filename": "dont-doubt.jpg",
       "url": "wallpapers-mobile/motivational/dont-doubt.jpg",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/motivational/dont-doubt.webp",
@@ -625,6 +625,46 @@
       "size": 187681,
       "modified": "2025-10-26T15:27:28.060545+00:00",
       "category": "motivational"
+    },
+    {
+      "filename": "ash.jpg",
+      "url": "wallpapers-mobile/pokemon/ash.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/pokemon/ash.webp",
+      "size": 855476,
+      "modified": "2025-10-26T15:30:17.818618+00:00",
+      "category": "pokemon"
+    },
+    {
+      "filename": "gyarados.jpg",
+      "url": "wallpapers-mobile/pokemon/gyarados.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/pokemon/gyarados.webp",
+      "size": 171445,
+      "modified": "2025-10-28T17:37:10.509806+00:00",
+      "category": "pokemon"
+    },
+    {
+      "filename": "pokemon-blue.jpg",
+      "url": "wallpapers-mobile/pokemon/pokemon-blue.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/pokemon/pokemon-blue.webp",
+      "size": 464983,
+      "modified": "2025-10-28T17:36:40.464432+00:00",
+      "category": "pokemon"
+    },
+    {
+      "filename": "pokemon-lugia.jpg",
+      "url": "wallpapers-mobile/pokemon/pokemon-lugia.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/pokemon/pokemon-lugia.webp",
+      "size": 348640,
+      "modified": "2025-10-25T23:32:17.459128+00:00",
+      "category": "pokemon"
+    },
+    {
+      "filename": "pokemon.jpg",
+      "url": "wallpapers-mobile/pokemon/pokemon.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/pokemon/pokemon.webp",
+      "size": 68023,
+      "modified": "2025-10-28T17:37:02.395705+00:00",
+      "category": "pokemon"
     },
     {
       "filename": "Astronaut.jpeg",
