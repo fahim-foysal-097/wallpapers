@@ -3,7 +3,7 @@
     {
       "name": "all",
       "label": "All",
-      "count": 236
+      "count": 248
     },
     {
       "name": "abstract",
@@ -13,17 +13,17 @@
     {
       "name": "aesthetic",
       "label": "aesthetic",
-      "count": 6
+      "count": 7
     },
     {
       "name": "anime",
       "label": "anime",
-      "count": 20
+      "count": 22
     },
     {
       "name": "art",
       "label": "art",
-      "count": 48
+      "count": 49
     },
     {
       "name": "cyber-cityscape",
@@ -38,12 +38,12 @@
     {
       "name": "gaming",
       "label": "gaming",
-      "count": 24
+      "count": 30
     },
     {
       "name": "landscape",
       "label": "landscape",
-      "count": 26
+      "count": 27
     },
     {
       "name": "minimal",
@@ -58,7 +58,7 @@
     {
       "name": "pokemon",
       "label": "pokemon",
-      "count": 17
+      "count": 18
     },
     {
       "name": "sci-fi",
@@ -80,7 +80,7 @@
     {
       "name": "all",
       "label": "All",
-      "count": 94
+      "count": 104
     },
     {
       "name": "abstract",
@@ -100,7 +100,7 @@
     {
       "name": "anime",
       "label": "anime",
-      "count": 3
+      "count": 6
     },
     {
       "name": "art",
@@ -120,7 +120,7 @@
     {
       "name": "gaming",
       "label": "gaming",
-      "count": 9
+      "count": 13
     },
     {
       "name": "landscape",
@@ -135,7 +135,7 @@
     {
       "name": "pokemon",
       "label": "pokemon",
-      "count": 5
+      "count": 7
     },
     {
       "name": "sci-fi",
@@ -150,7 +150,7 @@
     {
       "name": "uncategorized",
       "label": "uncategorized",
-      "count": 7
+      "count": 8
     }
   ]
 }
