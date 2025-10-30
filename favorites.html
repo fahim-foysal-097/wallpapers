@@ -32,53 +32,23 @@
     <div class="bg-blob blob-1"></div>
     <div class="bg-blob blob-2"></div>
 
-    <nav class="navbar navbar-dark sticky-top bg-transparent blur-nav px-3 py-2 border-bottom">
-        <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                <img src="assets/icon.png" alt="Logo" class="logo-image">
-                <div>
-                    <div class="h6 mb-0">Wallpaper Gallery</div>
-                    <small class="text-muted">Discover and Download</small>
-                </div>
-            </a>
+    <!-- Left icon sidebar navigation -->
+    <div class="side-nav">
+        <a class="btn btn-outline-light" href="index.html" title="Desktop wallpapers">
+            <i class="bi bi-laptop-fill"></i>
+        </a>
+        <a class="btn btn-outline-light" href="mobile.html" title="Mobile wallpapers">
+            <i class="bi bi-phone-fill"></i>
+        </a>
+        <a class="btn btn-outline-light active" href="favorites.html" title="Favorites">
+            <i class="bi bi-star-fill"></i>
+        </a>
+        <a class="btn btn-outline-light" href="https://github.com/fahim-foysal-097/wallpapers" target="_blank" title="Github">
+            <i class="bi bi-github"></i>
+        </a>
+    </div>
 
-            <div class="d-flex gap-2 align-items-center">
-                <div class="input-group" style="min-width:240px; max-width:440px;">
-                    <span class="input-group-text bg-secondary border-0"><i class="bi bi-search"></i></span>
-                    <input id="searchInput" type="search" class="form-control form-control-dark"
-                        placeholder="Search filename, size, date..." />
-                </div>
-
-                <div class="btn-group">
-                    <button id="sortBtn" class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Sort
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item sort-option" href="#" data-sort="name-asc">Name ↑</a></li>
-                        <li><a class="dropdown-item sort-option" href="#" data-sort="name-desc">Name ↓</a></li>
-                        <li><a class="dropdown-item sort-option" href="#" data-sort="time-desc">Newest</a></li>
-                        <li><a class="dropdown-item sort-option" href="#" data-sort="time-asc">Oldest</a></li>
-                        <li><a class="dropdown-item sort-option" href="#" data-sort="size-desc">Size ↓</a></li>
-                        <li><a class="dropdown-item sort-option" href="#" data-sort="size-asc">Size ↑</a></li>
-                    </ul>
-                </div>
-
-                <a class="btn btn-outline-light" href="index.html" title="Desktop wallpapers"><i
-                        class="bi bi-laptop-fill"></i></a>
-                <a class="btn btn-outline-light" href="mobile.html" title="Mobile wallpapers"><i
-                        class="bi bi-phone-fill"></i></a>
-                <a class="btn btn-outline-light active" href="favorites.html" title="Favorites"><i
-                        class="bi bi-star-fill"></i></a>
-                <a class="btn btn-outline-light" href="https://github.com/fahim-foysal-097/wallpapers" target="_blank"
-                    title="Github">
-                    <i class="bi bi-github"></i>
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <main class="container py-4">
+    <main class="container py-4 main-with-sidebar">
         <div class="glass glass-section p-3 p-md-4 mb-3">
         <div class="row align-items-center mb-3">
             <div class="col">
@@ -89,12 +59,24 @@
 
                 <p class="text-muted mb-0" id="summary">Loading…</p>
             </div>
-            <div class="col-auto d-flex gap-2">
+            <div class="col-auto d-flex gap-2 align-items-center">
+                <div class="input-group d-none d-sm-flex" style="min-width:240px; max-width:440px;">
+                    <span class="input-group-text bg-secondary border-0"><i class="bi bi-search"></i></span>
+                    <input id="searchInput" type="search" class="form-control form-control-dark" placeholder="Search filename, size, date..." />
+                </div>
+                <div class="btn-group">
+                    <button id="sortBtn" class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Sort</button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item sort-option" href="#" data-sort="name-asc">Name ↑</a></li>
+                        <li><a class="dropdown-item sort-option" href="#" data-sort="name-desc">Name ↓</a></li>
+                        <li><a class="dropdown-item sort-option" href="#" data-sort="time-desc">Newest</a></li>
+                        <li><a class="dropdown-item sort-option" href="#" data-sort="time-asc">Oldest</a></li>
+                        <li><a class="dropdown-item sort-option" href="#" data-sort="size-desc">Size ↓</a></li>
+                        <li><a class="dropdown-item sort-option" href="#" data-sort="size-asc">Size ↑</a></li>
+                    </ul>
+                </div>
                 <a id="downloadAllBtn" class="btn btn-gradient" href="wallpaper-all.zip" download>
                     <i class="bi bi-file-earmark-zip-fill"></i>&nbsp;Download All
-                </a>
-                <a class="btn btn-outline-light" href="index.html" title="Desktop wallpapers">
-                    <i class="bi bi-laptop-fill"></i>
                 </a>
             </div>
         </div>
