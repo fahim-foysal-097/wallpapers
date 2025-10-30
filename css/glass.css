@@ -6,7 +6,7 @@ button,
 input,
 select,
 textarea {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter",
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "SF Pro Text",
     system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 500;
 }
@@ -52,6 +52,22 @@ body {
   background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
   color: #f8f9fb;
 }
+.navbar .btn.active {
+  background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.06));
+  border-color: rgba(255,255,255,0.38);
+  box-shadow: 0 8px 26px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.28);
+  position: relative;
+}
+.navbar .btn.active::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  left: 16%;
+  right: 16%;
+  bottom: -6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #7c5cff, #6aa8ff);
+}
 .btn:hover {
   transform: translateY(-1px);
   box-shadow: 0 8px 22px rgba(0,0,0,0.35);
@@ -91,6 +107,9 @@ h1,
 h2,
 h3 {
   letter-spacing: -0.02em;
+  font-family: "Sora", "Poppins", -apple-system, BlinkMacSystemFont, system-ui,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
 }
 
 /* Chips - segmented control vibe */
@@ -159,6 +178,21 @@ footer a { color: #e0e9ff; }
 /* Small adjustments */
 .input-group { max-width: 520px; }
 .chips-wrapper { margin-top: 0.5rem; }
+
+/* Sections with stronger glass effect */
+.glass-section {
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.24);
+  background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.05));
+  box-shadow: 0 16px 44px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.18);
+}
+
+.gallery-panel {
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  box-shadow: 0 12px 36px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.12);
+}
 
 @media (max-width: 576px) {
   .input-group { max-width: 220px; }
