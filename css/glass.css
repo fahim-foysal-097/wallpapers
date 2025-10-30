@@ -14,27 +14,43 @@ textarea {
 /* Background: subtle macOS-like gradient + vignette */
 html,
 body {
-  background:
-    radial-gradient(1200px 800px at 15% 0%, rgba(255,255,255,0.06), transparent 60%),
-    radial-gradient(1000px 700px at 100% 100%, rgba(255,255,255,0.05), transparent 60%),
+  background: radial-gradient(
+      1200px 800px at 15% 0%,
+      rgba(255, 255, 255, 0.06),
+      transparent 60%
+    ),
+    radial-gradient(
+      1000px 700px at 100% 100%,
+      rgba(255, 255, 255, 0.05),
+      transparent 60%
+    ),
     linear-gradient(180deg, #0b0f16 0%, #0a0e14 55%, #090c12 100%);
   color: #e8ecf2;
 }
 
 /* Universal glass utility */
 .glass {
-  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
-  border: 1px solid rgba(255,255,255,0.22);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.26);
   border-radius: 16px;
-  backdrop-filter: saturate(140%) blur(20px);
-  -webkit-backdrop-filter: saturate(140%) blur(20px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.18);
+  backdrop-filter: saturate(160%) blur(22px);
+  -webkit-backdrop-filter: saturate(160%) blur(22px);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 /* Navbar */
 .navbar.blur-nav {
-  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
-  border-bottom: 1px solid rgba(255,255,255,0.18) !important;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.04)
+  );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
   backdrop-filter: saturate(160%) blur(22px);
   -webkit-backdrop-filter: saturate(160%) blur(22px);
 }
@@ -48,14 +64,23 @@ body {
 .btn-light {
   border-radius: 999px !important;
   padding: 0.48rem 0.8rem;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.03)
+  );
   color: #f8f9fb;
 }
 .navbar .btn.active {
-  background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.06));
-  border-color: rgba(255,255,255,0.38);
-  box-shadow: 0 8px 26px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.28);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.16),
+    rgba(255, 255, 255, 0.06)
+  );
+  border-color: rgba(255, 255, 255, 0.38);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
   position: relative;
 }
 .navbar .btn.active::after {
@@ -70,7 +95,7 @@ body {
 }
 .btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
 }
 .btn:active {
   transform: translateY(0);
@@ -80,21 +105,25 @@ body {
 .btn-gradient {
   border-radius: 999px !important;
   background: linear-gradient(90deg, #7c5cff 0%, #6aa8ff 100%);
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 10px 28px rgba(65, 105, 225, 0.28);
 }
 
 /* Search input pill */
 .input-group .input-group-text {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.16);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-right: 0;
   border-radius: 999px 0 0 999px;
 }
 .form-control-dark {
   border-radius: 0 999px 999px 0;
-  background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
-  border: 1px solid rgba(255,255,255,0.16);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0.03)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.16);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
@@ -115,15 +144,24 @@ h3 {
 /* Chips - segmented control vibe */
 .chips-scroll .chip,
 .chip {
-  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
-  border: 1px solid rgba(255,255,255,0.18);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.03)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.18);
   color: #f4f6fa;
 }
 .chips-scroll .chip.active,
 .chip.active {
-  background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06));
-  border: 1px solid rgba(255,255,255,0.35);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.22);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.06)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
 }
 .chip-nav {
   border-radius: 12px;
@@ -131,67 +169,129 @@ h3 {
 
 /* Gallery tiles as frosted glass cards */
 .tile {
-  background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04)) !important;
-  border: 1px solid rgba(255,255,255,0.22) !important;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.04)
+  ) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
   border-radius: 18px !important;
-  box-shadow: 0 12px 34px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.16);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
 }
 .tile:hover {
   transform: translateY(-8px) !important;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 }
 .tile .tile-footer {
-  background: linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.18));
-  border-top: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.18));
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 .tile .meta {
-  color: rgba(240,245,255,0.88) !important;
+  color: rgba(240, 245, 255, 0.88) !important;
 }
 
 /* Modal */
 .modal-content {
-  background: linear-gradient(180deg, rgba(20,24,32,0.85), rgba(12,14,20,0.92)) !important;
-  border: 1px solid rgba(255,255,255,0.18) !important;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 24, 32, 0.85),
+    rgba(12, 14, 20, 0.92)
+  ) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
   border-radius: 18px !important;
   backdrop-filter: blur(20px) saturate(140%);
   -webkit-backdrop-filter: blur(20px) saturate(140%);
 }
 .modal-nav-btn {
-  border: 1px solid rgba(255,255,255,0.18);
-  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.03)
+  );
+}
+
+/* Modal sizing and layout adjustments */
+.modal-dialog {
+  max-width: min(95vw, 1200px);
+}
+.modal-body {
+  padding: 1rem 1rem 1.25rem 1rem;
+}
+.modal-preview-wrap {
+  max-height: 70vh;
+}
+#modalImage {
+  width: 100%;
+  height: auto;
+  max-height: 65vh;
+  object-fit: contain;
+}
+.modal-actions .btn {
+  min-width: 140px;
+}
+
+@media (max-width: 576px) {
+  .modal-dialog {
+    max-width: 96vw;
+    margin: 0.75rem auto;
+  }
+  .modal-preview-wrap {
+    max-height: 72vh;
+  }
+  #modalImage {
+    max-height: 68vh;
+  }
 }
 
 /* Footer */
 footer {
-  color: rgba(240,245,255,0.65);
+  color: rgba(240, 245, 255, 0.65);
 }
-footer a { color: #e0e9ff; }
+footer a {
+  color: #e0e9ff;
+}
 
 /* Logo subtle tweak */
 .logo-image {
   border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.28);
+  border: 1px solid rgba(255, 255, 255, 0.28);
 }
 
 /* Small adjustments */
-.input-group { max-width: 520px; }
-.chips-wrapper { margin-top: 0.5rem; }
+.input-group {
+  max-width: 520px;
+}
+.chips-wrapper {
+  margin-top: 0.5rem;
+}
 
 /* Sections with stronger glass effect */
 .glass-section {
   border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.24);
-  background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.05));
-  box-shadow: 0 16px 44px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.18);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.06)
+  );
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.46),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .gallery-panel {
   border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
-  box-shadow: 0 12px 36px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.04)
+  );
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
 }
 
 /* Left icon sidebar navigation */
@@ -206,11 +306,16 @@ footer a { color: #e0e9ff; }
   z-index: 1030;
   padding: 10px;
   border-radius: 16px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.05));
-  border: 1px solid rgba(255,255,255,0.24);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.24);
   backdrop-filter: saturate(140%) blur(16px);
   -webkit-backdrop-filter: saturate(140%) blur(16px);
-  box-shadow: 0 12px 36px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.14);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
 }
 .side-nav .btn {
   width: 44px;
@@ -229,7 +334,9 @@ footer a { color: #e0e9ff; }
 .glass-section .row {
   row-gap: 0.75rem;
 }
-.glass-section .row > .col { min-width: 0; }
+.glass-section .row > .col {
+  min-width: 0;
+}
 .glass-section .row > .col-auto {
   display: flex;
   flex-wrap: wrap;
@@ -241,7 +348,9 @@ footer a { color: #e0e9ff; }
 }
 
 @media (max-width: 576px) {
-  .input-group { max-width: 220px; }
+  .input-group {
+    max-width: 220px;
+  }
   .side-nav {
     top: auto;
     bottom: 12px;
@@ -267,5 +376,3 @@ footer a { color: #e0e9ff; }
     -webkit-backdrop-filter: none !important;
   }
 }
-
-

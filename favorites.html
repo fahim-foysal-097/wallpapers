@@ -43,51 +43,50 @@
         <a class="btn btn-outline-light active" href="favorites.html" title="Favorites">
             <i class="bi bi-star-fill"></i>
         </a>
-        <a class="btn btn-outline-light" href="https://github.com/fahim-foysal-097/wallpapers" target="_blank" title="Github">
+        <div class="btn-group">
+            <button id="sortBtn" class="btn btn-outline-light bi-funnel-fill" data-bs-toggle="dropdown"
+                aria-expanded="false"></button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item sort-option" href="#" data-sort="name-asc">Name ↑</a></li>
+                <li><a class="dropdown-item sort-option" href="#" data-sort="name-desc">Name ↓</a></li>
+                <li><a class="dropdown-item sort-option" href="#" data-sort="time-desc">Newest</a></li>
+                <li><a class="dropdown-item sort-option" href="#" data-sort="time-asc">Oldest</a></li>
+                <li><a class="dropdown-item sort-option" href="#" data-sort="size-desc">Size ↓</a></li>
+                <li><a class="dropdown-item sort-option" href="#" data-sort="size-asc">Size ↑</a></li>
+            </ul>
+        </div>
+        <a class="btn btn-outline-light" href="https://github.com/fahim-foysal-097/wallpapers" target="_blank"
+            title="Github">
             <i class="bi bi-github"></i>
         </a>
     </div>
 
     <main class="container py-4 main-with-sidebar">
         <div class="glass glass-section p-3 p-md-4 mb-3">
-        <div class="row align-items-center mb-3">
-            <div class="col">
-                <h1 class="display-6 mb-0">Favorites</h1>
+            <div class="row align-items-center mb-3">
+                <div class="col">
+                    <h1 class="display-6 mb-0">Favorites</h1>
 
-                <!-- Animated subtitle (typing effect) - show same animation here too -->
-                <p id="animatedText" class="animated-subtitle">Discover Beautiful Wallpapers</p>
+                    <!-- Animated subtitle (typing effect) - show same animation here too -->
+                    <p id="animatedText" class="animated-subtitle">Discover Beautiful Wallpapers</p>
 
-                <p class="text-muted mb-0" id="summary">Loading…</p>
-            </div>
-            <div class="col-auto d-flex gap-2 align-items-center">
-                <div class="input-group d-none d-sm-flex" style="min-width:240px; max-width:440px;">
-                    <span class="input-group-text bg-secondary border-0"><i class="bi bi-search"></i></span>
-                    <input id="searchInput" type="search" class="form-control form-control-dark" placeholder="Search filename, size, date..." />
+                    <p class="text-muted mb-0" id="summary">Loading…</p>
                 </div>
-                <div class="btn-group">
-                    <button id="sortBtn" class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Sort</button>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item sort-option" href="#" data-sort="name-asc">Name ↑</a></li>
-                        <li><a class="dropdown-item sort-option" href="#" data-sort="name-desc">Name ↓</a></li>
-                        <li><a class="dropdown-item sort-option" href="#" data-sort="time-desc">Newest</a></li>
-                        <li><a class="dropdown-item sort-option" href="#" data-sort="time-asc">Oldest</a></li>
-                        <li><a class="dropdown-item sort-option" href="#" data-sort="size-desc">Size ↓</a></li>
-                        <li><a class="dropdown-item sort-option" href="#" data-sort="size-asc">Size ↑</a></li>
-                    </ul>
+                <div class="col-auto d-flex gap-2 align-items-center">
+                    <a id="downloadAllBtn" class="btn btn-gradient" href="wallpaper-all.zip" download>
+                        <i class="bi bi-file-earmark-zip-fill"></i>&nbsp;Download All
+                    </a>
                 </div>
-                <a id="downloadAllBtn" class="btn btn-gradient" href="wallpaper-all.zip" download>
-                    <i class="bi bi-file-earmark-zip-fill"></i>&nbsp;Download All
-                </a>
             </div>
-        </div>
 
-        <div id="categoryChipsWrapper" class="mb-3 chips-wrapper">
-            <button id="chipsPrev" class="chip-nav btn" aria-label="Scroll categories left" title="Scroll left"><i
-                    class="bi bi-chevron-left"></i></button>
-            <div id="categoryChips" class="chips-scroll py-2" tabindex="0" role="listbox" aria-label="Categories"></div>
-            <button id="chipsNext" class="chip-nav btn" aria-label="Scroll categories right" title="Scroll right"><i
-                    class="bi bi-chevron-right"></i></button>
-        </div>
+            <div id="categoryChipsWrapper" class="mb-3 chips-wrapper">
+                <button id="chipsPrev" class="chip-nav btn" aria-label="Scroll categories left" title="Scroll left"><i
+                        class="bi bi-chevron-left"></i></button>
+                <div id="categoryChips" class="chips-scroll py-2" tabindex="0" role="listbox" aria-label="Categories">
+                </div>
+                <button id="chipsNext" class="chip-nav btn" aria-label="Scroll categories right" title="Scroll right"><i
+                        class="bi bi-chevron-right"></i></button>
+            </div>
         </div>
 
         <div class="glass gallery-panel p-3 p-md-4">
@@ -110,28 +109,13 @@
 
     <!-- Preview Modal -->
     <div class="modal fade" id="previewModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen-sm-down modal-xl modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-dark border-0 position-relative">
-                <!-- Prev / Next buttons -->
-                <button class="modal-nav-btn prev" id="modalPrevBtn" title="Previous (🡐)"><i
-                        class="bi bi-chevron-left"></i></button>
-                <button class="modal-nav-btn next" id="modalNextBtn" title="Next (🡒)"><i
-                        class="bi bi-chevron-right"></i></button>
-
                 <div class="modal-body p-3">
                     <div class="d-flex justify-content-between align-items-start">
                         <div>
                             <h5 id="modalFilename" class="mb-1"></h5>
                             <small id="modalMeta" class="text-muted"></small>
-                        </div>
-                        <div class="btn-group">
-                            <a id="modalDownload" class="btn btn-light btn-sm" target="_blank" rel="noopener noreferrer"
-                                download>
-                                <i class="bi bi-download"></i> Download
-                            </a>
-                            <button type="button" class="btn btn-outline-light btn-sm" data-bs-dismiss="modal">
-                                <i class="bi bi-x"></i>
-                            </button>
                         </div>
                     </div>
 
@@ -145,6 +129,22 @@
                             <!-- the image element — keep same id used in your JS -->
                             <img id="modalImage" src="" alt="preview" class="img-fluid rounded shadow-lg" />
                         </div>
+                    </div>
+
+                    <!-- Prev / Next buttons -->
+                    <button class="modal-nav-btn prev" id="modalPrevBtn" title="Previous (🡐)"><i
+                            class="bi bi-chevron-left"></i></button>
+                    <button class="modal-nav-btn next" id="modalNextBtn" title="Next (🡒)"><i
+                            class="bi bi-chevron-right"></i></button>
+
+                    <!-- Actions below image -->
+                    <div class="modal-actions d-flex justify-content-center gap-2 mt-3">
+                        <a id="modalDownload" class="btn btn-light" target="_blank" rel="noopener noreferrer" download>
+                            <i class="bi bi-download"></i> Download
+                        </a>
+                        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">
+                            <i class="bi bi-x"></i> Close
+                        </button>
                     </div>
                 </div>
             </div>

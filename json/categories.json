@@ -3,7 +3,7 @@
     {
       "name": "all",
       "label": "All",
-      "count": 250
+      "count": 249
     },
     {
       "name": "abstract",
@@ -23,7 +23,7 @@
     {
       "name": "art",
       "label": "art",
-      "count": 49
+      "count": 48
     },
     {
       "name": "cyber-cityscape",
@@ -80,7 +80,7 @@
     {
       "name": "all",
       "label": "All",
-      "count": 104
+      "count": 107
     },
     {
       "name": "abstract",
@@ -90,7 +90,7 @@
     {
       "name": "aesthetic",
       "label": "aesthetic",
-      "count": 3
+      "count": 4
     },
     {
       "name": "animals",
@@ -105,7 +105,7 @@
     {
       "name": "art",
       "label": "art",
-      "count": 15
+      "count": 16
     },
     {
       "name": "cyber-cityscape",
@@ -125,7 +125,7 @@
     {
       "name": "landscape",
       "label": "landscape",
-      "count": 10
+      "count": 11
     },
     {
       "name": "motivational",

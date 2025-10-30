@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-10-30T13:29:33.297591+00:00",
-  "count": 104,
+  "generated_at": "2025-10-30T20:57:04.954051+00:00",
+  "count": 107,
   "wallpapers": [
     {
       "filename": "colorful-knit-pattern-preppy.jpg",
@@ -11,19 +11,19 @@
       "category": "uncategorized"
     },
     {
-      "filename": "cozy-autumn-leaves-pattern.jpg",
-      "url": "wallpapers-mobile/cozy-autumn-leaves-pattern.jpg",
-      "thumb_url": "thumbnail/mobile-wallpapers-thumb/cozy-autumn-leaves-pattern.webp",
-      "size": 1749097,
-      "modified": "2025-10-29T17:30:43.375865+00:00",
-      "category": "uncategorized"
-    },
-    {
       "filename": "Dark-Netflix.png",
       "url": "wallpapers-mobile/Dark-Netflix.png",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/Dark-Netflix.webp",
       "size": 2371659,
       "modified": "2025-10-24T20:40:45.071066+00:00",
+      "category": "uncategorized"
+    },
+    {
+      "filename": "flowerpot-window.jpg",
+      "url": "wallpapers-mobile/flowerpot-window.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/flowerpot-window.webp",
+      "size": 476083,
+      "modified": "2025-10-30T20:53:33.165190+00:00",
       "category": "uncategorized"
     },
     {
@@ -195,6 +195,14 @@
       "category": "aesthetic"
     },
     {
+      "filename": "gentle-purple.jpg",
+      "url": "wallpapers-mobile/aesthetic/gentle-purple.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/aesthetic/gentle-purple.webp",
+      "size": 370436,
+      "modified": "2025-10-30T20:54:32.817262+00:00",
+      "category": "aesthetic"
+    },
+    {
       "filename": "spiderman-wall.png",
       "url": "wallpapers-mobile/aesthetic/spiderman-wall.png",
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/aesthetic/spiderman-wall.webp",
@@ -352,6 +360,14 @@
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/Pixelated_forest.webp",
       "size": 468454,
       "modified": "2025-10-24T20:38:28.210634+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "princess-mononoke.jpg",
+      "url": "wallpapers-mobile/art/princess-mononoke.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/art/princess-mononoke.webp",
+      "size": 2004034,
+      "modified": "2025-10-29T17:29:56.245006+00:00",
       "category": "art"
     },
     {
@@ -584,6 +600,14 @@
       "thumb_url": "thumbnail/mobile-wallpapers-thumb/landscape/Aesthetic_blue.webp",
       "size": 2341173,
       "modified": "2025-10-24T20:36:54.743869+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "autumn-leaves.jpg",
+      "url": "wallpapers-mobile/landscape/autumn-leaves.jpg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/landscape/autumn-leaves.webp",
+      "size": 1749097,
+      "modified": "2025-10-29T17:30:43.375865+00:00",
       "category": "landscape"
     },
     {
