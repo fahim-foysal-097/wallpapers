@@ -3,7 +3,7 @@
     {
       "name": "all",
       "label": "All",
-      "count": 248
+      "count": 250
     },
     {
       "name": "abstract",
@@ -33,12 +33,12 @@
     {
       "name": "fun",
       "label": "fun",
-      "count": 8
+      "count": 9
     },
     {
       "name": "gaming",
       "label": "gaming",
-      "count": 30
+      "count": 31
     },
     {
       "name": "landscape",
@@ -63,7 +63,7 @@
     {
       "name": "sci-fi",
       "label": "sci-fi",
-      "count": 6
+      "count": 8
     },
     {
       "name": "tech",
@@ -73,7 +73,7 @@
     {
       "name": "uncategorized",
       "label": "uncategorized",
-      "count": 13
+      "count": 11
     }
   ],
   "mobile": [

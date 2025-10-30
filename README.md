@@ -33,3 +33,5 @@ Or use the following Python scripts included in the repository (use in order) :
 > **Disclaimer:** None of the wallpapers included are owned by me. They are collected from other sites. I have no way of knowing if there is a copyright on these images. If you find any of the image hosted here is yours and of limited use, please let me know and i will remove it.
 
 Enjoy your wallpapers!
+
+<img src="assets/screenshot.png">

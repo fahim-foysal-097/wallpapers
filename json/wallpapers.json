@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-10-29T17:59:08.673976+00:00",
-  "count": 248,
+  "generated_at": "2025-10-30T13:29:33.282195+00:00",
+  "count": 250,
   "wallpapers": [
     {
       "filename": "4k-keyboard.jpg",
@@ -16,14 +16,6 @@
       "thumb_url": "thumbnail/wallpapers-thumb/arch_nz.webp",
       "size": 424254,
       "modified": "2025-10-28T17:51:51.603141+00:00",
-      "category": "uncategorized"
-    },
-    {
-      "filename": "blackhole-interstellar.jpg",
-      "url": "wallpapers/blackhole-interstellar.jpg",
-      "thumb_url": "thumbnail/wallpapers-thumb/blackhole-interstellar.webp",
-      "size": 1571282,
-      "modified": "2025-10-26T15:25:23.643754+00:00",
       "category": "uncategorized"
     },
     {
@@ -56,14 +48,6 @@
       "thumb_url": "thumbnail/wallpapers-thumb/odd.webp",
       "size": 578466,
       "modified": "2025-10-24T10:13:51.059186+00:00",
-      "category": "uncategorized"
-    },
-    {
-      "filename": "stare.png",
-      "url": "wallpapers/stare.png",
-      "thumb_url": "thumbnail/wallpapers-thumb/stare.webp",
-      "size": 413588,
-      "modified": "2025-10-25T19:06:33.056074+00:00",
       "category": "uncategorized"
     },
     {
@@ -939,6 +923,14 @@
       "category": "fun"
     },
     {
+      "filename": "stare.png",
+      "url": "wallpapers/fun/stare.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/fun/stare.webp",
+      "size": 413588,
+      "modified": "2025-10-25T19:06:33.056074+00:00",
+      "category": "fun"
+    },
+    {
       "filename": "sudo-rm-rf.jpg",
       "url": "wallpapers/fun/sudo-rm-rf.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/fun/sudo-rm-rf.webp",
@@ -953,6 +945,14 @@
       "size": 25635,
       "modified": "2025-10-27T07:56:09.212379+00:00",
       "category": "fun"
+    },
+    {
+      "filename": "apex_octane.jpg",
+      "url": "wallpapers/gaming/apex_octane.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/gaming/apex_octane.webp",
+      "size": 4937817,
+      "modified": "2025-05-09T06:25:40.874331+00:00",
+      "category": "gaming"
     },
     {
       "filename": "botw-cover.jpg",
@@ -1763,6 +1763,14 @@
       "category": "sci-fi"
     },
     {
+      "filename": "blackhole-interstellar.jpg",
+      "url": "wallpapers/sci-fi/blackhole-interstellar.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/sci-fi/blackhole-interstellar.webp",
+      "size": 1571282,
+      "modified": "2025-10-26T15:25:23.643754+00:00",
+      "category": "sci-fi"
+    },
+    {
       "filename": "comet.jpg",
       "url": "wallpapers/sci-fi/comet.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/sci-fi/comet.webp",
@@ -1784,6 +1792,14 @@
       "thumb_url": "thumbnail/wallpapers-thumb/sci-fi/groove-edit.webp",
       "size": 651369,
       "modified": "2025-10-24T19:13:15.706592+00:00",
+      "category": "sci-fi"
+    },
+    {
+      "filename": "space.png",
+      "url": "wallpapers/sci-fi/space.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/sci-fi/space.webp",
+      "size": 1978965,
+      "modified": "2025-10-24T10:13:49.734168+00:00",
       "category": "sci-fi"
     },
     {
