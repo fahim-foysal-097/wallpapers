@@ -641,7 +641,7 @@
 })();
 
 /* ---------------------
-   Typing animation (keeps as-is)
+   Typing animation (disabled on mobile — static text shown instead)
    --------------------- */
 
 (function typingAnimation() {
@@ -650,25 +650,25 @@
   if (!el) return; // nothing to do
 
   // phrases to cycle through - you can edit these
-
   const phrases = [
     "Discover Beautiful Wallpapers",
-
     "Portrait wallpapers for phones",
-
     "High-resolution phone backgrounds",
   ];
 
+  // If mobile (<= 480px) just show the first phrase as static text
+  const isMobile = window.matchMedia("(max-width: 480px)").matches;
+  if (isMobile) {
+    el.textContent = phrases[0];
+    return;
+  }
+
   const TYPING_SPEED = 40; // ms per character
-
   const ERASING_SPEED = 30; // ms per character when deleting
-
   const PAUSE_AFTER = 1200; // pause after typing a phrase (ms)
 
   let phraseIndex = 0;
-
   let charIndex = 0;
-
   let isDeleting = false;
 
   function tick() {
@@ -676,45 +676,30 @@
 
     if (!isDeleting) {
       // typing
-
       el.textContent = current.slice(0, charIndex + 1);
-
       charIndex++;
-
       if (charIndex === current.length) {
         // finished typing
-
         isDeleting = true;
-
         setTimeout(tick, PAUSE_AFTER);
-
         return;
       }
-
       setTimeout(tick, TYPING_SPEED);
     } else {
       // deleting
-
       el.textContent = current.slice(0, charIndex - 1);
-
       charIndex--;
-
       if (charIndex === 0) {
         isDeleting = false;
-
         phraseIndex = (phraseIndex + 1) % phrases.length;
-
         setTimeout(tick, TYPING_SPEED);
-
         return;
       }
-
       setTimeout(tick, ERASING_SPEED);
     }
   }
 
-  // start when DOM ready (if script is appended at end it's usually safe, but be explicit)
-
+  // start when DOM ready
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", () => {
       setTimeout(tick, 300); // small initial delay

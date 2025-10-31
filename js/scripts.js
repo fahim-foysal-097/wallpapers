@@ -126,14 +126,22 @@
     return (n / 1024 / 1024 / 1024).toFixed(2) + " GB";
   }
 
-  /* typing animation (kept from your code) */
+  /* typing animation */
   (function initTyping() {
     if (!animatedEl) return;
     const original =
       animatedEl.textContent.trim() || "Discover Beautiful Wallpapers";
     const alt = "Download Wallpapers";
-    const alt2 = "If you want to add wallpapers, go to the github repository";
+    const alt2 = "High Quality Wallpapers";
     const phrases = [original, alt, alt2];
+
+    // If mobile (<= 480px) just show the first phrase as static text
+    const isMobile = window.matchMedia("(max-width: 480px)").matches;
+    if (isMobile) {
+      animatedEl.textContent = phrases[0];
+      return;
+    }
+
     const typingSpeed = 60;
     const deletingSpeed = 40;
     const pauseAfterTyping = 1200;
