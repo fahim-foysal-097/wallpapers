@@ -3,7 +3,7 @@
     {
       "name": "all",
       "label": "All",
-      "count": 249
+      "count": 256
     },
     {
       "name": "abstract",
@@ -18,7 +18,7 @@
     {
       "name": "anime",
       "label": "anime",
-      "count": 22
+      "count": 23
     },
     {
       "name": "art",
@@ -28,7 +28,7 @@
     {
       "name": "cyber-cityscape",
       "label": "cyber-cityscape",
-      "count": 9
+      "count": 10
     },
     {
       "name": "fun",
@@ -68,12 +68,12 @@
     {
       "name": "tech",
       "label": "tech",
-      "count": 24
+      "count": 26
     },
     {
       "name": "uncategorized",
       "label": "uncategorized",
-      "count": 11
+      "count": 14
     }
   ],
   "mobile": [

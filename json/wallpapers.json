@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-10-30T20:57:04.939484+00:00",
-  "count": 249,
+  "generated_at": "2025-11-01T18:27:27.168801+00:00",
+  "count": 256,
   "wallpapers": [
     {
       "filename": "4k-keyboard.jpg",
@@ -35,6 +35,14 @@
       "category": "uncategorized"
     },
     {
+      "filename": "leaves.jpg",
+      "url": "wallpapers/leaves.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/leaves.webp",
+      "size": 3543784,
+      "modified": "2022-08-07T11:52:40+00:00",
+      "category": "uncategorized"
+    },
+    {
       "filename": "mecha-keyboard.jpg",
       "url": "wallpapers/mecha-keyboard.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/mecha-keyboard.webp",
@@ -48,6 +56,14 @@
       "thumb_url": "thumbnail/wallpapers-thumb/odd.webp",
       "size": 578466,
       "modified": "2025-10-24T10:13:51.059186+00:00",
+      "category": "uncategorized"
+    },
+    {
+      "filename": "room.jpg",
+      "url": "wallpapers/room.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/room.webp",
+      "size": 1448035,
+      "modified": "2022-08-05T13:55:32+00:00",
       "category": "uncategorized"
     },
     {
@@ -88,6 +104,14 @@
       "thumb_url": "thumbnail/wallpapers-thumb/wildarch2.webp",
       "size": 394985,
       "modified": "2025-10-28T17:52:34.013641+00:00",
+      "category": "uncategorized"
+    },
+    {
+      "filename": "windows-10.jpg",
+      "url": "wallpapers/windows-10.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/windows-10.webp",
+      "size": 1456670,
+      "modified": "2022-08-05T13:47:32+00:00",
       "category": "uncategorized"
     },
     {
@@ -360,6 +384,14 @@
       "thumb_url": "thumbnail/wallpapers-thumb/anime/itachi-sasuke.webp",
       "size": 122024,
       "modified": "2025-10-28T17:59:43.662533+00:00",
+      "category": "anime"
+    },
+    {
+      "filename": "Itachi.jpg",
+      "url": "wallpapers/anime/Itachi.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/anime/Itachi.webp",
+      "size": 111502,
+      "modified": "2022-08-15T10:39:28+00:00",
       "category": "anime"
     },
     {
@@ -816,6 +848,14 @@
       "thumb_url": "thumbnail/wallpapers-thumb/cyber-cityscape/city-view.webp",
       "size": 1653122,
       "modified": "2025-10-24T10:13:53.633220+00:00",
+      "category": "cyber-cityscape"
+    },
+    {
+      "filename": "city.jpg",
+      "url": "wallpapers/cyber-cityscape/city.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/cyber-cityscape/city.webp",
+      "size": 436271,
+      "modified": "2022-07-30T12:49:53.640309+00:00",
       "category": "cyber-cityscape"
     },
     {
@@ -1827,6 +1867,14 @@
       "category": "tech"
     },
     {
+      "filename": "cloudy-windows.jpg",
+      "url": "wallpapers/tech/cloudy-windows.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/cloudy-windows.webp",
+      "size": 445762,
+      "modified": "2022-08-05T13:47:04+00:00",
+      "category": "tech"
+    },
+    {
       "filename": "kitty.jpg",
       "url": "wallpapers/tech/kitty.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/tech/kitty.webp",
@@ -1960,6 +2008,14 @@
       "thumb_url": "thumbnail/wallpapers-thumb/tech/python-minim.webp",
       "size": 23344,
       "modified": "2025-09-22T05:46:32.769666+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "red-windows.jpg",
+      "url": "wallpapers/tech/red-windows.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/red-windows.webp",
+      "size": 629856,
+      "modified": "2022-08-05T13:46:04+00:00",
       "category": "tech"
     },
     {
