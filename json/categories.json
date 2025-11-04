@@ -3,12 +3,12 @@
     {
       "name": "all",
       "label": "All",
-      "count": 256
+      "count": 271
     },
     {
       "name": "abstract",
       "label": "abstract",
-      "count": 11
+      "count": 15
     },
     {
       "name": "aesthetic",
@@ -23,7 +23,7 @@
     {
       "name": "art",
       "label": "art",
-      "count": 48
+      "count": 49
     },
     {
       "name": "cyber-cityscape",
@@ -43,7 +43,7 @@
     {
       "name": "landscape",
       "label": "landscape",
-      "count": 27
+      "count": 35
     },
     {
       "name": "minimal",
@@ -68,12 +68,12 @@
     {
       "name": "tech",
       "label": "tech",
-      "count": 26
+      "count": 27
     },
     {
       "name": "uncategorized",
       "label": "uncategorized",
-      "count": 14
+      "count": 15
     }
   ],
   "mobile": [

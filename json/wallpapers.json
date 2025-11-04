@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-01T18:27:27.168801+00:00",
-  "count": 256,
+  "generated_at": "2025-11-04T19:32:01.798572+00:00",
+  "count": 271,
   "wallpapers": [
     {
       "filename": "4k-keyboard.jpg",
@@ -32,14 +32,6 @@
       "thumb_url": "thumbnail/wallpapers-thumb/chip-intel.webp",
       "size": 18728,
       "modified": "2025-09-22T05:51:27.709409+00:00",
-      "category": "uncategorized"
-    },
-    {
-      "filename": "leaves.jpg",
-      "url": "wallpapers/leaves.jpg",
-      "thumb_url": "thumbnail/wallpapers-thumb/leaves.webp",
-      "size": 3543784,
-      "modified": "2022-08-07T11:52:40+00:00",
       "category": "uncategorized"
     },
     {
@@ -91,6 +83,14 @@
       "category": "uncategorized"
     },
     {
+      "filename": "Wallpaper.jpg",
+      "url": "wallpapers/Wallpaper.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/Wallpaper.webp",
+      "size": 1149526,
+      "modified": "2023-02-27T14:11:44+00:00",
+      "category": "uncategorized"
+    },
+    {
       "filename": "wide_tokyonight_lines.png",
       "url": "wallpapers/wide_tokyonight_lines.png",
       "thumb_url": "thumbnail/wallpapers-thumb/wide_tokyonight_lines.webp",
@@ -104,6 +104,14 @@
       "thumb_url": "thumbnail/wallpapers-thumb/wildarch2.webp",
       "size": 394985,
       "modified": "2025-10-28T17:52:34.013641+00:00",
+      "category": "uncategorized"
+    },
+    {
+      "filename": "window-girl.jpg",
+      "url": "wallpapers/window-girl.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/window-girl.webp",
+      "size": 816648,
+      "modified": "2024-07-01T10:29:47.450974+00:00",
       "category": "uncategorized"
     },
     {
@@ -136,6 +144,14 @@
       "thumb_url": "thumbnail/wallpapers-thumb/abstract/abstract-3.webp",
       "size": 970150,
       "modified": "2025-10-26T15:20:48.133980+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "abstract-4.jpg",
+      "url": "wallpapers/abstract/abstract-4.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/abstract/abstract-4.webp",
+      "size": 781057,
+      "modified": "2024-11-28T11:02:46.931210+00:00",
       "category": "abstract"
     },
     {
@@ -187,6 +203,14 @@
       "category": "abstract"
     },
     {
+      "filename": "Gradient1.png",
+      "url": "wallpapers/abstract/Gradient1.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/abstract/Gradient1.webp",
+      "size": 5203164,
+      "modified": "2025-03-03T19:29:33+00:00",
+      "category": "abstract"
+    },
+    {
       "filename": "lines.jpg",
       "url": "wallpapers/abstract/lines.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/abstract/lines.webp",
@@ -195,11 +219,27 @@
       "category": "abstract"
     },
     {
+      "filename": "mountain-abs.png",
+      "url": "wallpapers/abstract/mountain-abs.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/abstract/mountain-abs.webp",
+      "size": 16147024,
+      "modified": "2025-03-12T18:27:32.529045+00:00",
+      "category": "abstract"
+    },
+    {
       "filename": "technical.jpg",
       "url": "wallpapers/abstract/technical.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/abstract/technical.webp",
       "size": 253026,
       "modified": "2025-05-09T06:25:43.513812+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "wave.jpg",
+      "url": "wallpapers/abstract/wave.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/abstract/wave.webp",
+      "size": 421215,
+      "modified": "2024-11-28T08:58:31.399134+00:00",
       "category": "abstract"
     },
     {
@@ -536,6 +576,14 @@
       "thumb_url": "thumbnail/wallpapers-thumb/art/castle.webp",
       "size": 3627582,
       "modified": "2025-10-24T20:17:36.726415+00:00",
+      "category": "art"
+    },
+    {
+      "filename": "cat.png",
+      "url": "wallpapers/art/cat.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/art/cat.webp",
+      "size": 2296184,
+      "modified": "2025-11-01T18:38:26.821558+00:00",
       "category": "art"
     },
     {
@@ -1275,6 +1323,14 @@
       "category": "landscape"
     },
     {
+      "filename": "dark.jpg",
+      "url": "wallpapers/landscape/dark.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/dark.webp",
+      "size": 2595345,
+      "modified": "2025-03-03T19:20:34.288718+00:00",
+      "category": "landscape"
+    },
+    {
       "filename": "deer_and_sunset.jpg",
       "url": "wallpapers/landscape/deer_and_sunset.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/landscape/deer_and_sunset.webp",
@@ -1288,6 +1344,22 @@
       "thumb_url": "thumbnail/wallpapers-thumb/landscape/deer_in_pine_forest.webp",
       "size": 398671,
       "modified": "2025-10-24T20:31:57.046490+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "desert-night.jpg",
+      "url": "wallpapers/landscape/desert-night.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/desert-night.webp",
+      "size": 17235975,
+      "modified": "2024-05-09T18:21:39+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "desert.jpg",
+      "url": "wallpapers/landscape/desert.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/desert.webp",
+      "size": 976956,
+      "modified": "2024-11-28T11:03:32.585068+00:00",
       "category": "landscape"
     },
     {
@@ -1315,6 +1387,14 @@
       "category": "landscape"
     },
     {
+      "filename": "fuji.jpg",
+      "url": "wallpapers/landscape/fuji.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/fuji.webp",
+      "size": 681493,
+      "modified": "2025-03-15T16:25:58+00:00",
+      "category": "landscape"
+    },
+    {
       "filename": "garden-path.jpg",
       "url": "wallpapers/landscape/garden-path.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/landscape/garden-path.webp",
@@ -1328,6 +1408,22 @@
       "thumb_url": "thumbnail/wallpapers-thumb/landscape/lake.webp",
       "size": 1278424,
       "modified": "2025-10-24T10:13:52.511205+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "leaves.jpg",
+      "url": "wallpapers/landscape/leaves.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/leaves.webp",
+      "size": 3543784,
+      "modified": "2022-08-07T11:52:40+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "mountains-0.jpg",
+      "url": "wallpapers/landscape/mountains-0.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/mountains-0.webp",
+      "size": 2133873,
+      "modified": "2024-11-28T11:03:55.494803+00:00",
       "category": "landscape"
     },
     {
@@ -1403,6 +1499,14 @@
       "category": "landscape"
     },
     {
+      "filename": "shrine.png",
+      "url": "wallpapers/landscape/shrine.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/shrine.webp",
+      "size": 1003783,
+      "modified": "2024-03-05T09:53:40+00:00",
+      "category": "landscape"
+    },
+    {
       "filename": "studio-ghibli-stone.jpg",
       "url": "wallpapers/landscape/studio-ghibli-stone.jpg",
       "thumb_url": "thumbnail/wallpapers-thumb/landscape/studio-ghibli-stone.webp",
@@ -1424,6 +1528,14 @@
       "thumb_url": "thumbnail/wallpapers-thumb/landscape/the-snap-hunt-camping.webp",
       "size": 8213673,
       "modified": "2025-05-09T06:25:43.563152+00:00",
+      "category": "landscape"
+    },
+    {
+      "filename": "view.jpg",
+      "url": "wallpapers/landscape/view.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/landscape/view.webp",
+      "size": 2229107,
+      "modified": "2025-03-03T19:20:41+00:00",
       "category": "landscape"
     },
     {
@@ -1880,6 +1992,14 @@
       "thumb_url": "thumbnail/wallpapers-thumb/tech/kitty.webp",
       "size": 70800,
       "modified": "2025-10-24T20:30:48.457265+00:00",
+      "category": "tech"
+    },
+    {
+      "filename": "MSI_MAG.jpg",
+      "url": "wallpapers/tech/MSI_MAG.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/tech/MSI_MAG.webp",
+      "size": 3237314,
+      "modified": "2022-03-28T12:30:12+00:00",
       "category": "tech"
     },
     {
