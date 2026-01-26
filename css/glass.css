@@ -251,14 +251,20 @@ h3 {
 
 /* Chips - segmented control vibe */
 .chips-scroll .chip,
-.chip {
+.chip,
+.chips-scroll .chip.btn,
+.chip.btn {
     background: linear-gradient(
         180deg,
         rgba(255, 255, 255, 0.06),
         rgba(255, 255, 255, 0.03)
-    );
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    color: #f4f6fa;
+    ) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    color: #f4f6fa !important;
+    padding: 0.42rem 0.75rem !important;
+    min-height: 36px !important;
+    height: auto !important;
+    transform: translateY(0) !important;
 }
 .chips-scroll .chip.active,
 .chip.active {
@@ -266,10 +272,35 @@ h3 {
         180deg,
         rgba(255, 255, 255, 0.18),
         rgba(255, 255, 255, 0.06)
-    );
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    ) !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35),
         inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    padding: 0.42rem 0.75rem !important;
+    min-height: 36px !important;
+    height: auto !important;
+    transform: translateY(0) !important;
+}
+
+/* Ensure chips maintain size on touch devices */
+@media (pointer: coarse), (hover: none) {
+    .chips-scroll .chip,
+    .chip,
+    .chips-scroll .chip.btn,
+    .chip.btn {
+        transform: translateY(0) !important;
+        padding: 0.42rem 0.75rem !important;
+        min-height: 36px !important;
+        height: auto !important;
+    }
+    
+    .chips-scroll .chip.active,
+    .chip.active {
+        transform: translateY(0) !important;
+        padding: 0.42rem 0.75rem !important;
+        min-height: 36px !important;
+        height: auto !important;
+    }
 }
 .chip-nav {
     border-radius: 12px;
@@ -414,15 +445,17 @@ footer a {
     transform: translateY(0);
 }
 
-/* Improved chip interactions */
-.chips-scroll .chip:not(.active):hover {
-    background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.1),
-        rgba(255, 255, 255, 0.06)
-    );
-    border-color: rgba(255, 255, 255, 0.25);
-    transform: translateY(-2px);
+/* Improved chip interactions - only on pointer devices */
+@media (hover: hover) and (pointer: fine) {
+    .chips-scroll .chip:not(.active):hover {
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.06)
+        );
+        border-color: rgba(255, 255, 255, 0.25);
+        transform: translateY(-2px);
+    }
 }
 
 /* Better modal backdrop */

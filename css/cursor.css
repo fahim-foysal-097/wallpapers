@@ -82,17 +82,19 @@
     }
 }
 
-/* hide system cursor on desktop */
-html,
-body,
-*,
-a,
-button,
-input,
-textarea,
-select,
-[contenteditable] {
-    cursor: none !important;
+/* hide system cursor on desktop - only on pointer devices */
+@media (hover: hover) and (pointer: fine) {
+    html,
+    body,
+    *,
+    a,
+    button,
+    input,
+    textarea,
+    select,
+    [contenteditable] {
+        cursor: none !important;
+    }
 }
 
 /* hide custom cursor on touch/coarse devices */

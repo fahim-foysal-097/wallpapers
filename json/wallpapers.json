@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-01-03T19:56:19.917531+00:00",
-  "count": 271,
+  "generated_at": "2026-01-26T20:02:18.387421+00:00",
+  "count": 275,
   "wallpapers": [
     {
       "filename": "4k-keyboard.jpg",
@@ -240,6 +240,38 @@
       "thumb_url": "thumbnail/wallpapers-thumb/abstract/wave.webp",
       "size": 421215,
       "modified": "2024-11-28T08:58:31.399134+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "win1.png",
+      "url": "wallpapers/abstract/win1.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/abstract/win1.webp",
+      "size": 302920,
+      "modified": "2026-01-26T19:55:06.071815+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "win2.png",
+      "url": "wallpapers/abstract/win2.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/abstract/win2.webp",
+      "size": 493172,
+      "modified": "2026-01-26T19:54:50.742735+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "win3.png",
+      "url": "wallpapers/abstract/win3.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/abstract/win3.webp",
+      "size": 446322,
+      "modified": "2026-01-26T19:54:59.515781+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "win4.png",
+      "url": "wallpapers/abstract/win4.png",
+      "thumb_url": "thumbnail/wallpapers-thumb/abstract/win4.webp",
+      "size": 775766,
+      "modified": "2026-01-26T19:55:14.177858+00:00",
       "category": "abstract"
     },
     {

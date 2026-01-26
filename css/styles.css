@@ -573,30 +573,38 @@ body {
     background: transparent;
 }
 
-/* chip (pill) base */
+/* chip (pill) base - override Bootstrap button styles */
 .chips-scroll .chip,
-.chip {
+.chip,
+.chips-scroll .chip.btn,
+.chip.btn {
     -webkit-tap-highlight-color: transparent;
-    display: inline-flex;
+    display: inline-flex !important;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.42rem 0.75rem;
-    border-radius: 999px;
+    padding: 0.42rem 0.75rem !important;
+    border-radius: 999px !important;
     white-space: nowrap; /* preserve full label (no truncation) */
     cursor: pointer;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--chip-text);
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    color: var(--chip-text) !important;
     background: linear-gradient(
         180deg,
         rgba(255, 255, 255, 0.015),
         rgba(255, 255, 255, 0.01)
-    );
-    border: 1px solid var(--chip-border);
+    ) !important;
+    border: 1px solid var(--chip-border) !important;
     transition: transform 0.12s ease, box-shadow 0.12s ease,
         background 0.12s ease, border-color 0.12s ease;
-    min-height: 36px;
-    line-height: 1;
+    min-height: 36px !important;
+    height: auto !important;
+    line-height: 1 !important;
+    transform: translateY(0) !important; /* ensure stable base transform */
+    box-sizing: border-box !important;
+    flex-shrink: 0;
+    width: auto !important;
+    margin: 0 !important;
 }
 
 /* count badge inside chip */
@@ -612,16 +620,48 @@ body {
     margin-left: 6px;
 }
 
-/* hover & active press feedback */
-.chips-scroll .chip:hover,
-.chip:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 28px rgba(2, 6, 23, 0.48);
+/* hover & active press feedback - only on devices with pointer */
+@media (hover: hover) and (pointer: fine) {
+    .chips-scroll .chip:hover,
+    .chip:hover {
+        transform: translateY(-3px) !important;
+        box-shadow: 0 10px 28px rgba(2, 6, 23, 0.48);
+        padding: 0.42rem 0.75rem !important;
+        min-height: 36px !important;
+    }
+
+    .chips-scroll .chip:active,
+    .chip:active {
+        transform: translateY(0) !important;
+        padding: 0.42rem 0.75rem !important;
+        min-height: 36px !important;
+    }
 }
 
-.chips-scroll .chip:active,
-.chip:active {
-    transform: translateY(0);
+/* Ensure chips maintain size on touch devices (no pointer) */
+@media (pointer: coarse), (hover: none) {
+    .chips-scroll .chip,
+    .chip {
+        transform: translateY(0) !important;
+        padding: 0.42rem 0.75rem !important;
+        min-height: 36px !important;
+        height: auto !important;
+    }
+
+    .chips-scroll .chip.active,
+    .chip.active {
+        transform: translateY(0) !important;
+        padding: 0.42rem 0.75rem !important;
+        min-height: 36px !important;
+        height: auto !important;
+    }
+
+    .chips-scroll .chip:active,
+    .chip:active {
+        transform: translateY(0) !important;
+        padding: 0.42rem 0.75rem !important;
+        min-height: 36px !important;
+    }
 }
 
 /* ACTIVE (selected) chip — stronger, accessible visual */
@@ -631,11 +671,22 @@ body {
         110deg,
         var(--chip-active-start) 0%,
         var(--chip-active-end) 100%
-    );
-    color: var(--chip-active-text);
-    border: 1px solid var(--chip-active-border);
+    ) !important;
+    color: var(--chip-active-text) !important;
+    border: 1px solid var(--chip-active-border) !important;
     box-shadow: var(--chip-active-shadow);
-    transform: translateY(-4px);
+    padding: 0.42rem 0.75rem !important;
+    min-height: 36px !important;
+    height: auto !important;
+    transform: translateY(0) !important; /* base transform for touch devices */
+}
+
+/* Active chip transform only on pointer devices */
+@media (hover: hover) and (pointer: fine) {
+    .chips-scroll .chip.active,
+    .chip.active {
+        transform: translateY(-4px) !important;
+    }
 }
 
 /* improve label contrast inside active chip (if you used custom spans) */
@@ -681,15 +732,17 @@ body {
     transition: transform 0.12s ease, background 0.12s ease, opacity 0.12s ease;
 }
 
-/* hover feedback: slightly brighter gradient */
-.chip-nav:hover {
-    transform: translateY(-2px);
-    background: linear-gradient(
-        135deg,
-        rgba(61, 87, 255, 0.25) 0%,
-        rgba(61, 214, 199, 0.18) 100%
-    );
-    box-shadow: 0 12px 28px rgba(2, 6, 23, 0.52);
+/* hover feedback: slightly brighter gradient - only on pointer devices */
+@media (hover: hover) and (pointer: fine) {
+    .chip-nav:hover {
+        transform: translateY(-2px);
+        background: linear-gradient(
+            135deg,
+            rgba(61, 87, 255, 0.25) 0%,
+            rgba(61, 214, 199, 0.18) 100%
+        );
+        box-shadow: 0 12px 28px rgba(2, 6, 23, 0.52);
+    }
 }
 
 /* active press feedback */
@@ -724,6 +777,52 @@ body {
     white-space: nowrap;
 }
 
+/* Force consistent chip sizing on all devices - override any conflicting styles */
+.chips-scroll .chip.btn,
+.chip.btn {
+    vertical-align: baseline !important;
+    text-align: center !important;
+    text-decoration: none !important;
+}
+
+/* Prevent any size changes on touch devices */
+@media (pointer: coarse) {
+    .chips-scroll .chip,
+    .chip,
+    .chips-scroll .chip.btn,
+    .chip.btn,
+    .chips-scroll .chip.active,
+    .chip.active,
+    .chips-scroll .chip:active,
+    .chip:active,
+    .chips-scroll .chip:hover,
+    .chip:hover {
+        padding: 0.42rem 0.75rem !important;
+        min-height: 36px !important;
+        max-height: none !important;
+        height: auto !important;
+        transform: translateY(0) !important;
+        box-sizing: border-box !important;
+        line-height: 1 !important;
+    }
+
+    @media (max-width: 640px) {
+        .chips-scroll .chip,
+        .chip,
+        .chips-scroll .chip.btn,
+        .chip.btn,
+        .chips-scroll .chip.active,
+        .chip.active,
+        .chips-scroll .chip:active,
+        .chip:active,
+        .chips-scroll .chip:hover,
+        .chip:hover {
+            padding: 0.36rem 0.62rem !important;
+            font-size: 0.86rem !important;
+        }
+    }
+}
+
 /* responsive adjustments */
 @media (max-width: 640px) {
     .chip-nav {
@@ -738,9 +837,24 @@ body {
         gap: 0.4rem;
     }
 
-    .chips-scroll .chip {
-        padding: 0.36rem 0.62rem;
-        font-size: 0.86rem;
+    .chips-scroll .chip,
+    .chip,
+    .chips-scroll .chip.btn,
+    .chip.btn {
+        padding: 0.36rem 0.62rem !important;
+        font-size: 0.86rem !important;
+        min-height: 36px !important;
+        height: auto !important;
+        transform: translateY(0) !important;
+    }
+
+    .chips-scroll .chip.active,
+    .chip.active {
+        padding: 0.36rem 0.62rem !important;
+        font-size: 0.86rem !important;
+        min-height: 36px !important;
+        height: auto !important;
+        transform: translateY(0) !important;
     }
 }
 
@@ -1015,18 +1129,20 @@ input:focus-visible {
     transform: scale(1) translateY(0);
 }
 
-/* Improved chip hover states */
+/* Improved chip hover states - only on pointer devices */
 .chip {
     transition: all 0.2s cubic-bezier(0.2, 0.9, 0.3, 1);
 }
 
-.chip:hover:not(.active) {
-    background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.08),
-        rgba(255, 255, 255, 0.04)
-    );
-    border-color: rgba(255, 255, 255, 0.12);
+@media (hover: hover) and (pointer: fine) {
+    .chip:hover:not(.active) {
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.04)
+        );
+        border-color: rgba(255, 255, 255, 0.12);
+    }
 }
 
 /* Better loading text */
