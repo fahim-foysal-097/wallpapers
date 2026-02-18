@@ -93,7 +93,6 @@ jobs:
           name: ${{ env.TAG_PREFIX }}${{ steps.set_timestamp.outputs.ts }}
           body: |
             Automated wallpaper zip build for commit `${{ github.sha }}`
-            Actor: `${{ github.actor }}`
             Generated at (UTC): ${{ steps.set_timestamp.outputs.ts }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
