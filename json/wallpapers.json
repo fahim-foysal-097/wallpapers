@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-01-26T20:02:18.387421+00:00",
-  "count": 275,
+  "generated_at": "2026-02-18T16:28:01.200825+00:00",
+  "count": 276,
   "wallpapers": [
     {
       "filename": "4k-keyboard.jpg",
@@ -64,22 +64,6 @@
       "thumb_url": "thumbnail/wallpapers-thumb/trigonometry.webp",
       "size": 213808,
       "modified": "2025-10-25T21:04:29.328288+00:00",
-      "category": "uncategorized"
-    },
-    {
-      "filename": "tron-ares.jpg",
-      "url": "wallpapers/tron-ares.jpg",
-      "thumb_url": "thumbnail/wallpapers-thumb/tron-ares.webp",
-      "size": 4596791,
-      "modified": "2025-05-09T06:25:43.689222+00:00",
-      "category": "uncategorized"
-    },
-    {
-      "filename": "tron_legacy4.jpg",
-      "url": "wallpapers/tron_legacy4.jpg",
-      "thumb_url": "thumbnail/wallpapers-thumb/tron_legacy4.webp",
-      "size": 299224,
-      "modified": "2025-05-09T06:25:43.712364+00:00",
       "category": "uncategorized"
     },
     {
@@ -2201,6 +2185,30 @@
       "size": 161101,
       "modified": "2025-09-22T05:19:57.904905+00:00",
       "category": "tech"
+    },
+    {
+      "filename": "japan-car.jpg",
+      "url": "wallpapers/vehicles/japan-car.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/vehicles/japan-car.webp",
+      "size": 2032858,
+      "modified": "2026-02-18T16:22:56.366229+00:00",
+      "category": "vehicles"
+    },
+    {
+      "filename": "tron-ares.jpg",
+      "url": "wallpapers/vehicles/tron-ares.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/vehicles/tron-ares.webp",
+      "size": 4596791,
+      "modified": "2025-05-09T06:25:43.689222+00:00",
+      "category": "vehicles"
+    },
+    {
+      "filename": "tron_legacy4.jpg",
+      "url": "wallpapers/vehicles/tron_legacy4.jpg",
+      "thumb_url": "thumbnail/wallpapers-thumb/vehicles/tron_legacy4.webp",
+      "size": 299224,
+      "modified": "2025-05-09T06:25:43.712364+00:00",
+      "category": "vehicles"
     }
   ]
 }

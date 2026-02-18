@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 build_all.py - run full pipeline:
-  optionally clean outputs -> generate_thumbs.py -> generate_json.py -> write badges
+  optionally clean outputs
+generate_thumbs.py -> generate_json.py -> write badges
 
 Usage:
   python build_all.py           # normal run

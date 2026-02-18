@@ -3,7 +3,7 @@
     {
       "name": "all",
       "label": "All",
-      "count": 275
+      "count": 276
     },
     {
       "name": "abstract",
@@ -73,7 +73,12 @@
     {
       "name": "uncategorized",
       "label": "uncategorized",
-      "count": 15
+      "count": 13
+    },
+    {
+      "name": "vehicles",
+      "label": "vehicles",
+      "count": 3
     }
   ],
   "mobile": [
