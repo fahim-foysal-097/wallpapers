@@ -32,7 +32,7 @@ MOBILE_MAX = (540, 960)
 RASTER_EXTS = {".png", ".jpg", ".jpeg", ".webp", ".bmp", ".tiff"}
 
 OUT_FORMAT = "WEBP"
-OUT_QUALITY = 90
+OUT_QUALITY = 80
 
 
 def should_process(src: Path, dst: Path) -> bool:
