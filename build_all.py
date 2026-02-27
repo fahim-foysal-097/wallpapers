@@ -148,8 +148,8 @@ def run_script_capture(script: Path):
     """
     if not script.exists():
         raise FileNotFoundError(f"Required script not found: {script}")
-    # capture output for parsing, keep execution quiet
-    proc = subprocess.run([sys.executable, str(script)], cwd=str(ROOT), capture_output=True, text=True)
+    # capture stdout for parsing, let stderr pass through for live output
+    proc = subprocess.run([sys.executable, str(script)], cwd=str(ROOT), stdout=subprocess.PIPE, text=True)
     return proc
 
 
@@ -410,7 +410,7 @@ def main(argv=None):
             if proc.stdout:
                 error_lines.append("STDOUT:")
                 error_lines.extend([f"  {line}" for line in proc.stdout.strip().splitlines()])
-            if proc.stderr:
+            if getattr(proc, "stderr", None):
                 error_lines.append("STDERR:")
                 error_lines.extend([f"  {line}" for line in proc.stderr.strip().splitlines()])
             boxed_print(red(f"✖ ERROR in {name}"), error_lines)

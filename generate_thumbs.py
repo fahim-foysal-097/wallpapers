@@ -8,8 +8,8 @@ Writes thumbnails into:
 
 Behavior:
  - Animated GIFs (.gif) are skipped (no thumbnails).
- - This script is intentionally quiet during processing and emits a
-   single summary line at the end:
+ - This script emits a lightweight progress indicator on a single line
+   during processing, and a single summary line at the end:
      THUMBS_SUMMARY: created=... up_to_date=... skipped_gif=... failed=... total=... time_ms=...
 """
 
@@ -77,6 +77,46 @@ def make_fullscreen_webp(src_path: Path, dst_path: Path):
         im.save(str(dst_path), OUT_FORMAT, quality=FULLSCREEN_QUALITY, method=6)
 
 
+def print_progress(counters: dict):
+    """
+    Print a lightweight progress indicator on the current terminal line.
+    """
+    total = counters.get("grand_total", 0)
+    processed = counters["total"]
+    if total > 0:
+        percent = (processed / total) * 100
+        prefix = f"{percent:.1f}% ({processed}/{total})"
+    else:
+        prefix = f"{processed} processed"
+        
+    msg = (f"\r[Progress] {prefix} | Created: {counters['created']} | "
+           f"Up-to-date: {counters['up_to_date']} | Skipped: {counters['skipped_gif']} | "
+           f"Failed: {counters['failed']}")
+    # Pad with spaces to ensure previous longer lines are overwritten
+    sys.stderr.write(f"{msg: <100}")
+    sys.stderr.flush()
+
+
+def count_all_eligible_files(src_dir: Path) -> int:
+    """
+    Count how many files we will eventually process in src_dir and its subfolders.
+    """
+    cnt = 0
+    if not src_dir.exists() or not src_dir.is_dir():
+        return 0
+    # top-level
+    for p in src_dir.iterdir():
+        if p.is_file() and (p.suffix.lower() == ".gif" or p.suffix.lower() in RASTER_EXTS):
+            cnt += 1
+    # subfolders
+    for d in src_dir.iterdir():
+        if d.is_dir():
+            for p in d.iterdir():
+                if p.is_file() and (p.suffix.lower() == ".gif" or p.suffix.lower() in RASTER_EXTS):
+                    cnt += 1
+    return cnt
+
+
 def process_folder_recursive(src_dir: Path, out_dir: Path, out_fullscreen_dir: Path, max_size, counters: dict):
     """
     Process files in src_dir root and in one level of subfolders (categories).
@@ -92,6 +132,7 @@ def process_folder_recursive(src_dir: Path, out_dir: Path, out_fullscreen_dir: P
             sfx = p.suffix.lower()
             if sfx == ".gif":
                 counters["skipped_gif"] += 1
+                print_progress(counters)
                 continue
             if sfx not in RASTER_EXTS:
                 continue
@@ -113,6 +154,7 @@ def process_folder_recursive(src_dir: Path, out_dir: Path, out_fullscreen_dir: P
                     counters["up_to_date"] += 1
             except Exception:
                 counters["failed"] += 1
+            print_progress(counters)
 
     # subfolders (categories)
     for d in sorted([x for x in src_dir.iterdir() if x.is_dir()]):
@@ -121,6 +163,7 @@ def process_folder_recursive(src_dir: Path, out_dir: Path, out_fullscreen_dir: P
             sfx = p.suffix.lower()
             if sfx == ".gif":
                 counters["skipped_gif"] += 1
+                print_progress(counters)
                 continue
             if sfx not in RASTER_EXTS:
                 continue
@@ -143,6 +186,7 @@ def process_folder_recursive(src_dir: Path, out_dir: Path, out_fullscreen_dir: P
                     counters["up_to_date"] += 1
             except Exception:
                 counters["failed"] += 1
+            print_progress(counters)
 
 
 def count_existing_thumbs(root: Path) -> int:
@@ -158,7 +202,10 @@ def count_existing_thumbs(root: Path) -> int:
 def main():
     t0 = time.perf_counter()
 
+    grand_total = count_all_eligible_files(SRC_DESKTOP) + count_all_eligible_files(SRC_MOBILE)
+
     counters = {
+        "grand_total": grand_total,
         "total": 0,
         "created": 0,
         "up_to_date": 0,
@@ -174,6 +221,9 @@ def main():
 
     existing_after = count_existing_thumbs(OUT_ROOT)
     elapsed_ms = int((time.perf_counter() - t0) * 1000)
+
+    sys.stderr.write("\n") # End the progress indicator line
+    sys.stderr.flush()
 
     # Human-friendly short line
     created = counters["created"]
