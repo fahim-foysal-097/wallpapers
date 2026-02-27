@@ -14,8 +14,8 @@
 
     // pointer position
     document.addEventListener("pointermove", (e) => {
-        cursor.style.left = e.clientX + "px";
-        cursor.style.top = e.clientY + "px";
+        cursor.style.setProperty("--x", e.clientX + "px");
+        cursor.style.setProperty("--y", e.clientY + "px");
     });
 
     // hover effect on interactive elements

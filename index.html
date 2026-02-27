@@ -7,6 +7,10 @@
     <title>Wallpaper Gallery</title>
     <link rel="icon" href="assets/icon.png" />
 
+    <!-- DNS prefetch for external domains -->
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://api.github.com">
+
     <meta property="og:title" content="Wallpaper Gallery - Download Wallpapers">
     <meta property="og:description" content="Browse and download high-quality desktop and mobile wallpapers.">
     <meta property="og:type" content="website">
@@ -17,16 +21,17 @@
     <meta property="og:site_name" content="Wallpaper Gallery">
     <meta property="og:locale" content="en_US">
 
-
     <meta name="description" content="Wallpapers gallery - browse and download desktop wallpapers." />
     <meta name="keywords"
         content="Wallpaper, Wallpapers, Desktop, Desktop Wallpaper, Best wallpaper, Wallpaper github, linux wallpaper" />
     <meta name="author" content="Fahim Foysal" />
     <meta name="copyright" content="Fahim Foysal" />
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts (preload + stylesheet for fastest paint) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Sora:wght@400;600;700&display=swap">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Sora:wght@400;600;700&display=swap"
         rel="stylesheet">
@@ -204,7 +209,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

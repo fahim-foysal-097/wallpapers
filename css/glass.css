@@ -782,4 +782,53 @@ html {
         backdrop-filter: none !important;
         -webkit-backdrop-filter: none !important;
     }
+
+    /* Strip ALL costly backdrop-filter on small phones */
+    .glass,
+    .tile,
+    .input-group,
+    .side-nav,
+    .modal-content,
+    .modal-nav-btn,
+    .form-select {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+
+    .side-nav {
+        background: rgba(10, 13, 20, 0.92) !important;
+    }
+
+    .tile {
+        background: rgba(255, 255, 255, 0.06) !important;
+    }
+
+    .input-group {
+        background: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    .modal-content {
+        background: rgba(14, 18, 26, 0.96) !important;
+    }
+}
+
+/* Mid-size screens: reduce blur intensity instead of removing completely */
+@media (min-width: 577px) and (max-width: 768px) {
+    .glass,
+    .glass-section,
+    .gallery-panel,
+    .side-nav {
+        backdrop-filter: blur(10px) saturate(130%) !important;
+        -webkit-backdrop-filter: blur(10px) saturate(130%) !important;
+    }
+
+    .tile {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+
+    .input-group {
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
+    }
 }

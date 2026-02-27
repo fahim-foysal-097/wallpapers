@@ -16,7 +16,7 @@
     height: var(--cursor-size);
     border-radius: 50%;
     pointer-events: none;
-    transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(calc(var(--x, -100px) - 50%), calc(var(--y, -100px) - 50%), 0);
     z-index: 999999;
     background: linear-gradient(
         145deg,
@@ -25,6 +25,7 @@
     );
     border: var(--cursor-ring-width) solid rgba(var(--accent2), 0.6);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    will-change: transform;
 }
 
 /* inner subtle ring */
@@ -39,7 +40,7 @@
 
 /* hover on interactive elements */
 .custom-cursor.cursor--hover {
-    transform: translate3d(-50%, -50%, 0) scale(1.5);
+    transform: translate3d(calc(var(--x, -100px) - 50%), calc(var(--y, -100px) - 50%), 0) scale(1.5);
     background: linear-gradient(
         145deg,
         rgba(var(--accent2), 0.18),
@@ -52,7 +53,7 @@
 
 /* pressed state */
 .custom-cursor.cursor--down {
-    transform: translate3d(-50%, -50%, 0) scale(0.9);
+    transform: translate3d(calc(var(--x, -100px) - 50%), calc(var(--y, -100px) - 50%), 0) scale(0.9);
     opacity: 0.95;
 }
 
