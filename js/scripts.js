@@ -596,6 +596,7 @@
 
         const hasThumb = item.thumb_url && item.thumb_url.trim().length;
         const urlIsGif = isGifUrl(item.url);
+        const previewUrl = item.fullscreen_url ? item.fullscreen_url : item.url;
 
         if (hasThumb && !urlIsGif) {
             // show thumbnail immediately (fast)
@@ -606,11 +607,11 @@
 
             // preload full image in background
             try {
-                const loaded = await preloadImage(item.url);
+                const loaded = await preloadImage(previewUrl);
                 modalImage.classList.remove("loading");
                 swapModalImageElement(loaded);
             } catch (err) {
-                console.warn("Full image failed to preload:", item.url, err);
+                console.warn("Full image failed to preload:", previewUrl, err);
                 showSpinner(false);
                 modalImage.classList.remove("loading", "modal-img-blur");
                 modalImage.classList.add(
@@ -626,7 +627,7 @@
         showSpinner(true);
 
         try {
-            const loaded = await preloadImage(item.url);
+            const loaded = await preloadImage(previewUrl);
             modalImage.classList.remove("loading");
             swapModalImageElement(loaded);
         } catch (err) {

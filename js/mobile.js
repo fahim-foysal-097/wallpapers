@@ -450,13 +450,14 @@
 
         const hasThumb = entry.thumb_url && entry.thumb_url.trim().length;
         const urlIsGif = isGifUrl(entry.url);
+        const previewUrl = entry.fullscreen_url ? entry.fullscreen_url : entry.url;
 
         if (hasThumb && !urlIsGif) {
             modalImage.src = entry.thumb_url;
             modalImage.alt = entry.filename;
             modalImage.classList.add("modal-img-blur", "modal-img-visible");
             showSpinner(true);
-            preloadImage(entry.url)
+            preloadImage(previewUrl)
                 .then((loaded) => {
                     modalImage.classList.remove("loading");
                     swapModalImageElement(loaded);
@@ -473,7 +474,7 @@
         } else {
             modalImage.classList.add("modal-img-fade");
             showSpinner(true);
-            preloadImage(entry.url)
+            preloadImage(previewUrl)
                 .then((loaded) => {
                     modalImage.classList.remove("loading");
                     swapModalImageElement(loaded);

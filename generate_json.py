@@ -29,10 +29,10 @@ from datetime import datetime, timezone
 from typing import List, Dict, Tuple
 import time
 
-# Config: (src_dir, output_json, thumb_root)
+# Config: (src_dir, output_json, thumb_root, fs_thumb_root)
 ENTRIES = [
-    (Path("wallpapers"), Path("json/wallpapers.json"), Path("thumbnail/wallpapers-thumb")),
-    (Path("wallpapers-mobile"), Path("json/wallpapers-mobile.json"), Path("thumbnail/mobile-wallpapers-thumb")),
+    (Path("wallpapers"), Path("json/wallpapers.json"), Path("thumbnail/wallpapers-thumb"), Path("thumbnail/wallpapers-fullscreen")),
+    (Path("wallpapers-mobile"), Path("json/wallpapers-mobile.json"), Path("thumbnail/mobile-wallpapers-thumb"), Path("thumbnail/mobile-wallpapers-fullscreen")),
 ]
 
 # Known image extensions (we index GIFs too; thumbnails for GIFs are not used)
@@ -45,29 +45,35 @@ def is_image(path: Path) -> bool:
     return path.suffix.lower() in IMAGE_EXTS
 
 
-def make_entry(rel_path: Path, src_root: Path, thumb_root: Path) -> dict:
+def make_entry(rel_path: Path, src_root: Path, thumb_root: Path, fs_thumb_root: Path) -> dict:
     full_path = src_root.joinpath(rel_path)
     stat = full_path.stat()
     modified = datetime.fromtimestamp(stat.st_mtime, tz=timezone.utc).isoformat()
 
     suffix = full_path.suffix.lower()
     thumb_url = None
+    fullscreen_url = None
     if suffix != ".gif":
         thumb_candidate = thumb_root.joinpath(rel_path.with_suffix(".webp"))
         if thumb_candidate.exists():
             thumb_url = str(thumb_candidate.as_posix())
+            
+        fs_candidate = fs_thumb_root.joinpath(rel_path.with_suffix(".webp"))
+        if fs_candidate.exists():
+            fullscreen_url = str(fs_candidate.as_posix())
 
     return {
         "filename": rel_path.name,
         "url": str(src_root.joinpath(rel_path).as_posix()),
         "thumb_url": thumb_url,
+        "fullscreen_url": fullscreen_url,
         "size": stat.st_size,
         "modified": modified,
         "category": rel_path.parent.name if rel_path.parent != Path(".") else "uncategorized"
     }
 
 
-def generate_for(src_dir: Path, out_file: Path, thumb_dir: Path) -> Tuple[List[dict], Dict[str, int]]:
+def generate_for(src_dir: Path, out_file: Path, thumb_dir: Path, fs_thumb_dir: Path) -> Tuple[List[dict], Dict[str, int]]:
     if not src_dir.exists() or not src_dir.is_dir():
         return [], {}
 
@@ -78,7 +84,7 @@ def generate_for(src_dir: Path, out_file: Path, thumb_dir: Path) -> Tuple[List[d
     files_root = sorted([x for x in src_dir.iterdir() if x.is_file() and is_image(x)], key=lambda p: p.name.lower())
     for p in files_root:
         rel = Path(p.name)
-        ent = make_entry(rel, src_dir, thumb_dir)
+        ent = make_entry(rel, src_dir, thumb_dir, fs_thumb_dir)
         entries.append(ent)
         cat = ent["category"] or "uncategorized"
         cat_counts[cat] = cat_counts.get(cat, 0) + 1
@@ -89,7 +95,7 @@ def generate_for(src_dir: Path, out_file: Path, thumb_dir: Path) -> Tuple[List[d
         files = sorted([x for x in d.iterdir() if x.is_file() and is_image(x)], key=lambda p: p.name.lower())
         for f in files:
             rel = Path(d.name) / f.name
-            ent = make_entry(rel, src_dir, thumb_dir)
+            ent = make_entry(rel, src_dir, thumb_dir, fs_thumb_dir)
             entries.append(ent)
             cat = ent["category"] or "uncategorized"
             cat_counts[cat] = cat_counts.get(cat, 0) + 1
@@ -117,8 +123,8 @@ def main():
     desktop_count = 0
     mobile_count = 0
 
-    for src, out, thumb in ENTRIES:
-        entries, counts = generate_for(src, out, thumb)
+    for src, out, thumb, fs_thumb in ENTRIES:
+        entries, counts = generate_for(src, out, thumb, fs_thumb)
         total = sum(counts.values()) if counts else 0
         arr = []
         arr.append({"name": "all", "label": "All", "count": total})

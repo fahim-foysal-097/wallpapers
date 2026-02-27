@@ -23,6 +23,8 @@ SRC_MOBILE = Path("wallpapers-mobile")
 OUT_ROOT = Path("thumbnail")
 OUT_DESKTOP = OUT_ROOT / "wallpapers-thumb"
 OUT_MOBILE = OUT_ROOT / "mobile-wallpapers-thumb"
+OUT_DESKTOP_FULLSCREEN = OUT_ROOT / "wallpapers-fullscreen"
+OUT_MOBILE_FULLSCREEN = OUT_ROOT / "mobile-wallpapers-fullscreen"
 
 
 DESKTOP_MAX = (640, 360)
@@ -33,6 +35,7 @@ RASTER_EXTS = {".png", ".jpg", ".jpeg", ".webp", ".bmp", ".tiff"}
 
 OUT_FORMAT = "WEBP"
 OUT_QUALITY = 80
+FULLSCREEN_QUALITY = 80
 
 
 def should_process(src: Path, dst: Path) -> bool:
@@ -62,7 +65,19 @@ def make_thumb(src_path: Path, dst_path: Path, max_size):
         im.save(str(dst_path), OUT_FORMAT, quality=OUT_QUALITY, method=6)
 
 
-def process_folder_recursive(src_dir: Path, out_dir: Path, max_size, counters: dict):
+def make_fullscreen_webp(src_path: Path, dst_path: Path):
+    """
+    Create a full-resolution WEBP for src_path at dst_path.
+    Raises exception on failure.
+    """
+    with Image.open(src_path) as im:
+        if im.mode not in ("RGB", "L"):
+            im = im.convert("RGB")
+        dst_path.parent.mkdir(parents=True, exist_ok=True)
+        im.save(str(dst_path), OUT_FORMAT, quality=FULLSCREEN_QUALITY, method=6)
+
+
+def process_folder_recursive(src_dir: Path, out_dir: Path, out_fullscreen_dir: Path, max_size, counters: dict):
     """
     Process files in src_dir root and in one level of subfolders (categories).
     Updates counters dict with keys: total, created, up_to_date, skipped_gif, failed
@@ -82,9 +97,17 @@ def process_folder_recursive(src_dir: Path, out_dir: Path, max_size, counters: d
                 continue
             dst_name = p.with_suffix("." + OUT_FORMAT.lower()).name
             dst_path = out_dir / dst_name
+            dst_fs_path = out_fullscreen_dir / dst_name
             try:
+                processed_any = False
                 if should_process(p, dst_path):
                     make_thumb(p, dst_path, max_size)
+                    processed_any = True
+                if should_process(p, dst_fs_path):
+                    make_fullscreen_webp(p, dst_fs_path)
+                    processed_any = True
+                
+                if processed_any:
                     counters["created"] += 1
                 else:
                     counters["up_to_date"] += 1
@@ -104,9 +127,17 @@ def process_folder_recursive(src_dir: Path, out_dir: Path, max_size, counters: d
             rel = Path(d.name) / p.name
             dst_rel = rel.with_suffix("." + OUT_FORMAT.lower())
             dst_path = out_dir / dst_rel
+            dst_fs_path = out_fullscreen_dir / dst_rel
             try:
+                processed_any = False
                 if should_process(p, dst_path):
                     make_thumb(p, dst_path, max_size)
+                    processed_any = True
+                if should_process(p, dst_fs_path):
+                    make_fullscreen_webp(p, dst_fs_path)
+                    processed_any = True
+                
+                if processed_any:
                     counters["created"] += 1
                 else:
                     counters["up_to_date"] += 1
@@ -138,8 +169,8 @@ def main():
     existing_before = count_existing_thumbs(OUT_ROOT)
 
     # run processors (quiet)
-    process_folder_recursive(SRC_DESKTOP, OUT_DESKTOP, DESKTOP_MAX, counters)
-    process_folder_recursive(SRC_MOBILE, OUT_MOBILE, MOBILE_MAX, counters)
+    process_folder_recursive(SRC_DESKTOP, OUT_DESKTOP, OUT_DESKTOP_FULLSCREEN, DESKTOP_MAX, counters)
+    process_folder_recursive(SRC_MOBILE, OUT_MOBILE, OUT_MOBILE_FULLSCREEN, MOBILE_MAX, counters)
 
     existing_after = count_existing_thumbs(OUT_ROOT)
     elapsed_ms = int((time.perf_counter() - t0) * 1000)
