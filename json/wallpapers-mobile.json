@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-02-27T12:05:15.749735+00:00",
-  "count": 107,
+  "generated_at": "2026-05-12T19:56:57.996968+00:00",
+  "count": 109,
   "wallpapers": [
     {
       "filename": "colorful-knit-pattern-preppy.jpg",
@@ -180,6 +180,24 @@
       "fullscreen_url": "thumbnail/mobile-wallpapers-fullscreen/abstract/abstract-9.webp",
       "size": 734340,
       "modified": "2025-10-26T17:46:58.249743+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "Fractured Symmetry.jpeg",
+      "url": "wallpapers-mobile/abstract/Fractured Symmetry.jpeg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/abstract/Fractured Symmetry.webp",
+      "fullscreen_url": "thumbnail/mobile-wallpapers-fullscreen/abstract/Fractured Symmetry.webp",
+      "size": 1507098,
+      "modified": "2026-05-12T19:50:52.361508+00:00",
+      "category": "abstract"
+    },
+    {
+      "filename": "Fractured Symmetry2.jpeg",
+      "url": "wallpapers-mobile/abstract/Fractured Symmetry2.jpeg",
+      "thumb_url": "thumbnail/mobile-wallpapers-thumb/abstract/Fractured Symmetry2.webp",
+      "fullscreen_url": "thumbnail/mobile-wallpapers-fullscreen/abstract/Fractured Symmetry2.webp",
+      "size": 1402571,
+      "modified": "2026-05-12T19:50:55.960523+00:00",
       "category": "abstract"
     },
     {
